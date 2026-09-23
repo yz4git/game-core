@@ -149,3 +149,62 @@ QA記録には、
 
 新しい移動手段や補助能力によって、
 以前不適切だった地形を面白い課題へ変えられることがある。
+
+
+## 14. City road hierarchy
+
+都市生成では道路を一種類として扱わない。
+
+- arterial
+- collector
+- local
+- alley
+などの階層ごとに、
+- width
+- curvature
+- intersection density
+- speed
+を変える。
+
+## 15. Driveability validation
+
+道路グラフのconnectivityだけでなく、車両agentを走らせて、
+- corner radius
+- slope
+- braking frequency
+- stuck rate
+を検証する。
+
+## 16. Player-height validation
+
+俯瞰で自然な都市が、地上視点でも理解しやすいとは限らない。
+
+自動／人間テストをプレイヤー高さでも行い、
+- route readability
+- landmark visibility
+- repetitive frontage
+を確認する。
+
+## 17. LOD must preserve navigation
+
+LODで削除してよいものと、残すべきものを分ける。
+
+優先保持:
+- road silhouette
+- intersection
+- landmark
+- drivable boundary
+
+装飾detailよりnavigation informationを優先する。
+
+## 18. Generation trace
+
+seedだけでなく、主要な生成判断をtraceとして保存すると、
+「なぜこの道路になったか」を追跡しやすい。
+
+最低:
+- generator version
+- branch decisions
+- rejected candidates
+- repair steps
+をデバッグ時に参照可能にする。
