@@ -74,3 +74,36 @@ lock/favorite領域を尊重する。
 - 回復使用まで何手か
 - 装備比較に画面往復が必要か
 - auto-sortがプレイヤー意図を壊さないか
+
+
+## 9. Search scales with collection size
+
+所持数が増えるゲームでは、
+- text search
+- filter
+- category
+- value/weight sort
+を段階的に提供する。
+
+大容量化だけを報酬にしない。
+
+## 10. Automate obvious work
+
+一意の正解しかない反復操作は自動化候補。
+
+- stack
+- sell marked junk
+- repair all
+- loadout restore
+
+自動化によって失われる判断があるか確認してから採用する。
+
+## 11. Loot volume must justify itself
+
+小差の装備を大量に落とすと、戦利品の喜びより比較作業が増える。
+
+一つのドロップが、
+- build
+- resource
+- tradeoff
+のどれを変えるかを見る。
