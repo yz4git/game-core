@@ -73,6 +73,47 @@ Game Over後に、
 - 次の目標
 が見えるようにする。
 
+## 8. Save schema is a compatibility contract
+
+一度公開したsave形式は、休止プレイヤーが何年後かに持ち帰る可能性がある。
+
+- schema versionを明示する
+- 過去versionのmigrationを保持する
+- game build versionとは分離する
+- 過去save fixtureをCIに残す
+
+## 9. Save writes should be transactional
+
+唯一の正常saveを直接上書きしない。
+
+**candidate write → integrity/semantic validation → commit → previous known-good保持**
+
+途中終了や容量不足を「全進行消失」に変換しない。
+
+## 10. Parse success is not state validity
+
+JSON等を読めたこととゲーム状態が正しいことは別。
+
+migration/load後に、ID、数値範囲、inventory、progression、world identity等のinvariantを検証する。
+
+## 11. Backup needs time diversity
+
+直近5回のautosaveが短時間に同じ破損を複製する場合がある。
+
+recent backupだけでなく、session-startやmilestoneなど時間的に離れた復旧点を残す。
+
+## 12. Cloud conflict is competing history
+
+localとcloudの両方が正しい進行を持つ場合がある。
+
+単純なtimestamp勝者ではなく、revision、device/session、進行要約を使い、安全に自動解決できない場合はプレイヤーへ意味のある差を示す。
+
+## 13. Unknown future saves are read-only problems
+
+古いbuildが新しいschemaを見た場合、推測して読み込み・autosaveしない。
+
+元データを保持し、対応buildが必要なことを示す。
+
 ## Playtest
 
 - 一回の失敗で何分失うか
@@ -80,3 +121,9 @@ Game Over後に、
 - オートセーブが詰み状態を作らないか
 - 戻される部分に判断が残っているか
 - 永続損失がゲームの中心体験に必要か
+- 全released schemaのfixtureをcurrentへmigrationできるか
+- save途中の各地点で強制終了してもknown-goodが残るか
+- parse可能だが不正なstateを拒否できるか
+- corruption発見が遅れても古い復旧点が残るか
+- cloud/local競合で望む進行を選べるか
+- 古いbuildが新しいsaveを破壊しないか
