@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 20
+最終更新: 2026-09-24 / Batch 21
 
 ## Completed / substantially sampled
 
@@ -23,6 +23,7 @@
 - Monthly Coin Journal / Canadian Coin Box — 1989 / 1995 / 1996 / 1998 arcade-operations sampling
 - Japan Amusement Monthly — 1992 sampling
 - Game Yuu II — 1995–1996 sampling
+- Famimaga 64 — 1996–1998 complete holdings indexed
 
 ### Related developer / technical / design material
 - Gamest / 三辻富貴朗系
@@ -42,6 +43,8 @@
 - save-schema migration / backup-recovery implementation references
 - Nintendo save corruption support documentation
 - PCG evaluation literature — expressive range, behavior/trajectory metrics, human similarity calibration, novelty search
+- Blizzard Overwatch replay / league / world-cup viewer documentation
+- Unity server-authority / spectator snapshot-distribution material
 
 ## Well-covered batches
 
@@ -61,6 +64,7 @@
 - 18: save schema migration / transactional writes / corruption recovery / backup horizon / cloud conflict / save identity / destructive fault injection
 - 19: rollback / input prediction / interpolation / lag compensation / jitter and burst loss / mobile reconnect / desync diagnostics
 - 20: procedural decision signatures / route heatmaps / expressive-range distributions / visual semantic repetition / human metric calibration
+- 21: replay retention / compatibility / authority / spectator scale / privacy boundary / learning UX / comprehension analytics
 
 ## Dedicated guides
 
@@ -96,6 +100,7 @@
 - docs/strategy-automation.md
 - docs/procedural-city-road-generation.md
 - docs/replay-spectator-telemetry.md
+- docs/replay-lifecycle-privacy.md
 - docs/touch-controller-ergonomics.md
 - docs/ugc-discovery-moderation.md
 - docs/long-term-comeback-design.md
@@ -125,11 +130,12 @@
 - automated landmark/readability metrics
 - human-calibrated repetition thresholds
 
-### Replay / telemetry — production scale
-- server-authoritative validation
-- replay privacy / sharing metadata
-- replay storage retention
-- spectator analytics
+### Replay / telemetry — follow-up
+- privacy threat-model details for user-generated replay sharing
+- long-term format migration and archival corpus
+- spectator anti-cheat / hidden-information delay
+- automated highlight quality evaluation
+- replay storage quotas / eviction stress tests
 
 ### Touch / physical interaction
 - handedness presets
