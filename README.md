@@ -19,6 +19,12 @@
 - [Production Loop](docs/production-loop.md) — 企画からPolishまでの実践開発順序
 - [Opponent AI & Balance](docs/opponent-ai-and-balance.md) — 読めるAI、公平感、CPU対戦設計
 - [Layered Accessibility & Depth](docs/layered-accessibility-and-depth.md) — 初心者の入口と上級者の深さを両立
+- [Fighting Game Design](docs/fighting-game-design.md) — 間合い、状態遷移、対抗策、マッチアップ
+- [Racing Game Design](docs/racing-game-design.md) — 予告距離、ライン、ライバル、分岐
+- [Shooter Recovery & Encounters](docs/shooter-recovery-and-encounters.md) — 復帰、パワー曲線、敵配置
+- [Puzzle Planning](docs/puzzle-planning.md) — 未来情報、計画、速度、リセット
+- [Arcade Session & Attract](docs/arcade-session-and-attract.md) — 初心者導入、セッション、デモ
+- [Game Economy & Interface](docs/game-economy-and-interface.md) — 通貨、消耗品、反復UI、因果
 - [Genre Heuristics](docs/genre-heuristics.md) — ジャンル別の重点項目
 - [Copyright & Sources](docs/copyright-and-sources.md) — 参照資料の扱い方
 - [Research Notes](research/README.md) — 調査ごとの抽象化メモ
