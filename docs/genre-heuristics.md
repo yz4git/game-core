@@ -490,3 +490,19 @@
 - team resultがkill数だけでなくassist/save/setup/objective contributionを示すか
 - starts/hourとimmediate replayを同時に評価しているか
 - 専用の高コスト機能がgenericな構成では得られない体験差を作るか
+
+
+## Networked Action / Rollback
+
+- netcode方式がジャンルの重要skillを守っているか
+- local input delayとrollback artifactを比較して選んでいるか
+- prediction hit rateを測っているか
+- RTTだけでなくjitter/burst loss/reorderを測っているか
+- extrapolation horizonを超えたら明示的なdegraded stateへ移るか
+- lag compensationのrewind上限が定義されているか
+- authoritative simulationとrender smoothingが分離されているか
+- rollback時のone-shot side effectsにevent IDがあるか
+- reconnectをsnapshot/catchup込みのstate machineとして扱っているか
+- deterministic desyncのfirst divergenceを追跡できるか
+- mobileのbackground/resumeとnetwork transitionを試しているか
+- spectator/replayがadjudicated eventを説明できるか
