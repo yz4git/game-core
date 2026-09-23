@@ -143,3 +143,70 @@ challenge / speedrun用に、
 - version違いを誤ってleaderboard比較しないか
 - spectatorが30秒で状況を理解できるか
 - highlightが本当に意味ある瞬間か
+
+
+## 13. Hybrid replay
+
+完全なinput replayと完全state recordingの中間を使える。
+
+例:
+- 通常はinput/eventを記録
+- 数秒ごとにkey state
+- divergence時は近いkey stateから再開
+
+これにより、
+- file size
+- seek speed
+- determinism robustness
+を両立しやすい。
+
+## 14. State checksums
+
+重要状態からhash/checksumを作り、一定tickごとに記録する。
+
+候補:
+- player transforms
+- score
+- RNG state
+- objective state
+- active entity count
+
+再生時に比較し、最初のdivergenceを特定する。
+
+## 15. Compression
+
+毎frameの完全transformを保存する前に、
+- delta
+- quantization
+- event-based recording
+- keyframe
+を検討する。
+
+競技／デバッグで必要な精度と、観戦の見た目精度を分ける。
+
+## 16. Rewindable debugging
+
+短時間の状態ring bufferを常時保持すると、
+クラッシュ／AI異常の直前へ戻って調査できる。
+
+これはinput replayの完全determinismとは別のデバッグ価値を持つ。
+
+## 17. Compatibility policy
+
+replay formatには明示的なversionを持つ。
+
+方針例:
+- same-version only
+- migration support
+- video fallback
+- metadata-only archive
+
+中途半端な互換再生で誤った競技結果を見せない。
+
+## Additional QA
+
+- 1時間runで最初のdivergence tickはどこか
+- checksum overheadは許容範囲か
+- seekに何秒かかるか
+- keyframe間隔を変えた時のfile size
+- patch後に旧ghostをどう扱うか
