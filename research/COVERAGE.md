@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 16
+最終更新: 2026-09-24 / Batch 17
 
 ## Completed / substantially sampled
 
@@ -13,7 +13,7 @@
 - GamePro
 - LOGiN
 - Beep
-- Play Meter — archive overview plus operator-setting / attract / session-economics / physical-interface passes
+- Play Meter — archive overview plus operator-setting / attract / session-economics / physical-interface / maintenance passes
 - Micom BASIC / Program Pochette
 - Technopolis
 - Marukatsu / Gekkan / PC Engine Fan
@@ -37,6 +37,7 @@
 - arcade operator earnings / settings historical syntheses
 - SEGA Arcade History / product archive
 - HCI Museum physical arcade controller records
+- arcade operator/service manuals — calibration, I/O tests, network linking, payout configuration
 
 ## Well-covered batches
 
@@ -52,6 +53,7 @@
 - 14B: headless procedural CI / replay operations / touch production QA / UGC trust-safety / returner matchmaking operations
 - 15: physical arcade controls / cabinet ergonomics / embodied input / spectator-readable intent / platform differentiation / local co-op social feedback
 - 16: continue / buy-in / redemption incentives / kit economics / public-play conversion / linked-play social structure
+- 17: physical-input calibration / maintenance diagnostics / linked-network lifecycle / payout invariants / operator audits / reset domains
 
 ## Dedicated guides
 
@@ -101,6 +103,8 @@
 - docs/returner-matchmaking-operations.md
 - docs/physical-arcade-interface-design.md
 - docs/continue-redemption-public-play.md
+- docs/input-calibration-and-diagnostics.md
+- docs/linked-play-reliability.md
 
 ## Next priorities — high
 
@@ -126,22 +130,24 @@
 - semantic equivalence metrics across touch/controller/keyboard
 
 ### Arcade / public-play follow-up
-- physical-control maintenance / calibration as design constraint
-- linked cabinets / team-vs-team: cabinet topology, matchmaking and queue behavior
-- redemption payout calibration / exploit resistance deeper pass
+- linked cabinets / team-vs-team queue and dropout behavior
 - public demo / convention conversion telemetry in modern deployments
+- skill-based redemption transparency and payout volatility
+- maintenance frequency / component degradation effects on play
 
 ### Save / resilience
 - schema migration
 - corrupted-save recovery
 - cloud/local conflict handling
 - rollback/export validation
+- reset-domain and audit-history separation
 
 ### Networked action
 - rollback design
 - prediction vs input delay
 - lag compensation
 - mobile-network instability
+- reconnect/resynchronization after authority change
 
 ## Next priorities — medium
 
