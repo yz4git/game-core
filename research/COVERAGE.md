@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-23
+最終更新: 2026-09-23 / Batch 07
 
 ## Completed / substantially sampled
 
@@ -10,24 +10,29 @@
 
 - Gaming Alexandria Magazine Archive — 全体構成確認
 - Gaming Alexandria Magazine Sets — セット構成確認
-- Family Computer Magazine — 1985創刊号を中心に高得点・攻略文化を分析
-- Nintendo Fun Club News — 1988年号から攻略・能力多用途性を分析
-- GamePro — 1989創刊期から攻略、スコア、ステージ変化、リソースを分析
-- LOGiN — 1983開発記事、1986年号、1987年2月号の一部を分析
-- Beep — 1985年号のレビュー／技術密度を分析
-- Play Meter — 1982年前後の設計・運営論、1987–89市場史を一部分析
-- Technopolis — アーカイブ構成、開発者インタビュー連載の存在を確認
-- Marukatsu PC Engine — アーカイブ構成確認、今後本文分析余地あり
-- EGM — 2000年前後レビュー文化の操作性・リプレイ評価を分析
+- Family Computer Magazine — 1985創刊号、高得点・攻略文化
+- Nintendo Fun Club News — 1988、攻略・能力多用途性
+- GamePro — 1989創刊期、攻略・スコア・リソース
+- GamePro Street Fighter II Strategy Guide — 技入力と対戦戦略の分離、マッチアップ
+- LOGiN — 1983開発記事、1986、1987の一部
+- Beep — 1985、技術密度・レビュー
+- Play Meter — 1982設計論、1984-85運営／初心者／セッション、1987-89市場史
+- Technopolis — 全体構成、開発者・同人／自作ゲーム文化の存在確認
+- Marukatsu PC Engine — セット構成確認
+- Gekkan PC Engine / PC Engine Fan — セット構成確認
+- EGM — 2000年前後レビュー文化
+- Super Play — レース等のレビュー文化を一部抽出
 
 ### Related historical material
 
-- Gamest / 三辻富貴朗系ゲームデザイン論 — 駆け引き、公平性、ステージ設計、スコアを抽象化
-- Computer Gaming World — 1989の段階的複雑性、1992のAI／バランス論を分析
-- historical developer interview translations — Xevious制作工程などを補助資料として利用
+- Gamest / 三辻富貴朗系 — 駆け引き、公平性、スコア、ステージ設計
+- Computer Gaming World — AI、段階的複雑性、RPG経済、UI、パズル、シミュレーション
+- historical developer interviews — Xevious、操作／制作工程
+- contemporary retrospectives — 歴史資料の機構確認用に限定利用
 
-## Core themes already well covered
+## Core themes now well covered
 
+### Universal
 - 入力数 vs 技術密度
 - 判断密度
 - リスク／報酬
@@ -37,97 +42,97 @@
 - 予測
 - ランダムと構造
 - リソース制約
-- 敵役割
-- 敵組み合わせ
-- ボス＝学習の試験
-- ステージの教える→試す→ひねる
+- 敵役割／組み合わせ
+- ボス
+- 教える→試す→ひねる
 - ペーシング／呼吸
 - 成功フィードバック
-- 操作感
-- タッチ／身体一致
-- 入力の寛容さ
-- スコア／上達指標
+- 操作感／身体一致
+- 入力寛容性
+- 上達指標
 - 隠し要素／攻略共有
-- RPG成長
-- 情報記録
-- 発見／ヒント段階
-- AIの可読性
-- AI公平感
+- AI可読性／公平感
 - 非対称バランス
-- 協力参加摩擦
-- 協力相互依存
-- layered accessibility / progressive disclosure
-- プロトタイプ
-- Fresh-Eyes review
-- Feature Complete → Polish
-- 世界設定による制作一貫性
+- 協力参加摩擦／相互依存
+- layered accessibility
+- prototype / Fresh-Eyes / Polish
+
+### Newly deepened in Batch 07
+- 死後の復帰状態／失敗連鎖
+- beginner practice / attract design
+- 有限クリア vs endless mastery
+- fighting matchup / counterplay / state transition
+- racing preview horizon / rival interaction / haptics / branching
+- shooter recovery / power curve / encounter rhythm
+- puzzle planning horizon / voluntary tempo
+- RPG economy sinks / convenience progression / high-frequency UI
+- simulation causal feedback
+- audience segmentation / session metrics
+
+## Dedicated guides now available
+
+- docs/opponent-ai-and-balance.md
+- docs/layered-accessibility-and-depth.md
+- docs/fighting-game-design.md
+- docs/racing-game-design.md
+- docs/shooter-recovery-and-encounters.md
+- docs/puzzle-planning.md
+- docs/arcade-session-and-attract.md
+- docs/game-economy-and-interface.md
 
 ## Next priorities — high
 
 ### Level / encounter design
-- シューティングの敵出現順・画面支配・復活パターン
-- ベルトスクロールの敵数・方向・間合い設計
-- アクションの地形と敵の組み合わせ
-- 一本道でも選択を作る方法
-- チェックポイント配置
+- ベルトスクロールの複数方向圧力
+- 3Dアクションのカメラと敵配置
+- 一本道で選択を作る空間設計
+- チェックポイントの空間配置
+- 隠れた安全地帯と誘導
 
-### Fighting
-- neutral / advantage / disadvantage の歴史的攻略言語
-- 投げ・ガード・打撃の読み合い
-- キャラ差と間合い
-- 対戦ゲームの初心者導線
-- CPU戦と対人戦の違い
+### Sound as gameplay information
+- 音だけで読める危険
+- 距離／方向の音響表現
+- BGMとゲーム状態同期
+- 音声情報の優先順位
+- モバイルスピーカー環境
 
-### Racing
-- コース記憶
-- 最速ライン vs 安全ライン
-- 車体挙動と操作感
-- ライバルAI
-- キャッチアップ／ゴムバンドの公平感
+### Horror
+- 緊張→予測→解放の周期
+- 安全地帯の信用
+- 敵を見せる量
+- 音と想像の役割
+- ランダム化で恐怖を維持する範囲
 
-### Shooter
-- 敵配置リズム
-- 復活可能性
-- パワーアップ設計
-- スコアと生存の分岐
-- ボムなど救済資源
-- 画面内危険密度
+### Save / failure systems
+- セーブスカムと意思決定
+- オートセーブの境界
+- 永続損失
+- Game Over後の保持
+- 長時間ゲームの中断復帰
 
-### RPG / Strategy
-- 経済設計
-- 消耗品の意味
-- 装備更新と横方向の選択
-- セーブ／リロードが戦略へ与える影響
-- 情報の不確実性
-- シナリオ分岐の実質性
+### Manuals vs in-game teaching
+- 80/90年代マニュアルが担った情報
+- 現代ゲームへ移した時に残すべき情報
+- tutorial overloadを避ける教授順
 
-### Puzzle
-- チュートリアルなしの教授法
-- 仮説を立てられる情報量
-- リセットコスト
-- 複数解
-- 発見と作業の境界
-
-### Arcade operations
-- プレイ時間と回転率
-- attracting spectators
-- cabinet/control novelty
-- difficulty/operator settings
-- multiplayer economics → home/mobile transfer
+### Community / metagame
+- 大会ルール
+- tier形成
+- 攻略誌→ネットコミュニティへの移行
+- shared discoveries
+- speedrun / challenge cultureへの一般化
 
 ## Next priorities — medium
 
-- horror tension cycles
-- sports game abstraction
-- simulation transparency
-- save systems
-- demos/attract modes
-- sound as gameplay information
-- accessibility before the term became common
-- manuals vs in-game teaching
-- community/metagame formation
+- sports abstraction deeper study
+- simulation transparency deeper study
 - user-generated content / editors
-- doujin/indie production practices from Technopolis
+- Technopolis / doujin production
+- rhythm/music game timing design
+- strategy UI and information overload
+- inventory ergonomics
+- camera design history
+- local multiplayer social dynamics
 
 ## Batch history
 
@@ -137,14 +142,16 @@
 - 04: Japanese design lineage
 - 05: RPG / Adventure / mastery
 - 06: AI / Co-op / layered depth
+- 07: Fighting / Racing / Shooter recovery / Puzzle / Economy / Arcade onboarding
 
 ## Rule for future runs
 
-優先順位は「未読だから」だけで決めない。
-
-1. 現在のゲーム制作へ転用価値が高い
-2. 既存原則にない機構が見つかりそう
-3. 異なる年代・ジャンルから既存原則を検証できる
+1. 転用価値が高い
+2. 既存原則にない
+3. 異なる年代・ジャンルから検証できる
 4. 一次資料または当時資料に近い
+5. 既存の専門ガイドへ具体的に統合できる
 
-の順で読む。
+を優先する。
+
+各大規模バッチでは可能なら複数ジャンルを横断し、単なる資料リストではなく、実装／プレイテストに使える成果へ変換する。
