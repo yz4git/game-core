@@ -1102,3 +1102,88 @@ remix作品からoriginalまで系譜を辿れるか確認する。
 - failure count
 - p95
 を比較し、少数の破綻が隠れていないかを見る。
+
+
+## 101. Headless Seed Farm Audit
+
+CI/夜間ジョブで大量seedを生成し、
+- hard fail count
+- p95/p99 metrics
+- worst-N
+を保存する。
+
+失敗seedはcanonical setへ追加する。
+
+## 102. Failure Artifact Audit
+
+自動テスト失敗時に、
+- seed
+- version
+- screenshot
+- metrics
+- trace
+が一つのartifactとして残るか確認する。
+
+## 103. Replay First-Divergence Audit
+
+同一runのstate hashをtick単位で比較し、
+最初の不一致tickを自動表示できるか確認する。
+
+## 104. Authoritative-State Audit
+
+Replay hashへ、
+- gameplay state
+と
+- cosmetic state
+を混在させていないか確認する。
+
+見た目差だけで競技replayをfailさせない。
+
+## 105. Side-Effect Replay Audit
+
+rewind / rollback / replayで、
+- SE二重再生
+- haptic二重発火
+- analytics重複
+- achievement重複
+が起きないか確認する。
+
+## 106. Long-Session Touch Audit
+
+30分／60分プレイ後に、
+- thumb pain
+- grip change
+- reach miss
+- accidental system gesture
+を記録する。
+
+## 107. UGC Ranking Abuse Audit
+
+同一作品へ短時間に大量評価を送るscenarioを作り、
+順位が異常に変化しないか確認する。
+
+## 108. UGC Appeal Audit
+
+誤moderation想定で、
+creatorが
+- reason
+- affected content/version
+- appeal
+へ到達できるか確認する。
+
+## 109. Restricted-UGC Graceful Audit
+
+UGC制限ユーザーで、
+- restricted contentだけ見えない
+- core gameは可能な限り遊べる
+- 理由が説明される
+ことを確認する。
+
+## 110. Returner Opponent-Fairness Audit
+
+復帰者の最初の10戦について、
+本人だけでなく対戦相手側の
+- expected win probability
+- stomp rate
+- rematch/quit
+も確認する。
