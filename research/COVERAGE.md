@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 23
+最終更新: 2026-09-24 / Batch 24
 
 ## Completed / substantially sampled
 
@@ -14,6 +14,7 @@
 - Play Meter / Monthly Coin Journal / Japan Amusement Monthly / Game Yuu II
 - Micom BASIC / Program Pochette / Technopolis / Marukatsu / K-POWER / Game Hihyō
 - Batch 23 historical sports context: Play Meter 1977/1988/1990, GamePro 1989, Technopolis 1987, Family Computer Magazine 1990, Canadian Coin Box 1990
+- Batch 24 procedural/readability historical cross-sample: Micom BASIC 1984, Family Computer Magazine 1985/1990, Comptiq 1988/1990, Canadian Coin Box 1986
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -27,6 +28,9 @@
 - smartphone thumb-reach / grip-span ergonomics research
 - FIFA 13/17/22 and EA SPORTS FC 25 tactical/off-ball AI developer material
 - TacticAI football tactical graph-model research
+- AIIDE PCG evaluation / expressive-range / survival-analysis references
+- multi-agent PCGRL and multi-agent behavioural-diversity research
+- Neon Chrome procedural-generation public breakdown
 
 ## Well-covered batches
 
@@ -48,6 +52,7 @@
 - 21: replay lifecycle / authority / spectator scale / privacy / analytics
 - 22: adaptive touch ergonomics / handedness / reachability / occlusion / haptic density / thermal fatigue / cross-input equivalence
 - 23: sports teammate/off-ball AI / hierarchical team intent / role contracts / spatial relations / intent hysteresis / counterfactual AI QA
+- 24: procedural pacing signatures / multi-skill difficulty curves / route-weighted threat / recovery budget / landmark-junction readability / clustered strategy heatmaps / counterfactual strategy diversity / human metric calibration
 
 ## Dedicated guides
 
@@ -60,7 +65,8 @@ Core specialist set includes:
 - docs/rollback-mobile-network-design.md
 - docs/replay-spectator-telemetry.md
 - docs/replay-lifecycle-privacy.md
-- docs/procedural-diversity-metrics.md
+- docs/procedural-diversity-metrics.md — expanded Batch 24 pacing/readability/strategy metrics
+- docs/procedural-pacing-readability-qa.md
 - docs/save-resilience-and-migration.md
 - docs/sports-game-abstraction.md — expanded Batch 23 teammate/off-ball AI guidance
 
@@ -69,11 +75,11 @@ See docs/ for remaining genre/system guides.
 ## Next priorities — high
 
 ### Procedural automated QA — follow-up
-- semantic visual descriptors beyond screenshot hashes
-- multi-agent route/strategy diversity
-- generated encounter pacing signatures
-- automated landmark/readability metrics
-- human-calibrated repetition thresholds
+- empirical landmark/readability threshold calibration with human route-choice data
+- multi-agent adversarial seed search for rare exploits
+- encounter pacing signatures for shooter/racing/RPG-specific semantics
+- visual-semantic descriptors using geometry/depth/segmentation rather than screenshot hashes
+- generator coverage stopping criteria: when fresh cohorts stop finding new behavior clusters
 
 ### Replay / telemetry — follow-up
 - privacy threat-model details for user-generated replay sharing
