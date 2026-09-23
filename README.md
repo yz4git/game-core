@@ -46,6 +46,10 @@
 - [Touch & Controller Ergonomics](docs/touch-controller-ergonomics.md) — タッチ直接性、遮蔽、持ち方、移植
 - [UGC Discovery & Moderation](docs/ugc-discovery-moderation.md) — 発見、推薦、報告、作者分析
 - [Long-Term Comeback Design](docs/long-term-comeback-design.md) — Rested、復帰、低義務進行
+- [Replay Determinism & Regression](docs/replay-determinism-regression.md) — 決定性、snapshot、checksum、CI
+- [Procedural Regression Testing](docs/procedural-regression-testing.md) — 固定seed、tail risk、trace
+- [UGC Versioning & Remix](docs/ugc-versioning-remix.md) — version固定、派生系譜、moderation evidence
+- [Returning Player Recalibration](docs/returning-player-recalibration.md) — MMR確信度、warm-up、season reset
 - [Genre Heuristics](docs/genre-heuristics.md) — ジャンル別の重点項目
 - [Copyright & Sources](docs/copyright-and-sources.md) — 参照資料の扱い方
 - [Research Notes](research/README.md) — 調査ごとの抽象化メモ
