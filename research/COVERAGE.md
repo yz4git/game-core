@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 19
+最終更新: 2026-09-24 / Batch 20
 
 ## Completed / substantially sampled
 
@@ -41,6 +41,7 @@
 - PlayFab Game Saves — cross-device sync, conflict handling, offline progression
 - save-schema migration / backup-recovery implementation references
 - Nintendo save corruption support documentation
+- PCG evaluation literature — expressive range, behavior/trajectory metrics, human similarity calibration, novelty search
 
 ## Well-covered batches
 
@@ -59,6 +60,7 @@
 - 17: physical-input calibration / maintenance diagnostics / linked-network lifecycle / payout invariants / operator audits / reset domains
 - 18: save schema migration / transactional writes / corruption recovery / backup horizon / cloud conflict / save identity / destructive fault injection
 - 19: rollback / input prediction / interpolation / lag compensation / jitter and burst loss / mobile reconnect / desync diagnostics
+- 20: procedural decision signatures / route heatmaps / expressive-range distributions / visual semantic repetition / human metric calibration
 
 ## Dedicated guides
 
@@ -81,6 +83,7 @@
 - docs/rhythm-game-timing.md
 - docs/camera-and-targeting.md
 - docs/procedural-generation-quality.md
+- docs/procedural-diversity-metrics.md
 - docs/inventory-ergonomics.md
 - docs/strategy-ui-information.md
 - docs/local-multiplayer-design.md
@@ -115,12 +118,12 @@
 
 ## Next priorities — high
 
-### Procedural automated QA — production scale
-- route heatmaps
-- geometry invariant checks
-- visual semantic diff
-- structural-diversity / decision-signature metrics
-- aesthetic repetition detection
+### Procedural automated QA — follow-up
+- semantic visual descriptors beyond screenshot hashes
+- multi-agent route/strategy diversity
+- generated encounter pacing signatures
+- automated landmark/readability metrics
+- human-calibrated repetition thresholds
 
 ### Replay / telemetry — production scale
 - server-authoritative validation
@@ -162,7 +165,6 @@
 - sports teammate/off-ball AI
 - crafting economy
 - accessibility across genres
-- procedural aesthetics / repetition metrics deeper pass
 - photo/replay sharing privacy and metadata
 - live balance telemetry
 - economy inflation monitoring
