@@ -31,6 +31,16 @@
 - [Teaching & Documentation](docs/teaching-and-documentation.md) — マニュアル、ヘルプ、実践教授
 - [Encounter & Camera Design](docs/encounter-and-camera-design.md) — 脅威方向、画面外、公平な大群戦
 - [Community, UGC & Metagame](docs/community-ugc-metagame.md) — 攻略文化、エディタ、想定外技、共有
+- [Rhythm Game Design](docs/rhythm-game-design.md) — 判定幅、演奏、表現
+- [Rhythm Game Timing](docs/rhythm-game-timing.md) — 音声時刻、校正、Early/Late
+- [Camera & Targeting](docs/camera-and-targeting.md) — 3D座標、ロックオン、視認性
+- [Procedural Generation Quality](docs/procedural-generation-quality.md) — 品質ゲート、シード、制約
+- [Inventory Ergonomics](docs/inventory-ergonomics.md) — 容量、検索、比較、不要作業
+- [Strategy UI & Information](docs/strategy-ui-information.md) — micro/macro、通知、ホットキー
+- [Local Multiplayer Design](docs/local-multiplayer-design.md) — 同室、共有画面、待ち時間
+- [Accessibility Options](docs/accessibility-options.md) — 負荷別Assist、冗長情報、操作設定
+- [Rewards & Retention](docs/rewards-and-retention.md) — 報酬と継続を義務化しない設計
+- [Crafting System Design](docs/crafting-system-design.md) — レシピ教授、素材、作業負荷
 - [Genre Heuristics](docs/genre-heuristics.md) — ジャンル別の重点項目
 - [Copyright & Sources](docs/copyright-and-sources.md) — 参照資料の扱い方
 - [Research Notes](research/README.md) — 調査ごとの抽象化メモ
