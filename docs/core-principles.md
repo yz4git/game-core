@@ -2593,3 +2593,21 @@ For games encountered in public or from a web landing page, design the sequence 
 
 ### Multiplayer earns its complexity when human intent changes decisions
 Additional players are valuable when observing another person's intent changes target, route, timing, positioning, or resource choices. Player count alone is not a social mechanic.
+
+
+## Networked-action principles — Batch 19
+
+### Netcode chooses where unavoidable uncertainty appears
+Network latency cannot be removed; architecture moves its cost between local input delay, remote presentation delay and correction artifacts. Choose the trade-off that preserves the genre's core skill.
+
+### Measure network distributions, not only ping
+Average RTT hides jitter, burst loss and reordering. Test and record these separately because two connections with the same average ping can play very differently.
+
+### Separate authoritative truth from presentation smoothing
+Correct simulation state according to authority; smooth only the visual/audio representation when possible. Cosmetic reconciliation must not change collision or subsequent gameplay.
+
+### Reconnect means resynchronize
+Transport reconnection is incomplete until identity, authoritative snapshot, sequence baseline and pending-input policy are reconciled.
+
+### Find the first divergence
+Deterministic failures should produce the earliest divergent tick and subsystem/state hashes. Final mismatch alone is insufficient for actionable debugging.
