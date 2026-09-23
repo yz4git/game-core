@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-23 / Batch 15
+最終更新: 2026-09-24 / Batch 16
 
 ## Completed / substantially sampled
 
@@ -51,6 +51,7 @@
 - 14: arcade operator tuning / session economics / attract-mode teaching / spectator conversion / photo-mode expression / procedural structural diversity
 - 14B: headless procedural CI / replay operations / touch production QA / UGC trust-safety / returner matchmaking operations
 - 15: physical arcade controls / cabinet ergonomics / embodied input / spectator-readable intent / platform differentiation / local co-op social feedback
+- 16: continue / buy-in / redemption incentives / kit economics / public-play conversion / linked-play social structure
 
 ## Dedicated guides
 
@@ -99,6 +100,7 @@
 - docs/ugc-trust-safety-ops.md
 - docs/returner-matchmaking-operations.md
 - docs/physical-arcade-interface-design.md
+- docs/continue-redemption-public-play.md
 
 ## Next priorities — high
 
@@ -124,11 +126,10 @@
 - semantic equivalence metrics across touch/controller/keyboard
 
 ### Arcade / public-play follow-up
-- continue / buy-in economics deeper pass
-- redemption transition in the 1990s
-- public demo / convention conversion metrics
 - physical-control maintenance / calibration as design constraint
-- linked cabinets / team-vs-team social structures
+- linked cabinets / team-vs-team: cabinet topology, matchmaking and queue behavior
+- redemption payout calibration / exploit resistance deeper pass
+- public demo / convention conversion telemetry in modern deployments
 
 ### Save / resilience
 - schema migration
