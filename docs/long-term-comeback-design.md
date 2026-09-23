@@ -108,3 +108,66 @@ season resetを使う場合、
 - rested bonusがregular playを無意味にしないか
 - season resetで同じ作業を強制しすぎないか
 - 戻った瞬間に「失ったもの」ばかり見せていないか
+
+
+## 10. Rating confidence decay
+
+長期休止後、過去MMRを即座に捨てる必要はない。
+
+代わりに、
+> このMMRが現在も正しいという確信
+を下げる。
+
+再開後の数試合でratingが通常より速く調整される状態にする。
+
+## 11. Do not assume skill loss
+
+休止中に、
+- similar games
+- practice elsewhere
+- retained motor skill
+があるかもしれない。
+
+復帰者を一律に低ランクへ落とすのではなく、再校正を速める。
+
+## 12. Warm-up route
+
+rankedへ入る前に、
+- training
+- unranked
+- bot match
+- short recap
+へ自然に誘導できる。
+
+必須化しすぎず、skill memoryを戻す場所を提供する。
+
+## 13. Return matchmaking telemetry
+
+復帰者について、
+- first 10 match win rate
+- opponent MMR
+- rating movement
+- quit rate
+を通常プレイヤーと比較する。
+
+復帰直後だけ極端に悪い場合は再校正設計を疑う。
+
+## 14. Season reset separation
+
+区別する:
+- reward/progression reset
+- rank compression
+- hidden skill estimate
+- confidence reset
+
+全部を同じresetへまとめない。
+
+## 15. Comeback abuse resistance
+
+復帰補正が、
+- intentional inactivity
+- smurfing
+- deranking
+の利益になりすぎないようにする。
+
+確信度調整はskillを直接下げるより悪用されにくい場合がある。
