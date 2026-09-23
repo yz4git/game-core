@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 25
+最終更新: 2026-09-24 / Batch 26
 
 ## Completed / substantially sampled
 
@@ -10,12 +10,14 @@
 - Gaming Alexandria Magazine Archive / Magazine Sets
 - Family Computer Magazine / Nintendo Fun Club News / GamePro / LOGiN / Beep / EGM / Super Play
 - PC Engine Fan — complete run indexed; 1993/1994 touch-contrast sampling
+- Gekkan PC Engine — complete 1988–1994 run indexed
 - Famimaga 64 — 1996–1998 complete holdings indexed
 - Play Meter / Monthly Coin Journal / Japan Amusement Monthly / Game Yuu II
 - Micom BASIC / Program Pochette / Technopolis / Marukatsu / K-POWER / Game Hihyō
 - Batch 23 historical sports context: Play Meter 1977/1988/1990, GamePro 1989, Technopolis 1987, Family Computer Magazine 1990, Canadian Coin Box 1990
 - Batch 24 procedural/readability historical cross-sample: Micom BASIC 1984, Family Computer Magazine 1985/1990, Comptiq 1988/1990, Canadian Coin Box 1986
 - Batch 25 replay/spectator historical cross-sample: Family Computer Magazine holdings, Famimaga 64 1996–1998, TV Gamer 1997, Monthly Coin Journal 1998, Gamejin 1999
+- Batch 26 procedural QA cross-sample: Technopolis 1987/1994, PC Engine Fan 1994, Gekkan PC Engine 1988–1994, Famimaga 64 1996, Game Yuu II 1996, Monthly Coin Journal 1998
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -36,6 +38,11 @@
 - FDG / Honor of Kings / gameplay-video multi-modal highlight detection research
 - player-reaction / outlying-behavior highlight research
 - spectator state-delay and replay privacy implementation references
+- AIIDE generic level evaluation / gameplay action-graph constraints / static+dynamic puzzle validation
+- PCG solution-action-sequence similarity / affordance-rich tile embeddings
+- space-time WFC and local-vs-global solvability research
+- Quality Diversity / constrained MAP-Elites game-content research
+- 2026 FPS MAP-Elites topology vs emergent gameplay evaluation
 
 ## Well-covered batches
 
@@ -59,6 +66,7 @@
 - 23: sports teammate/off-ball AI / hierarchical team intent / role contracts / spatial relations / intent hysteresis / counterfactual AI QA
 - 24: procedural pacing signatures / multi-skill difficulty curves / route-weighted threat / recovery budget / landmark-junction readability / clustered strategy heatmaps / counterfactual strategy diversity / human metric calibration
 - 25: automated highlight quality / hard-negative highlight QA / causal clip boundaries / highlight diversity / spectator hidden-information authorization / field-level replay privacy / collusion-delay testing
+- 26: adversarial procedural seed search / near-failure margins / static-vs-dynamic gates / semantic-depth-affordance visual regression / behavior-space coverage stopping / failure minimization / human-machine QA loop
 
 ## Dedicated guides
 
@@ -72,8 +80,9 @@ Core specialist set includes:
 - docs/replay-spectator-telemetry.md
 - docs/replay-lifecycle-privacy.md
 - docs/automated-highlight-spectator-safety.md
-- docs/procedural-diversity-metrics.md — expanded Batch 24 pacing/readability/strategy metrics
+- docs/procedural-diversity-metrics.md — expanded through Batch 26 adversarial coverage
 - docs/procedural-pacing-readability-qa.md
+- docs/adversarial-procedural-qa.md
 - docs/save-resilience-and-migration.md
 - docs/sports-game-abstraction.md — expanded Batch 23 teammate/off-ball AI guidance
 
@@ -82,11 +91,11 @@ See docs/ for remaining genre/system guides.
 ## Next priorities — high
 
 ### Procedural automated QA — follow-up
-- empirical landmark/readability threshold calibration with human route-choice data
-- multi-agent adversarial seed search for rare exploits
-- encounter pacing signatures for shooter/racing/RPG-specific semantics
-- visual-semantic descriptors using geometry/depth/segmentation rather than screenshot hashes
-- generator coverage stopping criteria: when fresh cohorts stop finding new behavior clusters
+- empirical calibration of behavior-space stopping thresholds on real generator histories
+- genre-specific adversarial objectives for shooter/racing/RPG/puzzle
+- 3D occlusion / skyline / road continuity semantic visual tests
+- mutation operators that preserve validity while searching near failure boundaries
+- production cost budgets: seeds/hour, agent CPU, render-buffer storage and CI sharding
 
 ### Replay / telemetry — follow-up
 - long-term format migration and archival corpus
