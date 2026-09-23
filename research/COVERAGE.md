@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-23 / Batch 10
+最終更新: 2026-09-23 / Batch 11
 
 ## Completed / substantially sampled
 
@@ -11,10 +11,11 @@
 - Family Computer Magazine — 高得点・攻略文化
 - Nintendo Fun Club News — 攻略・能力多用途性
 - GamePro — 攻略、スコア、リソース、格闘攻略
-- LOGiN — 制作記事、RPG/ADV、レビュー
+- LOGiN — 制作記事、RPG/ADV、レビュー、Program Olympics
 - Beep — 技術密度、レビュー
 - Play Meter — 設計、運営、初心者、セッション、Attract、音響／筐体
 - Micom BASIC / type-in preservation — 小規模ゲームのルール、音、セーブ、難度
+- Program Pochette — 1984–85 type-in games: sports abstraction, steering, resource limits, enemy AI, puzzle state transitions
 - Technopolis — 構成・自作文化
 - Marukatsu / Gekkan / PC Engine Fan — 構成・攻略誌文化
 - EGM — レビュー文化、格闘メタゲーム
@@ -27,6 +28,7 @@
 - PaRappa / DDR historical design material
 - Nintendo 3D camera / targeting development material
 - Game Developer design archives
+- GDC Vault design / AI / validation material
 - local multiplayer design research
 - procedural generation design / constraint literature
 - Game Accessibility Guidelines
@@ -66,16 +68,28 @@
 ### Batch 10
 - rhythm technical clock / calibration
 - strategy information architecture
-- attention hubs / notification priority
 - inventory search scaling / obvious-work automation
 - camera future-information framing
 - local social-space design / rapid rounds
 - procedural quality floor / automated feasibility / difficulty constraints
 - accessibility dimensions beyond Easy/Hard
-- redundant cues / remapping / speed control
-- intrinsic vs extrinsic rewards
-- daily-pressure risks
+- intrinsic vs extrinsic rewards / daily-pressure risks
 - crafting progressive reveal / logical recipes / material clutter
+
+### Batch 11
+- sports abstraction: preserve sport-specific decisions instead of literal motion count
+- sports camera + control coordinate-system coupling
+- team AI / off-ball coordination / tactical layering
+- narrative consequence readability and causal planning
+- commitment vs exploration vs optimization in save/rewind rules
+- delayed-consequence acknowledgment
+- speedrun restart latency / deterministic mastery surface / fixed vs random seed categories
+- sequence-break classification and challenge-mode QA
+- strategy automation: automate execution, preserve intent
+- automation legibility / override points
+- AI personality through strategic priorities
+- tactical-clarity limits on AI presentation bandwidth
+- automated validation agents for repetitive balance/feasibility coverage
 
 ## Dedicated guides
 
@@ -103,56 +117,60 @@
 - docs/accessibility-options.md
 - docs/rewards-and-retention.md
 - docs/crafting-system-design.md
+- docs/sports-game-abstraction.md
+- docs/narrative-choice-design.md
+- docs/speedrun-challenge-design.md
+- docs/strategy-automation.md
 
 ## Next priorities — high
 
-### Procedural city / road generation
+### Procedural city / road generation — deeper validation
 - road hierarchy
 - guaranteed connectivity
 - landmark spacing
 - visual repetition detection
 - LOD interaction with navigation
-- automated driveability tests
+- automated driveability agents
+- seed/version/trace based regression testing
 
-### Strategy automation vs meaningful micromanagement
-- auto-production
-- worker automation
-- formation control
-- alerts that lead to action
-- preserving macro choice while removing clicks
+### Replay / spectator / challenge telemetry
+- replay determinism
+- ghost representation
+- event compression
+- spectator threat readability
+- run metadata / versioning
 
-### Sports abstraction
-- translating real rules into readable decisions
-- AI teammate readability
-- position switching
-- timing windows
-- season/meta progression
+### Controller / touch ergonomics history
+- directional mental models
+- one-hand layouts
+- context-sensitive commands
+- simultaneous-input burden
+- physical-controller affordances
 
-### Narrative choice readability
-- visible consequence vs hidden consequence
-- delayed consequences
-- false choice
-- irreversible choices
-- save/reload interaction
+### UGC discovery / moderation
+- creation → test → share → discover loop
+- ranking and cold-start discovery
+- remix / attribution
+- moderation burden
+- creator feedback loops
 
-### Speedrun / challenge mode
-- restart speed
-- deterministic rules
-- split timing
-- practice tools
-- category support
-- exploit policy
+### Long-term progression without obligation
+- comeback systems
+- rested progress
+- seasonal reset cost
+- collection completion pressure
+- optional mastery tracks
 
 ## Next priorities — medium
-- replay / spectator tools
-- controller / touch ergonomics history
+
+- sports teammate selection / off-ball AI deeper study
+- narrative consequence telemetry
 - photo mode / camera expression
-- long-term progression without obligation
-- UGC discovery / moderation
 - crafting economy deeper study
 - accessibility presets across genres
 - procedural aesthetic coherence
 - simulation automation transparency
+- arcade cabinet / venue economics deeper historical pass
 
 ## Batch history
 
@@ -166,6 +184,7 @@
 - 08: Audio / Horror / Save / Teaching / Encounters / Community / UGC
 - 09: Rhythm / Camera / Inventory / Procedural Generation / Local Shared Play
 - 10: Strategy UI / Local Multiplayer / Accessibility / Rewards / Crafting + Batch09 technical deepening
+- 11: Sports Abstraction / Narrative Choice / Speedrun / Strategy Automation / Automated Validation
 
 ## Rule for future runs
 
