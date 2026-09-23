@@ -1006,3 +1006,99 @@ UGC作者が、
 休止中に失うものを一覧化する。
 
 失う量が大きすぎて「戻るのが怖い」状態になっていないか確認する。
+
+
+## 89. Replay Divergence Audit
+
+同一runを再生し、一定間隔のstate hashを比較する。
+
+最初に不一致になったframe/tickを記録し、その前後のRNG・physics・input順序を調べる。
+
+## 90. Replay Storage Audit
+
+1分／10分／1時間のreplayサイズを測る。
+
+- raw snapshot
+- delta
+- input log
+の比率を確認し、用途に対して過剰保存していないかを見る。
+
+## 91. Safe-Area Input Audit
+
+iPhoneの複数機種・向きで、
+- Home indicator
+- Dynamic Island
+- rounded corner
+- system gesture
+と主要入力が競合しないか確認する。
+
+## 92. Simultaneous-Touch Audit
+
+ゲーム中に必要な同時入力を列挙し、
+左右どちらの親指が担当するか図にする。
+
+一つの指へ矛盾する要求が集中していないかを見る。
+
+## 93. Haptic Semantics Audit
+
+各振動について、
+> 何を意味するか
+を一文で定義する。
+
+複数の別イベントが同じpatternで区別不能になっていないか確認する。
+
+## 94. Moderation Evidence Audit
+
+UGC report一件から、
+- 対象
+- 理由
+- 証拠
+- 時刻
+- 発生画面
+をmoderatorが再構築できるか確認する。
+
+## 95. UGC Version Audit
+
+公開UGCを編集後、
+- old replay
+- old leaderboard
+- old moderation report
+- old rating
+がどのversionを指すか追跡できるか確認する。
+
+## 96. Remix Attribution Audit
+
+remix作品からoriginalまで系譜を辿れるか確認する。
+
+作者名だけでなく、どのversionを元にしたか残す。
+
+## 97. Returning-MMR Audit
+
+長期休止ユーザーの最初の10戦で、
+- opponent strength
+- rating change
+- confidence
+- win/loss
+を追跡する。
+
+過去ratingへ固執しすぎず、数戦で適応できるか確認する。
+
+## 98. Return Warm-up Audit
+
+1か月休止想定のプレイヤーがranked前に、
+- controls
+- meta changes
+- current build
+を思い出す安全な導線があるか確認する。
+
+## 99. Canonical-Seed Regression Audit
+
+過去bug seed、極端seed、代表seedを固定セット化し、generator変更ごとに自動実行する。
+
+## 100. Procedural Tail-Risk Audit
+
+多数seedの平均だけでなく、
+- worst 1%
+- failure count
+- p95
+を比較し、少数の破綻が隠れていないかを見る。
