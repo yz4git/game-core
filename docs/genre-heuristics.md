@@ -439,3 +439,40 @@
 - 長期進行に時間圧の弱い軸があるか
 - return notificationが義務感を作りすぎていないか
 - 数か月ぶりでも操作を思い出せる短い再練習があるか
+
+
+## Production QA / Live Systems
+
+### Procedural CI
+- canonical seedとrandom seedを両方回しているか
+- hard failとquality warningを分けているか
+- failure artifactが自動保存されるか
+- p95/p99/worst-Nを監視しているか
+- performanceもseed別に追跡しているか
+
+### Replay / Netcode Validation
+- checksumで異常検出し、state diffで原因特定できるか
+- 最初のdivergence tickを見つけられるか
+- authoritative stateとpresentation stateを分けているか
+- rollbackで副作用を二重実行しないか
+- event indexから任意地点へseekできるか
+
+### Touch Production QA
+- safe-areaだけでなくthumb reachを確認しているか
+- 頻繁なcontrolsに十分なhit areaがあるか
+- haptics OFFでも遊べるか
+- 30〜60分の疲労テストをしているか
+- OS gesture誤発火を測っているか
+
+### UGC Trust
+- popularityとqualityを分けているか
+- rating brigading耐性があるか
+- appeal経路があるか
+- moderation reasonをcreatorへ返せるか
+- UGC制限時にゲーム全体を過剰blockしていないか
+
+### Returning Matchmaking
+- inactivityでuncertaintyを増やすか
+- ratingを機械的に下げすぎていないか
+- 復帰者の適応速度が十分か
+- 相手側の不公平も同時監視しているか
