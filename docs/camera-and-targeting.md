@@ -100,3 +100,33 @@
 - カメラ距離変更で難易度が壊れないか
 - 壁際で入力方向が急変しないか
 - タッチ中にカメラ操作が攻撃を妨げないか
+
+
+## 10. Speed-based framing
+
+高速移動時は、キャラクター周囲より進行方向の未来情報を優先する。
+
+- distance
+- forward offset
+- FOV
+を速度に応じて調整する。
+
+## 11. Visibility priority
+
+カメラ衝突解決では、
+1. player / target visibility
+2. control stability
+3. composition
+の順に優先する。
+
+「壁には入らないが敵が見えない」状態を成功とみなさない。
+
+## 12. Level-authored overrides
+
+万能アルゴリズムへ依存せず、
+- boss arena
+- narrow corridor
+- fall
+- high-speed segment
+- puzzle view
+へレベル側からカメラ指示を出せるようにする。
