@@ -41,6 +41,11 @@
 - [Accessibility Options](docs/accessibility-options.md) — 負荷別Assist、冗長情報、操作設定
 - [Rewards & Retention](docs/rewards-and-retention.md) — 報酬と継続を義務化しない設計
 - [Crafting System Design](docs/crafting-system-design.md) — レシピ教授、素材、作業負荷
+- [Procedural City & Road Generation](docs/procedural-city-road-generation.md) — 道路階層、走行品質、ランドマーク、LOD
+- [Replay, Spectator & Telemetry](docs/replay-spectator-telemetry.md) — 再現性、ghost、観戦、デバッグ
+- [Touch & Controller Ergonomics](docs/touch-controller-ergonomics.md) — タッチ直接性、遮蔽、持ち方、移植
+- [UGC Discovery & Moderation](docs/ugc-discovery-moderation.md) — 発見、推薦、報告、作者分析
+- [Long-Term Comeback Design](docs/long-term-comeback-design.md) — Rested、復帰、低義務進行
 - [Genre Heuristics](docs/genre-heuristics.md) — ジャンル別の重点項目
 - [Copyright & Sources](docs/copyright-and-sources.md) — 参照資料の扱い方
 - [Research Notes](research/README.md) — 調査ごとの抽象化メモ
