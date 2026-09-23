@@ -2196,3 +2196,198 @@ Create → Publish → Discover → Play → Feedback → Improve
 - optional challenge
 - rested progress
 など、時間圧の弱い進行軸を混ぜる。
+
+
+## 199. リプレイ方式は「決定論」一本に固定しない
+
+完全deterministicな入力再生は軽量だが、物理・浮動小数・処理順・外部入力の差に敏感。
+
+用途によって、
+- input log
+- state snapshot
+- hybrid
+を使い分ける。
+
+**原則:** replay方式はデータ量ではなく、必要な再現保証から選ぶ。
+
+## 200. リプレイには「ズレ始めた瞬間」を検出するチェックポイントを持つ
+
+最終結果だけ比較すると、長いrunのどこで決定性が壊れたか分からない。
+
+一定間隔で、
+- position
+- score
+- RNG state
+- important state hash
+を保存／比較する。
+
+## 201. リプレイ圧縮は「完全状態を毎フレーム保存しない」方向から考える
+
+用途に応じて、
+- keyframe + delta
+- input event
+- sparse state samples
+を組み合わせる。
+
+**原則:** 再生品質に必要な最小情報を保存し、見た目だけの状態は必要に応じて再構築する。
+
+## 202. 巻き戻しデバッグは決定論リプレイとは別の価値を持つ
+
+不具合直前へ戻って状態を見る用途では、完全な再計算より一定期間の状態snapshotを保持した方が実用的な場合がある。
+
+**原則:** QA用replayとプレイヤー向けreplayを同じ制約へ押し込めない。
+
+## 203. iPhoneのsafe-areaとsystem gesture領域は「使えない余白」ではなく入力制約
+
+Home indicator、Dynamic Island、端スワイプなどと主要操作を競合させない。
+
+**原則:** 画面全体を座標として使えても、全領域を同じ信頼度の入力領域とは考えない。
+
+## 204. タッチボタンには視覚だけでなく触覚的な「押した確信」を返す
+
+物理ボタンには反発があるが、ガラス面にはない。
+
+- visual press state
+- sound
+- haptic
+を一貫して返し、「入力が通ったか」を迷わせない。
+
+## 205. タッチでは固定ボタンサイズより「有効入力領域」を大きくできる
+
+見た目のアイコンを小さく保っても、hit areaは広くできる。
+
+移動・カメラでは画面半分など大きな領域を利用し、指位置への厳密さを要求しない。
+
+## 206. 同時操作が必要なアクションは左右の指へ物理的に分散する
+
+移動しながら照準、移動しながら攻撃などは、同じ親指側へ集めると成立しにくい。
+
+**原則:** simultaneous input graphを作り、同時に必要な操作が同じ指を奪い合っていないか確認する。
+
+## 207. ハプティクスは「派手さ」ではなく因果の確認に使う
+
+異なる意味に同じ振動を使いすぎると情報価値がなくなる。
+
+- press
+- impact
+- warning
+- selection
+など、意味を一貫させる。
+
+## 208. UGC報告データは「後から調べられる証拠」として設計する
+
+最低限、
+- target user/content ID
+- content type
+- report reason
+- evidence
+- timestamp
+- origin
+を記録する。
+
+**原則:** Reportボタンだけではmoderation systemにならない。
+
+## 209. UGCを報告した本人には、そのコンテンツを即座に再表示しない選択肢を持たせる
+
+moderation完了を待つ間も、報告者が同じ不快コンテンツを繰り返し見る必要はない。
+
+hide / block creatorを報告導線と近づける。
+
+## 210. UGC remixには「系譜」を残す
+
+派生作品では、
+- original
+- remixed-from
+- creator
+- version
+を追跡できるようにする。
+
+**原則:** remixをコピーとして扱わず、作品関係をデータモデル化する。
+
+## 211. 自動クレジットと「人が敬意を示すクレジット」は同じではない
+
+システム上の自動attributionは最低条件として有効だが、コミュニティ上の感情的価値までは代替しない場合がある。
+
+**原則:** remix UIに自動出典を残しつつ、作者が原作者へ明示的なcredit/commentを加えられる余地を持つ。
+
+## 212. 公開UGCは更新されるたびに「同じ作品の新version」として扱う
+
+プレイヤーが評価した内容と現在内容が違うと、
+- rating
+- leaderboard
+- replay
+- moderation evidence
+が曖昧になる。
+
+**原則:** published contentにはversion IDを持たせる。
+
+## 213. UGCのリプレイ／ランキングはlevel versionへ固定する
+
+コースやルールが編集された後に旧スコアを同じ表へ残すと公平性が崩れる。
+
+**原則:** competitive recordsはcontent-version単位で比較する。
+
+## 214. 復帰者のmatchmakingでは「実力値」だけでなく「確信度」を下げる
+
+長期休止後は、以前のskill estimateが現在も正しいか分からない。
+
+**原則:** いきなり大幅降格させるのではなく、rating uncertaintyを増やし、数戦の結果へ速く適応できるようにする。
+
+## 215. 復帰者補正は「弱くなった前提」にしない
+
+休止中に別ゲームで技能が維持・向上していることもある。
+
+**原則:** returning statusはratingを固定的に下げる理由ではなく、再推定を速める理由として使う。
+
+## 216. 復帰者の最初の数戦は「再校正期間」として扱える
+
+競技モードへ即投入する前に、
+- warm-up
+- unranked calibration
+- practice
+を用意すると、技能を思い出す時間を作れる。
+
+## 217. シーズンresetとskill resetを混同しない
+
+進行・報酬のseason resetが必要でも、長年蓄積したskill estimateまで完全に消す必要はない。
+
+**原則:** progression reset、ranking compression、skill re-estimationを別変数として設計する。
+
+## 218. procedural regressionには「固定seed群」と「ランダムseed群」の両方を使う
+
+固定seed:
+- 過去bug
+- worst case
+- canonical cases
+
+ランダムseed:
+- 未知の破綻探索
+
+両方が必要。
+
+## 219. procedural testは「不変条件」と「品質指標」を分ける
+
+不変条件:
+- 到達可能
+- NaNなし
+- 道路切断なし
+
+品質指標:
+- 急ブレーキ率
+- landmark可視率
+- 繰り返し度
+- 平均速度
+
+**原則:** hard failとsoft quality regressionを別に扱う。
+
+## 220. 自動生成の回帰では「平均が改善した」だけで合格にしない
+
+平均値が良くても、最悪seedが悪化している可能性がある。
+
+見る:
+- median
+- p95 / p99
+- worst N
+- failure count
+
+**原則:** procedural QAはtail riskを監視する。
