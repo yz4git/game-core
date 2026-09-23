@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-23 / Batch 11
+最終更新: 2026-09-23 / Batch 12
 
 ## Completed / substantially sampled
 
@@ -14,8 +14,7 @@
 - LOGiN — 制作記事、RPG/ADV、レビュー、Program Olympics
 - Beep — 技術密度、レビュー
 - Play Meter — 設計、運営、初心者、セッション、Attract、音響／筐体
-- Micom BASIC / type-in preservation — 小規模ゲームのルール、音、セーブ、難度
-- Program Pochette — 1984–85 type-in games: sports abstraction, steering, resource limits, enemy AI, puzzle state transitions
+- Micom BASIC / Program Pochette — 小規模ゲーム、スポーツ抽象化、操作、資源、AI
 - Technopolis — 構成・自作文化
 - Marukatsu / Gekkan / PC Engine Fan — 構成・攻略誌文化
 - EGM — レビュー文化、格闘メタゲーム
@@ -25,71 +24,44 @@
 ### Related historical / developer / design material
 - Gamest / 三辻富貴朗系
 - Computer Gaming World
-- PaRappa / DDR historical design material
-- Nintendo 3D camera / targeting development material
-- Game Developer design archives
-- GDC Vault design / AI / validation material
-- local multiplayer design research
-- procedural generation design / constraint literature
+- Game Developer archives
+- GDC Vault design / AI / procedural / UGC sessions
+- procedural city / road generation literature
+- replay / spectator implementation material
+- touch ergonomics case studies
 - Game Accessibility Guidelines
 
 ## Core themes now well covered
-
-### Universal
-- 操作／技術密度
-- 判断密度
-- リスク／報酬
-- 学習可能性
-- 公平な失敗
-- テレグラフ／予測
-- ランダムと構造
-- 敵役割／組み合わせ
-- ペーシング／呼吸
-- 成功フィードバック
-- 操作感／入力寛容性
-- 上達指標
-- AI可読性／公平感
-- layered accessibility
-- prototype / Fresh-Eyes / Polish
 
 ### Batch 07
 - fighting / racing / shooter recovery / puzzle / economy / arcade onboarding
 
 ### Batch 08
-- audio / horror / save / teaching / encounters / metagame / UGC
+- audio / horror / save / teaching / encounters / metagame / UGC foundations
 
 ### Batch 09
-- rhythm design
-- camera / targeting
-- inventory ergonomics
-- procedural generation quality
-- local shared-play foundations
+- rhythm / camera / inventory / procedural generation / local shared play
 
 ### Batch 10
-- rhythm technical clock / calibration
-- strategy information architecture
-- inventory search scaling / obvious-work automation
-- camera future-information framing
-- local social-space design / rapid rounds
-- procedural quality floor / automated feasibility / difficulty constraints
-- accessibility dimensions beyond Easy/Hard
-- intrinsic vs extrinsic rewards / daily-pressure risks
-- crafting progressive reveal / logical recipes / material clutter
+- strategy UI / local multiplayer / accessibility / rewards / crafting
 
 ### Batch 11
-- sports abstraction: preserve sport-specific decisions instead of literal motion count
-- sports camera + control coordinate-system coupling
-- team AI / off-ball coordination / tactical layering
-- narrative consequence readability and causal planning
-- commitment vs exploration vs optimization in save/rewind rules
-- delayed-consequence acknowledgment
-- speedrun restart latency / deterministic mastery surface / fixed vs random seed categories
-- sequence-break classification and challenge-mode QA
-- strategy automation: automate execution, preserve intent
-- automation legibility / override points
-- AI personality through strategic priorities
-- tactical-clarity limits on AI presentation bandwidth
-- automated validation agents for repetitive balance/feasibility coverage
+- sports abstraction
+- narrative choice
+- speedrun / challenge
+- strategy automation
+- automated validation
+
+### Batch 12
+- procedural city road hierarchy / connectivity / driveability
+- landmark and district navigation grammar
+- LOD navigation preservation
+- generation seed/version/trace regression
+- replay determinism / version metadata / kill-cause learning
+- spectator continuous readability / focal management
+- touch directness / occlusion / grip / decision preservation
+- UGC cold-start discovery / recommendation / moderation / creator analytics
+- rested comeback / re-entry knowledge / low-obligation progression
 
 ## Dedicated guides
 
@@ -121,56 +93,62 @@
 - docs/narrative-choice-design.md
 - docs/speedrun-challenge-design.md
 - docs/strategy-automation.md
+- docs/procedural-city-road-generation.md
+- docs/replay-spectator-telemetry.md
+- docs/touch-controller-ergonomics.md
+- docs/ugc-discovery-moderation.md
+- docs/long-term-comeback-design.md
 
 ## Next priorities — high
 
-### Procedural city / road generation — deeper validation
-- road hierarchy
-- guaranteed connectivity
-- landmark spacing
-- visual repetition detection
-- LOD interaction with navigation
-- automated driveability agents
-- seed/version/trace based regression testing
+### Procedural city automated regression
+- thousands-of-seeds driveability metrics
+- road graph invariants
+- LOD regression screenshots / geometry checks
+- landmark visibility scoring
+- repetition detection
+- generation trace diffing
 
-### Replay / spectator / challenge telemetry
-- replay determinism
-- ghost representation
-- event compression
-- spectator threat readability
-- run metadata / versioning
+### Replay / challenge infrastructure
+- replay checksums
+- deterministic fixed-step requirements
+- ghost compression
+- leaderboard validation
+- event indexing / seeking
+- replay compatibility policy
 
-### Controller / touch ergonomics history
-- directional mental models
-- one-hand layouts
-- context-sensitive commands
-- simultaneous-input burden
-- physical-controller affordances
-
-### UGC discovery / moderation
-- creation → test → share → discover loop
-- ranking and cold-start discovery
+### UGC ecosystem deeper
+- creator cold-start experiments
+- recommendation diversity metrics
+- moderation queue design
 - remix / attribution
-- moderation burden
-- creator feedback loops
+- abuse-resistant ratings
+- versioning of published levels
 
-### Long-term progression without obligation
-- comeback systems
-- rested progress
-- seasonal reset cost
-- collection completion pressure
-- optional mastery tracks
+### Touch ergonomics deeper
+- handedness
+- safe-area / edge gestures
+- accidental OS gesture conflict
+- fatigue over 30–60 minute sessions
+- haptic feedback
+- virtual stick recenter strategies
+
+### Long-term progression deeper
+- rested-cap tuning
+- season reset migration
+- comeback bundle fairness
+- returning-player matchmaking
+- evergreen progression tracks
 
 ## Next priorities — medium
 
-- sports teammate selection / off-ball AI deeper study
-- narrative consequence telemetry
-- photo mode / camera expression
-- crafting economy deeper study
-- accessibility presets across genres
-- procedural aesthetic coherence
+- replay/photo camera expression
+- spectator analytics
+- accessibility across touch controls
 - simulation automation transparency
-- arcade cabinet / venue economics deeper historical pass
+- crafting economy
+- arcade venue economics deeper historical pass
+- narrative consequence telemetry
 
 ## Batch history
 
@@ -183,8 +161,9 @@
 - 07: Fighting / Racing / Shooter recovery / Puzzle / Economy / Arcade onboarding
 - 08: Audio / Horror / Save / Teaching / Encounters / Community / UGC
 - 09: Rhythm / Camera / Inventory / Procedural Generation / Local Shared Play
-- 10: Strategy UI / Local Multiplayer / Accessibility / Rewards / Crafting + Batch09 technical deepening
+- 10: Strategy UI / Local Multiplayer / Accessibility / Rewards / Crafting
 - 11: Sports Abstraction / Narrative Choice / Speedrun / Strategy Automation / Automated Validation
+- 12: Procedural City / Replay-Spectator / Touch / UGC Discovery / Comeback
 
 ## Rule for future runs
 
@@ -194,4 +173,4 @@
 4. 一次資料または実装経験に近い
 5. 専門ガイドへ実装可能な形で統合できる
 
-自動バッチと手動バッチが競合した場合は、既存成果を上書きせず、差分だけを追加する。
+自動バッチと手動バッチが競合した場合は、既存成果を上書きせず差分のみ追加する。
