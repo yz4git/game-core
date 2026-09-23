@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-23 / Batch 09
+最終更新: 2026-09-23 / Batch 10
 
 ## Completed / substantially sampled
 
@@ -14,23 +14,22 @@
 - LOGiN — 制作記事、RPG/ADV、レビュー
 - Beep — 技術密度、レビュー
 - Play Meter — 設計、運営、初心者、セッション、Attract、音響／筐体
-- Micom BASIC / type-in preservation — 小規模ゲームのルール、音による情報、セーブ、難度上昇
+- Micom BASIC / type-in preservation — 小規模ゲームのルール、音、セーブ、難度
 - Technopolis — 構成・自作文化
 - Marukatsu / Gekkan / PC Engine Fan — 構成・攻略誌文化
-- EGM — レビュー文化、Street Fighter IIの継続攻略／メタゲーム
+- EGM — レビュー文化、格闘メタゲーム
 - Game Hihyō — 批評誌としての位置づけ
 - K-POWER preservation — コンピュータ音楽／プログラム文化
 
-### Related historical / developer material
-- Gamest / 三辻富貴朗系 — 駆け引き、公平性、ステージ設計
-- Computer Gaming World — AI、RPG経済、UI、パズル、シミュレーション、セーブ、マニュアル／ヘルプ、UGC
-- PaRappa developer interviews — 判定幅、演奏緊張、自由なarrangement
-- DDR historical material — 判定、フィードバック、初心者モード、身体譜面
-- Nintendo Ocarina of Time development interviews — Z-targeting、3D座標、敵攻撃スケジューリング
-- Super Mario 64 manual — camera autonomy / override
-- Spelunky / roguelike procedural-generation discussions — robust components、fairness、gameplay-oriented generation
-- computational level-design research — solvabilityを越えたmechanic-aware generation
-- Resident Evil 4 inventory references — spatial capacity / capacity progression
+### Related historical / developer / design material
+- Gamest / 三辻富貴朗系
+- Computer Gaming World
+- PaRappa / DDR historical design material
+- Nintendo 3D camera / targeting development material
+- Game Developer design archives
+- local multiplayer design research
+- procedural generation design / constraint literature
+- Game Accessibility Guidelines
 
 ## Core themes now well covered
 
@@ -42,52 +41,41 @@
 - 公平な失敗
 - テレグラフ／予測
 - ランダムと構造
-- リソース制約
 - 敵役割／組み合わせ
 - ペーシング／呼吸
 - 成功フィードバック
 - 操作感／入力寛容性
-- スコア／上達指標
-- 隠し要素／攻略共有
+- 上達指標
 - AI可読性／公平感
 - layered accessibility
 - prototype / Fresh-Eyes / Polish
 
 ### Batch 07
-- 死後復帰
-- fighting matchup
-- racing anticipation
-- shooter recovery
-- puzzle planning
-- RPG economy
-- arcade onboarding
-- audience segmentation
+- fighting / racing / shooter recovery / puzzle / economy / arcade onboarding
 
 ### Batch 08
-- audio as gameplay information
-- horror tension cycle
-- save risk vs suspend convenience
-- manuals / contextual help / practical teaching
-- threat direction and offscreen fairness
-- camera as encounter design
-- metagame / exploit classification
-- UGC / Create→Test loop
+- audio / horror / save / teaching / encounters / metagame / UGC
 
 ### Batch 09
-- rhythm timing windows as emotional control
-- audiovisual timing agreement / calibration
-- note-level timing feedback
-- beginner musical continuity
-- expert rhythmic expression
-- 3D coordinate ambiguity / lock-on
-- camera + enemy scheduling
-- camera autonomy + manual override
-- spatial inventory / capacity progression
-- procedural quality gates beyond solvability
-- reproducible generation seeds
-- robust components for random placement
-- authored grammar + random assembly
-- shared-screen social information
+- rhythm design
+- camera / targeting
+- inventory ergonomics
+- procedural generation quality
+- local shared-play foundations
+
+### Batch 10
+- rhythm technical clock / calibration
+- strategy information architecture
+- attention hubs / notification priority
+- inventory search scaling / obvious-work automation
+- camera future-information framing
+- local social-space design / rapid rounds
+- procedural quality floor / automated feasibility / difficulty constraints
+- accessibility dimensions beyond Easy/Hard
+- redundant cues / remapping / speed control
+- intrinsic vs extrinsic rewards
+- daily-pressure risks
+- crafting progressive reveal / logical recipes / material clutter
 
 ## Dedicated guides
 
@@ -106,60 +94,65 @@
 - docs/encounter-and-camera-design.md
 - docs/community-ugc-metagame.md
 - docs/rhythm-game-design.md
+- docs/rhythm-game-timing.md
 - docs/camera-and-targeting.md
 - docs/procedural-generation-quality.md
 - docs/inventory-ergonomics.md
+- docs/strategy-ui-information.md
+- docs/local-multiplayer-design.md
+- docs/accessibility-options.md
+- docs/rewards-and-retention.md
+- docs/crafting-system-design.md
 
 ## Next priorities — high
 
-### Strategy UI / information architecture
-- layered map views
-- notification priority
-- forecast vs hidden information
-- automation vs manual control
-- reducing micromanagement without removing decisions
-- information density at mobile scale
+### Procedural city / road generation
+- road hierarchy
+- guaranteed connectivity
+- landmark spacing
+- visual repetition detection
+- LOD interaction with navigation
+- automated driveability tests
 
-### Local multiplayer / social dynamics
-- shared-screen readable goals
-- comeback without fake equality
-- downtime reduction
-- role asymmetry
-- griefing / cooperation
-- controller handoff / short-session party play
+### Strategy automation vs meaningful micromanagement
+- auto-production
+- worker automation
+- formation control
+- alerts that lead to action
+- preserving macro choice while removing clicks
 
-### Accessibility beyond Easy/Hard
-- remappable assistance dimensions
-- reaction-time vs planning assistance
-- visual/audio redundancy
-- motor accessibility without strategic flattening
-- assist presets + granular controls
+### Sports abstraction
+- translating real rules into readable decisions
+- AI teammate readability
+- position switching
+- timing windows
+- season/meta progression
 
-### Reward schedules / retention without grind
-- variable vs predictable rewards
-- visible progress
-- daily/weekly pressure
-- collection completion
-- mastery rewards vs attendance rewards
+### Narrative choice readability
+- visible consequence vs hidden consequence
+- delayed consequences
+- false choice
+- irreversible choices
+- save/reload interaction
 
-### Procedural generation — deeper validation
-- landmark grammar
-- road / city generation
-- aesthetic coherence
-- repetition detection
-- automated play agents
-- regeneration thresholds
+### Speedrun / challenge mode
+- restart speed
+- deterministic rules
+- split timing
+- practice tools
+- category support
+- exploit policy
 
 ## Next priorities — medium
-
-- sports abstraction deeper study
-- user-generated content discovery/moderation
-- simulation transparency deeper study
-- speedrun / challenge-mode design
+- replay / spectator tools
 - controller / touch ergonomics history
-- narrative choice readability
-- crafting systems and material clutter
-- photo / replay / spectator modes
+- photo mode / camera expression
+- long-term progression without obligation
+- UGC discovery / moderation
+- crafting economy deeper study
+- accessibility presets across genres
+- procedural aesthetic coherence
+- simulation automation transparency
 
 ## Batch history
 
@@ -172,13 +165,14 @@
 - 07: Fighting / Racing / Shooter recovery / Puzzle / Economy / Arcade onboarding
 - 08: Audio / Horror / Save / Teaching / Encounters / Community / UGC
 - 09: Rhythm / Camera / Inventory / Procedural Generation / Local Shared Play
+- 10: Strategy UI / Local Multiplayer / Accessibility / Rewards / Crafting + Batch09 technical deepening
 
 ## Rule for future runs
 
 1. 転用価値が高い
 2. 既存原則にない
 3. 異なる年代・ジャンルから検証できる
-4. 一次資料または当時資料に近い
+4. 一次資料または実装経験に近い
 5. 専門ガイドへ実装可能な形で統合できる
 
-各バッチは可能な限り複数ジャンル・複数年代を横断し、資料列挙ではなく実装・プレイテスト成果へ変換する。
+自動バッチと手動バッチが競合した場合は、既存成果を上書きせず、差分だけを追加する。
