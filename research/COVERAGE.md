@@ -2,49 +2,28 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 21
+最終更新: 2026-09-24 / Batch 22
 
 ## Completed / substantially sampled
 
 ### Historical / magazine / preservation foundation
 - Gaming Alexandria Magazine Archive / Magazine Sets
-- Family Computer Magazine
-- Nintendo Fun Club News
-- GamePro
-- LOGiN — 1983 / 1984 / 1985 preservation sampling plus prior design passes
-- Beep
-- Play Meter — archive overview plus operator-setting / attract / session-economics / physical-interface / maintenance passes
-- Micom BASIC / Program Pochette
-- Technopolis
-- Marukatsu / Gekkan / PC Engine Fan — complete PC Engine Fan run indexed
-- EGM
-- Game Hihyō
-- K-POWER
-- Monthly Coin Journal / Canadian Coin Box — 1989 / 1995 / 1996 / 1998 arcade-operations sampling
-- Japan Amusement Monthly — 1992 sampling
-- Game Yuu II — 1995–1996 sampling
+- Family Computer Magazine / Nintendo Fun Club News / GamePro / LOGiN / Beep / EGM / Super Play
+- PC Engine Fan — complete run indexed; 1993/1994 touch-contrast sampling
 - Famimaga 64 — 1996–1998 complete holdings indexed
+- Play Meter / Monthly Coin Journal / Japan Amusement Monthly / Game Yuu II
+- Micom BASIC / Program Pochette / Technopolis / Marukatsu / K-POWER / Game Hihyō
 
 ### Related developer / technical / design material
-- Gamest / 三辻富貴朗系
-- Computer Gaming World
-- Game Developer archives
-- GDC Vault
-- Apple game/touch HIG and WWDC
-- procedural-generation / city-road literature
-- UGC platform moderation guidelines
-- returning-player matchmaking case studies
-- International Arcade Museum eLibrary / Play Meter public text pages
-- arcade operator earnings / settings historical syntheses
-- SEGA Arcade History / product archive
-- HCI Museum physical arcade controller records
-- arcade operator/service manuals — calibration, I/O tests, network linking, payout configuration
-- PlayFab Game Saves — cross-device sync, conflict handling, offline progression
-- save-schema migration / backup-recovery implementation references
-- Nintendo save corruption support documentation
-- PCG evaluation literature — expressive range, behavior/trajectory metrics, human similarity calibration, novelty search
-- Blizzard Overwatch replay / league / world-cup viewer documentation
-- Unity server-authority / spectator snapshot-distribution material
+- Gamest / Computer Gaming World / Game Developer / GDC Vault
+- Apple game/touch HIG and WWDC — Game Controls, virtual/physical controllers, adaptive touch layouts, haptics
+- procedural-generation / city-road / PCG evaluation literature
+- UGC moderation / returner matchmaking case studies
+- arcade operator/service manuals and historical sales/settings material
+- PlayFab Game Saves / save migration-recovery references
+- GGPO / Source networking / deterministic and snapshot networking references
+- Blizzard Overwatch replay/spectator and Unity authority/spectator material
+- smartphone thumb-reach / grip-span ergonomics research
 
 ## Well-covered batches
 
@@ -56,70 +35,31 @@
 - 11: sports abstraction / narrative choice / speedrun / strategy automation / automated validation
 - 12: procedural city / replay-spectator / touch / UGC discovery / comeback
 - 13: replay determinism-regression / iPhone safe-area-haptics / UGC version-remix / returner recalibration / procedural regression
-- 14: arcade operator tuning / session economics / attract-mode teaching / spectator conversion / photo-mode expression / procedural structural diversity
-- 14B: headless procedural CI / replay operations / touch production QA / UGC trust-safety / returner matchmaking operations
-- 15: physical arcade controls / cabinet ergonomics / embodied input / spectator-readable intent / platform differentiation / local co-op social feedback
-- 16: continue / buy-in / redemption incentives / kit economics / public-play conversion / linked-play social structure
-- 17: physical-input calibration / maintenance diagnostics / linked-network lifecycle / payout invariants / operator audits / reset domains
-- 18: save schema migration / transactional writes / corruption recovery / backup horizon / cloud conflict / save identity / destructive fault injection
-- 19: rollback / input prediction / interpolation / lag compensation / jitter and burst loss / mobile reconnect / desync diagnostics
-- 20: procedural decision signatures / route heatmaps / expressive-range distributions / visual semantic repetition / human metric calibration
-- 21: replay retention / compatibility / authority / spectator scale / privacy boundary / learning UX / comprehension analytics
+- 14/14B: arcade operations / attract / photo mode / procedural and production operations
+- 15: physical arcade controls / embodied input / platform differentiation
+- 16: continue / redemption / kit economics / public-play conversion
+- 17: calibration / maintenance diagnostics / linked network / payout invariants
+- 18: save migration / corruption recovery / cloud conflict / fault injection
+- 19: rollback / prediction / interpolation / mobile reconnect / desync
+- 20: procedural decision signatures / heatmaps / semantic repetition
+- 21: replay lifecycle / authority / spectator scale / privacy / analytics
+- 22: adaptive touch ergonomics / handedness / reachability / occlusion / haptic density / long-session thermal fatigue / cross-input semantic equivalence
 
 ## Dedicated guides
 
-- docs/opponent-ai-and-balance.md
-- docs/layered-accessibility-and-depth.md
-- docs/fighting-game-design.md
-- docs/racing-game-design.md
-- docs/shooter-recovery-and-encounters.md
-- docs/puzzle-planning.md
-- docs/arcade-session-and-attract.md
-- docs/game-economy-and-interface.md
-- docs/audio-as-gameplay.md
-- docs/horror-tension-design.md
-- docs/save-and-failure-design.md
-- docs/save-resilience-and-migration.md
-- docs/teaching-and-documentation.md
-- docs/encounter-and-camera-design.md
-- docs/community-ugc-metagame.md
-- docs/rhythm-game-design.md
-- docs/rhythm-game-timing.md
-- docs/camera-and-targeting.md
-- docs/procedural-generation-quality.md
-- docs/procedural-diversity-metrics.md
-- docs/inventory-ergonomics.md
-- docs/strategy-ui-information.md
-- docs/local-multiplayer-design.md
-- docs/accessibility-options.md
-- docs/rewards-and-retention.md
-- docs/crafting-system-design.md
-- docs/sports-game-abstraction.md
-- docs/narrative-choice-design.md
-- docs/speedrun-challenge-design.md
-- docs/strategy-automation.md
-- docs/procedural-city-road-generation.md
+Core specialist set includes:
+- docs/touch-controller-ergonomics.md
+- docs/adaptive-touch-ergonomics.md
+- docs/touch-production-qa.md
+- docs/physical-arcade-interface-design.md
+- docs/input-calibration-and-diagnostics.md
+- docs/rollback-mobile-network-design.md
 - docs/replay-spectator-telemetry.md
 - docs/replay-lifecycle-privacy.md
-- docs/touch-controller-ergonomics.md
-- docs/ugc-discovery-moderation.md
-- docs/long-term-comeback-design.md
-- docs/replay-determinism-regression.md
-- docs/procedural-regression-testing.md
-- docs/ugc-versioning-remix.md
-- docs/returning-player-recalibration.md
-- docs/arcade-operations-economics.md
-- docs/photo-mode-player-expression.md
-- docs/procedural-ci-operations.md
-- docs/replay-validation-operations.md
-- docs/touch-production-qa.md
-- docs/ugc-trust-safety-ops.md
-- docs/returner-matchmaking-operations.md
-- docs/physical-arcade-interface-design.md
-- docs/continue-redemption-public-play.md
-- docs/input-calibration-and-diagnostics.md
-- docs/linked-play-reliability.md
-- docs/rollback-mobile-network-design.md
+- docs/procedural-diversity-metrics.md
+- docs/save-resilience-and-migration.md
+
+See docs/ for the remaining genre/system guides from earlier batches.
 
 ## Next priorities — high
 
@@ -137,33 +77,31 @@
 - automated highlight quality evaluation
 - replay storage quotas / eviction stress tests
 
-### Touch / physical interaction
-- handedness presets
-- dynamic control positioning
-- haptic fatigue
-- heat / long-session grip
-- accessibility + touch interaction
-- semantic equivalence metrics across touch/controller/keyboard
+### Touch / physical interaction — follow-up
+- empirical thresholds for layout adaptation / hysteresis
+- controller-to-touch competitive fairness telemetry
+- device-size matrix and thumb-occlusion automated overlays
+- sustained-performance + thermal ergonomics automation
+- motor-accessibility presets validated per genre
 
 ### Arcade / public-play follow-up
 - linked cabinets / team-vs-team queue and dropout behavior
-- public demo / convention conversion telemetry in modern deployments
-- skill-based redemption transparency and payout volatility
+- public demo / convention conversion telemetry
+- skill-based redemption transparency / payout volatility
 - maintenance frequency / component degradation effects on play
 
 ### Save / resilience — follow-up
 - semantic merge of independent progression branches
 - content-DLC removal / missing-mod compatibility
-- storage quota / partial-write behavior in browsers
-- recovery UX and privacy
-- long-lived save fixture corpus
+- browser storage quota / partial-write behavior
+- recovery UX/privacy and long-lived fixture corpus
 
 ### Networked action — follow-up
 - rollback CPU/memory budgets on mobile Safari
 - host/authority migration under dropout
 - matchmaking network-quality thresholds
 - cheating/security boundaries for client prediction
-- protocol/version migration for long-lived multiplayer
+- protocol/version migration
 
 ## Next priorities — medium
 
