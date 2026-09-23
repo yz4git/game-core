@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-23 / Batch 14
+最終更新: 2026-09-23 / Batch 14B
 
 ## Completed / substantially sampled
 
@@ -45,6 +45,7 @@
 - 12: procedural city / replay-spectator / touch / UGC discovery / comeback
 - 13: replay determinism-regression / iPhone safe-area-haptics / UGC version-remix / returner recalibration / procedural regression
 - 14: arcade operator tuning / session economics / attract-mode teaching / spectator conversion / photo-mode expression / procedural structural diversity
+- 14B: headless procedural CI / replay operations / touch production QA / UGC trust-safety / returner matchmaking operations
 
 ## Dedicated guides
 
@@ -87,6 +88,11 @@
 - docs/returning-player-recalibration.md
 - docs/arcade-operations-economics.md
 - docs/photo-mode-player-expression.md
+- docs/procedural-ci-operations.md
+- docs/replay-validation-operations.md
+- docs/touch-production-qa.md
+- docs/ugc-trust-safety-ops.md
+- docs/returner-matchmaking-operations.md
 
 ## Next priorities — high
 
@@ -100,9 +106,10 @@
 - structural-diversity / decision-signature metrics
 
 ### Replay / telemetry — production scale
+- checksum detection -> structured state diff
+- first-divergence tooling
 - event indexing / seek tables
 - replay privacy
-- checksum design
 - deterministic fixed-step integration
 - server-authoritative validation
 - replay storage retention
