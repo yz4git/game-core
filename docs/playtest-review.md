@@ -1187,3 +1187,17 @@ UGC制限ユーザーで、
 - stomp rate
 - rematch/quit
 も確認する。
+
+
+## Short-session economy / public-play review — Batch 16
+
+- Continue使用後も次の失敗を避けたい緊張が残るか
+- Continue/buy-inがskill rankやmastery signalを金・回数だけで代替していないか
+- scoreが報酬へ変換される場合、reward/minute最大行動が意図した遊びと一致するか
+- 意図的な死亡、restart、safe loop、time extensionで報酬をfarmできないか
+- 初見の観戦者が10〜20秒で「何をすればよいか」を説明できるか
+- demo/attractが超絶プレイだけでなく自分にも可能な成功を見せるか
+- 人間プレイヤーが増えることでtarget/route/timing/position/resource判断が変化するか
+- team resultが犯人探しより役割認識と再戦会話を生むか
+- session短縮時にstarts/hourだけでなくimmediate replayも測っているか
+- 運営設定を変更したときonboarding、fairness、reward economyが壊れないか
