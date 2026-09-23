@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 22
+最終更新: 2026-09-24 / Batch 23
 
 ## Completed / substantially sampled
 
@@ -13,10 +13,11 @@
 - Famimaga 64 — 1996–1998 complete holdings indexed
 - Play Meter / Monthly Coin Journal / Japan Amusement Monthly / Game Yuu II
 - Micom BASIC / Program Pochette / Technopolis / Marukatsu / K-POWER / Game Hihyō
+- Batch 23 historical sports context: Play Meter 1977/1988/1990, GamePro 1989, Technopolis 1987, Family Computer Magazine 1990, Canadian Coin Box 1990
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
-- Apple game/touch HIG and WWDC — Game Controls, virtual/physical controllers, adaptive touch layouts, haptics
+- Apple game/touch HIG and WWDC
 - procedural-generation / city-road / PCG evaluation literature
 - UGC moderation / returner matchmaking case studies
 - arcade operator/service manuals and historical sales/settings material
@@ -24,6 +25,8 @@
 - GGPO / Source networking / deterministic and snapshot networking references
 - Blizzard Overwatch replay/spectator and Unity authority/spectator material
 - smartphone thumb-reach / grip-span ergonomics research
+- FIFA 13/17/22 and EA SPORTS FC 25 tactical/off-ball AI developer material
+- TacticAI football tactical graph-model research
 
 ## Well-covered batches
 
@@ -43,7 +46,8 @@
 - 19: rollback / prediction / interpolation / mobile reconnect / desync
 - 20: procedural decision signatures / heatmaps / semantic repetition
 - 21: replay lifecycle / authority / spectator scale / privacy / analytics
-- 22: adaptive touch ergonomics / handedness / reachability / occlusion / haptic density / long-session thermal fatigue / cross-input semantic equivalence
+- 22: adaptive touch ergonomics / handedness / reachability / occlusion / haptic density / thermal fatigue / cross-input equivalence
+- 23: sports teammate/off-ball AI / hierarchical team intent / role contracts / spatial relations / intent hysteresis / counterfactual AI QA
 
 ## Dedicated guides
 
@@ -58,8 +62,9 @@ Core specialist set includes:
 - docs/replay-lifecycle-privacy.md
 - docs/procedural-diversity-metrics.md
 - docs/save-resilience-and-migration.md
+- docs/sports-game-abstraction.md — expanded Batch 23 teammate/off-ball AI guidance
 
-See docs/ for the remaining genre/system guides from earlier batches.
+See docs/ for remaining genre/system guides.
 
 ## Next priorities — high
 
@@ -84,12 +89,6 @@ See docs/ for the remaining genre/system guides from earlier batches.
 - sustained-performance + thermal ergonomics automation
 - motor-accessibility presets validated per genre
 
-### Arcade / public-play follow-up
-- linked cabinets / team-vs-team queue and dropout behavior
-- public demo / convention conversion telemetry
-- skill-based redemption transparency / payout volatility
-- maintenance frequency / component degradation effects on play
-
 ### Save / resilience — follow-up
 - semantic merge of independent progression branches
 - content-DLC removal / missing-mod compatibility
@@ -106,15 +105,15 @@ See docs/ for the remaining genre/system guides from earlier batches.
 ## Next priorities — medium
 
 - narrative consequence telemetry
-- sports teammate/off-ball AI
+- sports AI follow-up: multi-agent assignment conflict / role-transition hysteresis / teammate option-quality benchmark corpus
 - crafting economy
 - accessibility across genres
 - photo/replay sharing privacy and metadata
 - live balance telemetry
 - economy inflation monitoring
+- arcade linked-team queue/dropout and skill-redemption transparency
 
 ## Rule for future runs
-
 1. 既存内容と重複しない
 2. 実装・QA・プレイテストへ落とせる
 3. source -> mechanism -> principleへ抽象化する
