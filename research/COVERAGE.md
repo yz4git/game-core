@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-23 / Batch 13
+最終更新: 2026-09-23 / Batch 14
 
 ## Completed / substantially sampled
 
@@ -13,13 +13,14 @@
 - GamePro
 - LOGiN
 - Beep
-- Play Meter
+- Play Meter — archive overview plus deeper operator-setting / attract / session-economics pass in Batch 14
 - Micom BASIC / Program Pochette
 - Technopolis
 - Marukatsu / Gekkan / PC Engine Fan
 - EGM
 - Game Hihyō
 - K-POWER
+- Monthly Coin Journal / Canadian Coin Box — archive presence sampled for coin-op operations context
 
 ### Related developer / technical / design material
 - Gamest / 三辻富貴朗系
@@ -30,6 +31,8 @@
 - procedural-generation / city-road literature
 - UGC platform moderation guidelines
 - returning-player matchmaking case studies
+- International Arcade Museum eLibrary / Play Meter public text pages
+- arcade operator earnings / settings historical syntheses
 
 ## Well-covered batches
 
@@ -41,6 +44,7 @@
 - 11: sports abstraction / narrative choice / speedrun / strategy automation / automated validation
 - 12: procedural city / replay-spectator / touch / UGC discovery / comeback
 - 13: replay determinism-regression / iPhone safe-area-haptics / UGC version-remix / returner recalibration / procedural regression
+- 14: arcade operator tuning / session economics / attract-mode teaching / spectator conversion / photo-mode expression / procedural structural diversity
 
 ## Dedicated guides
 
@@ -81,6 +85,8 @@
 - docs/procedural-regression-testing.md
 - docs/ugc-versioning-remix.md
 - docs/returning-player-recalibration.md
+- docs/arcade-operations-economics.md
+- docs/photo-mode-player-expression.md
 
 ## Next priorities — high
 
@@ -91,6 +97,7 @@
 - geometry invariant checks
 - visual semantic diff
 - performance budgets per seed
+- structural-diversity / decision-signature metrics
 
 ### Replay / telemetry — production scale
 - event indexing / seek tables
@@ -123,16 +130,23 @@
 - returner-specific telemetry
 - post-season return flows
 
+### Arcade / public-play follow-up
+- operator-adjustable difficulty history across more Play Meter decades
+- continue / buy-in economics
+- redemption transition in the 1990s
+- cabinet ergonomics and physical control novelty
+- public demo / convention conversion metrics
+
 ## Next priorities — medium
 
-- photo mode / camera expression
 - narrative consequence telemetry
 - sports teammate/off-ball AI
 - crafting economy
 - accessibility across genres
-- arcade venue economics deeper historical pass
-- procedural aesthetics / repetition metrics
+- procedural aesthetics / repetition metrics deeper pass
 - spectator analytics
+- photo/replay sharing privacy and metadata
+- physical arcade control ergonomics
 
 ## Rule for future runs
 
