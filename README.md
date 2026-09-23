@@ -25,6 +25,12 @@
 - [Puzzle Planning](docs/puzzle-planning.md) — 未来情報、計画、速度、リセット
 - [Arcade Session & Attract](docs/arcade-session-and-attract.md) — 初心者導入、セッション、デモ
 - [Game Economy & Interface](docs/game-economy-and-interface.md) — 通貨、消耗品、反復UI、因果
+- [Audio as Gameplay](docs/audio-as-gameplay.md) — 音による危険、方向、状態の情報設計
+- [Horror Tension Design](docs/horror-tension-design.md) — 予告、不確実性、安全、恐怖周期
+- [Save & Failure Design](docs/save-and-failure-design.md) — セーブ、損失量、中断、永続損失
+- [Teaching & Documentation](docs/teaching-and-documentation.md) — マニュアル、ヘルプ、実践教授
+- [Encounter & Camera Design](docs/encounter-and-camera-design.md) — 脅威方向、画面外、公平な大群戦
+- [Community, UGC & Metagame](docs/community-ugc-metagame.md) — 攻略文化、エディタ、想定外技、共有
 - [Genre Heuristics](docs/genre-heuristics.md) — ジャンル別の重点項目
 - [Copyright & Sources](docs/copyright-and-sources.md) — 参照資料の扱い方
 - [Research Notes](research/README.md) — 調査ごとの抽象化メモ
