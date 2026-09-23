@@ -50,6 +50,13 @@
 - [Procedural Regression Testing](docs/procedural-regression-testing.md) — 固定seed、tail risk、trace
 - [UGC Versioning & Remix](docs/ugc-versioning-remix.md) — version固定、派生系譜、moderation evidence
 - [Returning Player Recalibration](docs/returning-player-recalibration.md) — MMR確信度、warm-up、season reset
+- [Arcade Operations & Economics](docs/arcade-operations-economics.md) — 運営設定、セッション、Attract、公共プレイ
+- [Photo Mode & Player Expression](docs/photo-mode-player-expression.md) — 撮影、構図、共有、表現
+- [Procedural CI Operations](docs/procedural-ci-operations.md) — headless seed farm、tail metrics、failure artifacts
+- [Replay Validation Operations](docs/replay-validation-operations.md) — checksum、first divergence、side effects、CI
+- [Touch Production QA](docs/touch-production-qa.md) — safe-area、thumb reach、長時間疲労、haptics
+- [UGC Trust & Safety Operations](docs/ugc-trust-safety-ops.md) — report、brigading、appeal、restriction
+- [Returner Matchmaking Operations](docs/returner-matchmaking-operations.md) — uncertainty、適応速度、対戦相手公平性
 - [Genre Heuristics](docs/genre-heuristics.md) — ジャンル別の重点項目
 - [Copyright & Sources](docs/copyright-and-sources.md) — 参照資料の扱い方
 - [Research Notes](research/README.md) — 調査ごとの抽象化メモ
