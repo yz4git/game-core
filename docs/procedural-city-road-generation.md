@@ -156,3 +156,68 @@ seedだけでは生成器更新後の再現に不十分な場合がある。
 - 100 seedの最悪5件を説明できるか
 - agentは到達するだけでなく自然に走れるか
 - seed/version/traceで不具合を完全再現できるか
+
+
+## 13. Canonical regression seeds
+
+固定seedセットを持つ。
+
+含める:
+- 過去bug
+- steep terrain
+- dense downtown
+- sparse suburbs
+- extreme bridge/tunnel cases
+- LOD-sensitive landmarks
+
+generator変更ごとに同じseedを自動検査する。
+
+## 14. Random exploration seeds
+
+固定seedだけでは未知の破綻を見つけられない。
+
+CI/夜間テスト等でランダムseedを追加し、
+失敗seedはcanonical setへ昇格する。
+
+## 15. Hard invariants vs soft metrics
+
+Hard fail:
+- disconnected major road
+- impossible destination
+- invalid geometry
+- NaN
+- road under terrain
+
+Soft regression:
+- excessive braking
+- repetitive blocks
+- low landmark visibility
+- high U-turn count
+
+判定方法を分ける。
+
+## 16. Tail-risk reporting
+
+平均だけでなく、
+- worst N
+- p95
+- p99
+- failure count
+を残す。
+
+少数の極端な悪seedを平均が隠さないようにする。
+
+## 17. Trace diffing
+
+同じseedの新旧generator traceを比較し、
+どの生成判断から結果が変わったか追えるようにする。
+
+## 18. Navigation LOD regression
+
+LOD変更時に、
+- road silhouette
+- junction visibility
+- landmark presence
+の自動／半自動比較を行う。
+
+FPS改善と引き換えにnavigation情報が消えていないか検査する。
