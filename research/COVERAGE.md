@@ -2,66 +2,45 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-23 / Batch 12
+最終更新: 2026-09-23 / Batch 13
 
 ## Completed / substantially sampled
 
-### Gaming Alexandria / linked archive material
-- Gaming Alexandria Magazine Archive / Magazine Sets — 全体構成
-- Family Computer Magazine — 高得点・攻略文化
-- Nintendo Fun Club News — 攻略・能力多用途性
-- GamePro — 攻略、スコア、リソース、格闘攻略
-- LOGiN — 制作記事、RPG/ADV、レビュー、Program Olympics
-- Beep — 技術密度、レビュー
-- Play Meter — 設計、運営、初心者、セッション、Attract、音響／筐体
-- Micom BASIC / Program Pochette — 小規模ゲーム、スポーツ抽象化、操作、資源、AI
-- Technopolis — 構成・自作文化
-- Marukatsu / Gekkan / PC Engine Fan — 構成・攻略誌文化
-- EGM — レビュー文化、格闘メタゲーム
-- Game Hihyō — 批評誌としての位置づけ
-- K-POWER preservation — コンピュータ音楽／プログラム文化
+### Historical / magazine / preservation foundation
+- Gaming Alexandria Magazine Archive / Magazine Sets
+- Family Computer Magazine
+- Nintendo Fun Club News
+- GamePro
+- LOGiN
+- Beep
+- Play Meter
+- Micom BASIC / Program Pochette
+- Technopolis
+- Marukatsu / Gekkan / PC Engine Fan
+- EGM
+- Game Hihyō
+- K-POWER
 
-### Related historical / developer / design material
+### Related developer / technical / design material
 - Gamest / 三辻富貴朗系
 - Computer Gaming World
 - Game Developer archives
-- GDC Vault design / AI / procedural / UGC sessions
-- procedural city / road generation literature
-- replay / spectator implementation material
-- touch ergonomics case studies
-- Game Accessibility Guidelines
+- GDC Vault
+- Apple game/touch HIG and WWDC
+- procedural-generation / city-road literature
+- UGC platform moderation guidelines
+- returning-player matchmaking case studies
 
-## Core themes now well covered
+## Well-covered batches
 
-### Batch 07
-- fighting / racing / shooter recovery / puzzle / economy / arcade onboarding
-
-### Batch 08
-- audio / horror / save / teaching / encounters / metagame / UGC foundations
-
-### Batch 09
-- rhythm / camera / inventory / procedural generation / local shared play
-
-### Batch 10
-- strategy UI / local multiplayer / accessibility / rewards / crafting
-
-### Batch 11
-- sports abstraction
-- narrative choice
-- speedrun / challenge
-- strategy automation
-- automated validation
-
-### Batch 12
-- procedural city road hierarchy / connectivity / driveability
-- landmark and district navigation grammar
-- LOD navigation preservation
-- generation seed/version/trace regression
-- replay determinism / version metadata / kill-cause learning
-- spectator continuous readability / focal management
-- touch directness / occlusion / grip / decision preservation
-- UGC cold-start discovery / recommendation / moderation / creator analytics
-- rested comeback / re-entry knowledge / low-obligation progression
+- 01–06: foundational principles / arcade science / review culture / Japanese lineage / RPG-ADV / AI-coop
+- 07: fighting / racing / shooter recovery / puzzle / economy / arcade onboarding
+- 08: audio / horror / save / teaching / encounters / community / UGC
+- 09: rhythm / camera / inventory / procedural generation / local shared play
+- 10: strategy UI / local multiplayer / accessibility / rewards / crafting
+- 11: sports abstraction / narrative choice / speedrun / strategy automation / automated validation
+- 12: procedural city / replay-spectator / touch / UGC discovery / comeback
+- 13: replay determinism-regression / iPhone safe-area-haptics / UGC version-remix / returner recalibration / procedural regression
 
 ## Dedicated guides
 
@@ -98,79 +77,67 @@
 - docs/touch-controller-ergonomics.md
 - docs/ugc-discovery-moderation.md
 - docs/long-term-comeback-design.md
+- docs/replay-determinism-regression.md
+- docs/procedural-regression-testing.md
+- docs/ugc-versioning-remix.md
+- docs/returning-player-recalibration.md
 
 ## Next priorities — high
 
-### Procedural city automated regression
-- thousands-of-seeds driveability metrics
-- road graph invariants
-- LOD regression screenshots / geometry checks
-- landmark visibility scoring
-- repetition detection
-- generation trace diffing
+### Procedural automated QA — production scale
+- headless thousands-of-seeds runs
+- failure artifact bundles
+- route heatmaps
+- geometry invariant checks
+- visual semantic diff
+- performance budgets per seed
 
-### Replay / challenge infrastructure
-- replay checksums
-- deterministic fixed-step requirements
-- ghost compression
-- leaderboard validation
-- event indexing / seeking
-- replay compatibility policy
+### Replay / telemetry — production scale
+- event indexing / seek tables
+- replay privacy
+- checksum design
+- deterministic fixed-step integration
+- server-authoritative validation
+- replay storage retention
 
-### UGC ecosystem deeper
-- creator cold-start experiments
-- recommendation diversity metrics
-- moderation queue design
-- remix / attribution
-- abuse-resistant ratings
-- versioning of published levels
+### Touch — production scale
+- handedness presets
+- dynamic control positioning
+- OS gesture conflict testing
+- haptic fatigue
+- heat / long-session grip
+- accessibility + touch interaction
 
-### Touch ergonomics deeper
-- handedness
-- safe-area / edge gestures
-- accidental OS gesture conflict
-- fatigue over 30–60 minute sessions
-- haptic feedback
-- virtual stick recenter strategies
+### UGC operations
+- version migration
+- remix permission policy
+- rating manipulation / brigading resistance
+- moderation queue prioritization
+- appeals
+- deleted-parent remix behavior
 
-### Long-term progression deeper
-- rested-cap tuning
-- season reset migration
-- comeback bundle fairness
-- returning-player matchmaking
-- evergreen progression tracks
+### Returning-player systems
+- uncertainty tuning
+- group matchmaking
+- comeback bundle abuse
+- returner-specific telemetry
+- post-season return flows
 
 ## Next priorities — medium
 
-- replay/photo camera expression
-- spectator analytics
-- accessibility across touch controls
-- simulation automation transparency
-- crafting economy
-- arcade venue economics deeper historical pass
+- photo mode / camera expression
 - narrative consequence telemetry
-
-## Batch history
-
-- 01: foundational magazine lessons
-- 02: arcade design science
-- 03: review culture
-- 04: Japanese design lineage
-- 05: RPG / Adventure / mastery
-- 06: AI / Co-op / layered depth
-- 07: Fighting / Racing / Shooter recovery / Puzzle / Economy / Arcade onboarding
-- 08: Audio / Horror / Save / Teaching / Encounters / Community / UGC
-- 09: Rhythm / Camera / Inventory / Procedural Generation / Local Shared Play
-- 10: Strategy UI / Local Multiplayer / Accessibility / Rewards / Crafting
-- 11: Sports Abstraction / Narrative Choice / Speedrun / Strategy Automation / Automated Validation
-- 12: Procedural City / Replay-Spectator / Touch / UGC Discovery / Comeback
+- sports teammate/off-ball AI
+- crafting economy
+- accessibility across genres
+- arcade venue economics deeper historical pass
+- procedural aesthetics / repetition metrics
+- spectator analytics
 
 ## Rule for future runs
 
-1. 転用価値が高い
-2. 既存原則にない
-3. 異なる年代・ジャンルから検証できる
-4. 一次資料または実装経験に近い
-5. 専門ガイドへ実装可能な形で統合できる
-
-自動バッチと手動バッチが競合した場合は、既存成果を上書きせず差分のみ追加する。
+1. 既存内容と重複しない
+2. 実装・QA・プレイテストへ落とせる
+3. source -> mechanism -> principleへ抽象化する
+4. copyright-protected表現を保存しない
+5. 自動バッチと手動バッチが競合したら差分のみ追加する
