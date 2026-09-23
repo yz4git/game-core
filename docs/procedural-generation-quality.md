@@ -119,3 +119,33 @@ QA記録には、
 - landmarkなしで迷う率
 - seedを100%再現できるか
 - 自動合格したseedを人間が却下する理由は何か
+
+
+## 11. Automated feasibility checks
+
+アクションゲームでは単純な経路探索だけでなく、可能ならゲーム物理を使うbot/agentで生成面を試す。
+
+特に、
+- 最大ジャンプ
+- 慣性
+- 移動速度
+- 必須技
+を含めて到達可能性を確認する。
+
+## 12. Difficulty by constraint relaxation
+
+序盤は厳しい安全制約を使い、進行とともに、
+- gap
+- hazard count
+- enemy combinations
+- route ambiguity
+などの許容範囲を広げる。
+
+乱数の振れ幅ではなく、制約の段階で難度を作る。
+
+## 13. Player capability and generator co-design
+
+生成器の出力範囲とプレイヤー能力を別々に固定しない。
+
+新しい移動手段や補助能力によって、
+以前不適切だった地形を面白い課題へ変えられることがある。
