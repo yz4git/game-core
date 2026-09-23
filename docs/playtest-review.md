@@ -45,3 +45,21 @@
 - highlight telemetryがraw chat/voice/face/account IDを不要に保存していないか
 - level/seed別highlight signatureが単一パターンへ偏っていないか
 - longest low-highlight intervalが意図した休息なのか、判断密度低下なのか確認したか
+
+## Batch 26 — Adversarial procedural QA review
+
+- random seed数だけでcoverage達成と判断していないか
+- canonical / random / adversarial cohortを別集計しているか
+- hard invalidだけでなくnear-failure marginを保存しているか
+- geometry/topologyを通過したseedをdynamic simulationでも検証しているか
+- local adjacencyが正しくてもglobal progressionが破綻していないか
+- novice/baseline/expert/exploit-seeking等で結果が大きく食い違わないか
+- adversarial searchが見た目の奇妙さではなくplayer-relevant failureを最大化しているか
+- solution/action traceがほぼ同じseedをcosmetic diversityとして水増ししていないか
+- RGB screenshotだけでなくdepth / collision / semantic / affordance差分を見られるか
+- objective / hazard / road / landmark等を装飾より重くvisual diffしているか
+- generator version更新でbehavior clusterが消失・過密化していないか
+- rolling new-cluster discovery rateが本当に飽和したか
+- rolling severe-failure discoveryもrandom/adversarial双方で飽和したか
+- severe failureを小さなreproへ自動縮小できるか
+- 人間が発見した反復・迷い・理不尽を次回からmachine predicateへ変換したか
