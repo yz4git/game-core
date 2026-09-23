@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 17
+最終更新: 2026-09-24 / Batch 18
 
 ## Completed / substantially sampled
 
@@ -11,12 +11,12 @@
 - Family Computer Magazine
 - Nintendo Fun Club News
 - GamePro
-- LOGiN
+- LOGiN — 1983 / 1984 / 1985 preservation sampling plus prior design passes
 - Beep
 - Play Meter — archive overview plus operator-setting / attract / session-economics / physical-interface / maintenance passes
 - Micom BASIC / Program Pochette
 - Technopolis
-- Marukatsu / Gekkan / PC Engine Fan
+- Marukatsu / Gekkan / PC Engine Fan — complete PC Engine Fan run indexed
 - EGM
 - Game Hihyō
 - K-POWER
@@ -38,6 +38,9 @@
 - SEGA Arcade History / product archive
 - HCI Museum physical arcade controller records
 - arcade operator/service manuals — calibration, I/O tests, network linking, payout configuration
+- PlayFab Game Saves — cross-device sync, conflict handling, offline progression
+- save-schema migration / backup-recovery implementation references
+- Nintendo save corruption support documentation
 
 ## Well-covered batches
 
@@ -54,6 +57,7 @@
 - 15: physical arcade controls / cabinet ergonomics / embodied input / spectator-readable intent / platform differentiation / local co-op social feedback
 - 16: continue / buy-in / redemption incentives / kit economics / public-play conversion / linked-play social structure
 - 17: physical-input calibration / maintenance diagnostics / linked-network lifecycle / payout invariants / operator audits / reset domains
+- 18: save schema migration / transactional writes / corruption recovery / backup horizon / cloud conflict / save identity / destructive fault injection
 
 ## Dedicated guides
 
@@ -68,6 +72,7 @@
 - docs/audio-as-gameplay.md
 - docs/horror-tension-design.md
 - docs/save-and-failure-design.md
+- docs/save-resilience-and-migration.md
 - docs/teaching-and-documentation.md
 - docs/encounter-and-camera-design.md
 - docs/community-ugc-metagame.md
@@ -135,12 +140,12 @@
 - skill-based redemption transparency and payout volatility
 - maintenance frequency / component degradation effects on play
 
-### Save / resilience
-- schema migration
-- corrupted-save recovery
-- cloud/local conflict handling
-- rollback/export validation
-- reset-domain and audit-history separation
+### Save / resilience — follow-up
+- semantic merge of independent progression branches
+- content-DLC removal / missing-mod compatibility
+- storage quota / partial-write behavior in browsers
+- recovery UX and privacy
+- long-lived save fixture corpus
 
 ### Networked action
 - rollback design
