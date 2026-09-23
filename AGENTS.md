@@ -52,3 +52,35 @@ For every proposed mechanic or improvement, ask:
 > What new decision, skill, prediction, or interaction does this create for the player?
 
 If the answer is "none," treat the feature as content or presentation rather than game-depth improvement.
+
+
+## Continuous research protocol
+
+For recurring research runs:
+
+1. Read `research/COVERAGE.md` before choosing sources.
+2. Prefer sources, years, genres, or themes marked under "Next priorities".
+3. Each substantial batch should normally use at least 3 distinct source items when accessible.
+4. Do not create a new core principle when an existing principle already captures the mechanism.
+5. If a source only reinforces an existing principle, record it under evidence/coverage rather than duplicating the principle.
+6. Promote to `docs/core-principles.md` only when the idea is broadly transferable and materially distinct.
+7. Update `research/COVERAGE.md` after each research batch:
+   - sources/years touched
+   - themes covered
+   - new principles promoted
+   - remaining gaps
+8. Prefer expanding under-covered areas:
+   - level design
+   - enemy encounter composition
+   - boss design
+   - fighting-game neutral/pressure
+   - racing line/vehicle feel
+   - shooter spawn/rhythm
+   - puzzle teaching
+   - economy/progression
+   - co-op/social design
+   - AI/opponent design
+   - UI/input/accessibility
+   - production/playtesting
+9. A recurring run should add value to the repository, not merely summarize reading.
+10. If no genuinely new principle is found, improve an existing guide with stronger tests, examples expressed generically, or cross-genre transfer questions.
