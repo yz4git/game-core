@@ -387,3 +387,55 @@
 - よく使うレシピをお気に入り登録できるか
 - 他プレイヤーの作業からクラフトを学べるか
 - 素材収集が探索判断か単純周回か
+
+
+## Procedural City / Driving World
+
+- 幹線／生活道路など道路階層があるか
+- 主要地点同士が複数経路でつながるか
+- 接続可能でも急坂・急角度・短交差点で走りにくくないか
+- ランドマークが位置推定に使えるか
+- 地区差が道路幅・建物高・色・密度まで一貫しているか
+- 遠距離LODでも道路とランドマークが残るか
+- 自動運転エージェントで多数seedを走行検証しているか
+- seed / generator version / traceを保存しているか
+
+## Replay / Spectator
+
+- replayがゲーム結果を決定論的に再現できるか
+- replay dataにversionが付くか
+- kill camで死因が分かるか
+- ghostが視界や当たり判定を邪魔しないか
+- 観客が途中参加しても現在状況を読めるか
+- spectator cameraに主要焦点を追う手段があるか
+- statsが意思決定の理解に役立つか
+- highlightが「派手」ではなく「重要」な瞬間を拾うか
+
+## Mobile / Touch — advanced
+
+- 物理コントローラのボタン配置をそのままコピーしていないか
+- 直接触れる方が自然な対象を仮想ボタン経由にしていないか
+- 見なくても押せる大きな入力領域か
+- 指で重要情報を隠さないか
+- invisible controlsに任意のinput feedbackがあるか
+- 片手／両手姿勢を想定しているか
+- ボタン数を減らしても中心となる判断を残しているか
+
+## UGC Discovery / Moderation
+
+- 人気順以外に新着・おすすめ・タグ・友人導線があるか
+- 新規作品が露出を得るcold-start導線があるか
+- thumbnail/title/categoryから数秒で内容が分かるか
+- free textを本当に必要な場所だけに限定しているか
+- report/block/moderation導線があるか
+- 作者にcompletion/quit等の改善情報を返せるか
+- creatorとconsumerの両方を推薦が満足させているか
+
+## Long-Term Comeback
+
+- 休止を罰するよりrested bonus等で戻りやすくしているか
+- 復帰者が短時間で現在目標を把握できるか
+- catch-upが常時プレイヤーの努力を無効化していないか
+- 長期進行に時間圧の弱い軸があるか
+- return notificationが義務感を作りすぎていないか
+- 数か月ぶりでも操作を思い出せる短い再練習があるか
