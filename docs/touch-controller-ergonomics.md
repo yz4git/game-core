@@ -4,93 +4,103 @@
 
 ## 1. Preserve decisions, not buttons
 
-移植で守るのはボタン配置ではなく、
-- aim
-- dodge choice
-- route choice
-- acceleration
-- timing
-などの意思決定。
-
-必要なら入力方法は大きく変える。
+操作数ではなく、aim / dodge / route / acceleration / timingなどの意思決定を守る。入力方法は媒体に合わせて変えてよい。
 
 ## 2. Directness
 
-タッチの強み:
-- objectを直接触れる
-- locationを直接指定できる
-- multiple fingers
-- gesture
-
-対象を触る方が自然なら、virtual cursorを挟まない。
+objectやlocationを直接触れる方が自然ならvirtual cursor/buttonを挟まない。
 
 ## 3. No tactile landmarks
 
-物理ボタンのような縁や反発がないため、小さい固定ボタンは視線を奪いやすい。
-
-対策:
-- oversized zones
-- whole-screen regions
-- dynamic joystick
-- generous hit areas
+物理buttonの縁や反発がないため、oversized zones、whole-screen regions、dynamic joystick、generous hit areasを使う。
 
 ## 4. Finger occlusion
 
-入力中に重要情報を隠さない。
-
-考慮:
-- thumb footprint
-- hand posture
-- device size
-- landscape / portrait
+thumb footprint、hand posture、device size、orientationを考慮し、入力中に重要情報を隠さない。
 
 ## 5. Invisible controls need feedback
 
-透明領域を使う場合、
-- helper arrow
-- brief joystick ring
-- direction trail
-などで入力状態を確認できるoptionを用意する。
+helper arrow、brief joystick ring、direction trail等で入力状態を確認できるoptionを用意する。
 
 ## 6. Context-sensitive input
 
-同じgestureでも状況で安全に意味を変えられるなら、ボタン数を減らせる。
-
-ただし予測不能なcontext switchingは避ける。
+同じgestureの意味変更は予測可能な場合だけ使う。
 
 ## 7. One-hand vs two-hand
 
-片手:
-- reachability
-- large regions
-- lower precision
-
-両手:
-- simultaneous actions
-- stable grip
-- thumb zones
-
-最初から対象姿勢を決める。
+片手はreachability/large regions、両手はsimultaneous actions/stable gripを重視する。
 
 ## 8. High-skill touch
 
-「mobileだから簡単にする」必要はない。
-
-精密で高速な操作でも、
-- direct touch
-- large zones
-- multi-touch
-を使えば複雑な判断を維持できる。
+mobileだから判断を単純化する必要はない。direct touch、large zones、multi-touchで高度な判断を維持できる。
 
 ## 9. Optional controller support
 
-タッチ主体でもcontroller supportは価値があるが、touch版を劣化コピーにしない。
+controllerを支援してもtouch版を劣化コピーにしない。
 
 ## 10. Prototype many layouts
 
-複数案が技術的に動いても、体感差は大きい。
+最終判断は複数deviceの実機プレイで行う。
 
-最終判断は実機プレイで行う。
+## 11. Safe areas and system gestures
+
+Home indicator、Dynamic Island、rounded corners、edge gesturesを入力信頼性の境界として扱う。
+
+## 12. Target size
+
+見た目のiconとhit regionを分離し、高頻度操作には十分大きなtargetを与える。
+
+## 13. Simultaneous input graph
+
+move+camera、move+attack、aim+fire、steer+brake等を列挙し、同じthumbへ競合する必須操作を割り当てない。
+
+## 14. Dynamic controls
+
+unavailable actionの非表示、context icon、touch位置へのstick出現を使えるが、context変更は予測可能にする。
+
+## 15. Press confidence
+
+重要入力にはvisual/sound/hapticの複数channelを使い、fingerでbuttonが隠れても成功が分かるようにする。
+
+## 16. Haptic grammar
+
+selection/hit/danger等でpatternを一貫させ、同じpatternを別意味へ乱用しない。
+
+## 17. Edge gesture conflicts
+
+custom gestureを必要以上にscreen edgeへ依存させない。
+
+## 18. Long-session fatigue
+
+5分だけでなく30〜60分でthumb strain、grip shift、device heat、repeated reachを見る。
+
+## 19. Reachability field
+
+reachabilityは固定rectangleではなくdevice size、selected hand、gripで変わるcost fieldとして扱う。高頻度×高緊急×高精度のactionへ最も安いreachを割り当てる。
+
+## 20. Handedness is semantic remapping
+
+左右presetを単純mirrorしない。move/camera/primary等のroleを維持しつつ、position/spacing/scale/capture regionを再最適化する。
+
+## 21. Bounded floating controls
+
+floating stickはtouch-downへ追従できるがcapture region、safe-area clamp、neutral/dead zone、最大移動量を固定する。適応でmotor memoryを壊さない。
+
+## 22. Measure occlusion
+
+critical information under thumb timeを測る。failure直前にtelegraph/targetがfingerで覆われていなかったか確認する。
+
+## 23. Haptic density budget
+
+haptic events/minuteを記録し、parry/collision/lock/danger等の意味ある状態変化を優先する。OFFでも情報を失わせない。
+
+## 24. Thermal ergonomics
+
+sustained load後のgrip shift、miss-rate delta、performance degradationを測る。冷えた端末だけでlayoutを承認しない。
+
+## 25. Semantic equivalence across inputs
+
+Touch/controller/keyboardはbutton数ではなくacquisition time、simultaneous action、precision、correction、fatigue、preserved tactical choiceで比較する。
 
 ## Playtest
 
@@ -99,87 +109,10 @@
 - 誤タップ率
 - 片手／両手の疲労
 - 小型／大型端末差
-- 削ったボタンでゲーム判断まで消えていないか
-
-
-## 11. Safe areas and system gestures
-
-iPhoneでは、
-- Home indicator
-- Dynamic Island
-- rounded corners
-- edge system gestures
-を考慮する。
-
-主要アクションを画面端ぎりぎりへ置かない。
-
-safe areaは単なる表示余白ではなく、入力信頼性の境界として扱う。
-
-## 12. Target size
-
-頻繁な操作は十分大きなtap targetを持つ。
-
-見た目のiconよりhit regionを大きくできる。
-
-小さな端末でも、プレイヤーがゲーム画面から視線を外さず押せることを優先する。
-
-## 13. Simultaneous input graph
-
-同時に必要な操作を列挙する。
-
-例:
-- move + camera
-- move + attack
-- aim + fire
-- steer + brake
-
-同じthumbに二つの必須操作を割り当てていないか確認する。
-
-## 14. Dynamic controls
-
-タッチでは、
-- unavailable actionを隠す
-- contextでiconを変える
-- thumbstickをtouch位置へ出す
-など、物理controllerにはできない変化を使える。
-
-ただしcontext変更は予測可能にする。
-
-## 15. Press confidence
-
-各重要入力へ、
-- visual state
-- sound
-- haptic
-のうち複数を返す。
-
-指がbuttonを覆っていてもpress成功が分かる表現を使う。
-
-## 16. Haptic grammar
-
-hapticを一貫した言語にする。
-
-例:
-- light transient = selection
-- sharp impact = hit
-- continuous pulse = danger
-
-別意味を同じpatternへ割り当てすぎない。
-
-## 17. Edge gesture conflicts
-
-ゲームgestureがsystem gestureと競合する場合、
-ユーザーがOS操作を失敗し続けないようにする。
-
-custom gestureを必要以上にedgeへ依存させない。
-
-## 18. Long-session fatigue
-
-5分では快適でも30〜60分で、
-- thumb strain
-- grip shift
-- device heat
-- repeated reach
-が問題になる。
-
-短時間テストだけでcontrol layoutを決めない。
+- high-frequency actionのreach distance
+- handedness presetのrole confusion
+- dynamic stickのrecenter/acquisition time
+- haptic events/minuteとpattern識別
+- 30〜60分後のmiss-rate delta
+- device heat後のgrip reposition
+- input媒体を変えて重要な判断が消えないか
