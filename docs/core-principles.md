@@ -2575,3 +2575,21 @@ Play数が多い作品はさらにplayされやすい。
 復帰者だけ快適でも、対戦相手が極端なミスマッチを受ければ成立しない。
 
 **原則:** returner qualityとopponent qualityを同時に監視する。
+
+
+## Operational and reward-system principles — Batch 16
+
+### Separate persistence from proof of mastery
+A recovery/continue system can preserve a player's run without preserving every competitive achievement signal. Completion, mastery/rank, and persistent reward eligibility should be independently definable when their incentives conflict.
+
+### Persistent rewards redefine the effective objective
+When score, time, kills, or other metrics become exchangeable for progression or rewards, players rationally optimize those metrics. Treat reward-linked scoring as an economy and test low-risk farming and deliberate-failure loops.
+
+### Configurable operations are part of the game design
+Difficulty, timers, continue counts, reward multipliers, and calibration ranges exposed to operators/event staff are live design parameters. Give them tested bounds and presets rather than assuming configuration cannot damage the experience.
+
+### Public onboarding begins before input
+For games encountered in public or from a web landing page, design the sequence watch → understand → imagine success → start. A demo should communicate an achievable interaction, not only expert spectacle.
+
+### Multiplayer earns its complexity when human intent changes decisions
+Additional players are valuable when observing another person's intent changes target, route, timing, positioning, or resource choices. Player count alone is not a social mechanic.
