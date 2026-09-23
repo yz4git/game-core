@@ -1201,3 +1201,19 @@ UGC制限ユーザーで、
 - team resultが犯人探しより役割認識と再戦会話を生むか
 - session短縮時にstarts/hourだけでなくimmediate replayも測っているか
 - 運営設定を変更したときonboarding、fairness、reward economyが壊れないか
+
+
+## Networked action / mobile instability — Batch 19
+
+- stable high pingとlow-ping high-jitterを別々に試したか
+- packet lossを単発とburstで分けて試したか
+- rollback frequency / depth / correction magnitudeを同時に記録しているか
+- 小さなfixed input delayを加えた場合の総合的な知覚品質を比較したか
+- prediction/extrapolationに上限があるか
+- lag compensationの最大rewindで攻撃側・防御側双方が納得できるか
+- simulation correctionをvisual smoothingが汚染していないか
+- rollback再実行でaudio/particle/hapticが二重発火しないか
+- Wi-Fi→劣化→切断→復帰の時間変化scenarioを試したか
+- reconnect後にstale stateが操作可能にならないか
+- desync時にfirst divergent tickを自動取得できるか
+- spectator/replayでnetwork adjudicationが不可能な命中に見えないか
