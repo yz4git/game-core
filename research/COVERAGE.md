@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 18
+最終更新: 2026-09-24 / Batch 19
 
 ## Completed / substantially sampled
 
@@ -58,6 +58,7 @@
 - 16: continue / buy-in / redemption incentives / kit economics / public-play conversion / linked-play social structure
 - 17: physical-input calibration / maintenance diagnostics / linked-network lifecycle / payout invariants / operator audits / reset domains
 - 18: save schema migration / transactional writes / corruption recovery / backup horizon / cloud conflict / save identity / destructive fault injection
+- 19: rollback / input prediction / interpolation / lag compensation / jitter and burst loss / mobile reconnect / desync diagnostics
 
 ## Dedicated guides
 
@@ -110,6 +111,7 @@
 - docs/continue-redemption-public-play.md
 - docs/input-calibration-and-diagnostics.md
 - docs/linked-play-reliability.md
+- docs/rollback-mobile-network-design.md
 
 ## Next priorities — high
 
@@ -147,12 +149,12 @@
 - recovery UX and privacy
 - long-lived save fixture corpus
 
-### Networked action
-- rollback design
-- prediction vs input delay
-- lag compensation
-- mobile-network instability
-- reconnect/resynchronization after authority change
+### Networked action — follow-up
+- rollback CPU/memory budgets on mobile Safari
+- host/authority migration under dropout
+- matchmaking network-quality thresholds
+- cheating/security boundaries for client prediction
+- protocol/version migration for long-lived multiplayer
 
 ## Next priorities — medium
 
