@@ -57,6 +57,7 @@
 - [Touch Production QA](docs/touch-production-qa.md) — safe-area、thumb reach、長時間疲労、haptics
 - [UGC Trust & Safety Operations](docs/ugc-trust-safety-ops.md) — report、brigading、appeal、restriction
 - [Returner Matchmaking Operations](docs/returner-matchmaking-operations.md) — uncertainty、適応速度、対戦相手公平性
+- [Physical Arcade Interface Design](docs/physical-arcade-interface-design.md) — 特殊筐体、身体入力、観戦性、移植時の意味保存
 - [Genre Heuristics](docs/genre-heuristics.md) — ジャンル別の重点項目
 - [Copyright & Sources](docs/copyright-and-sources.md) — 参照資料の扱い方
 - [Research Notes](research/README.md) — 調査ごとの抽象化メモ
