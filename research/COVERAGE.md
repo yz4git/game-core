@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-23 / Batch 14B
+最終更新: 2026-09-23 / Batch 15
 
 ## Completed / substantially sampled
 
@@ -13,14 +13,16 @@
 - GamePro
 - LOGiN
 - Beep
-- Play Meter — archive overview plus deeper operator-setting / attract / session-economics pass in Batch 14
+- Play Meter — archive overview plus operator-setting / attract / session-economics / physical-interface passes
 - Micom BASIC / Program Pochette
 - Technopolis
 - Marukatsu / Gekkan / PC Engine Fan
 - EGM
 - Game Hihyō
 - K-POWER
-- Monthly Coin Journal / Canadian Coin Box — archive presence sampled for coin-op operations context
+- Monthly Coin Journal / Canadian Coin Box — 1989 / 1995 / 1996 / 1998 arcade-operations sampling
+- Japan Amusement Monthly — 1992 sampling
+- Game Yuu II — 1995–1996 sampling
 
 ### Related developer / technical / design material
 - Gamest / 三辻富貴朗系
@@ -33,6 +35,8 @@
 - returning-player matchmaking case studies
 - International Arcade Museum eLibrary / Play Meter public text pages
 - arcade operator earnings / settings historical syntheses
+- SEGA Arcade History / product archive
+- HCI Museum physical arcade controller records
 
 ## Well-covered batches
 
@@ -46,6 +50,7 @@
 - 13: replay determinism-regression / iPhone safe-area-haptics / UGC version-remix / returner recalibration / procedural regression
 - 14: arcade operator tuning / session economics / attract-mode teaching / spectator conversion / photo-mode expression / procedural structural diversity
 - 14B: headless procedural CI / replay operations / touch production QA / UGC trust-safety / returner matchmaking operations
+- 15: physical arcade controls / cabinet ergonomics / embodied input / spectator-readable intent / platform differentiation / local co-op social feedback
 
 ## Dedicated guides
 
@@ -93,56 +98,49 @@
 - docs/touch-production-qa.md
 - docs/ugc-trust-safety-ops.md
 - docs/returner-matchmaking-operations.md
+- docs/physical-arcade-interface-design.md
 
 ## Next priorities — high
 
 ### Procedural automated QA — production scale
-- headless thousands-of-seeds runs
-- failure artifact bundles
 - route heatmaps
 - geometry invariant checks
 - visual semantic diff
-- performance budgets per seed
 - structural-diversity / decision-signature metrics
+- aesthetic repetition detection
 
 ### Replay / telemetry — production scale
-- checksum detection -> structured state diff
-- first-divergence tooling
-- event indexing / seek tables
-- replay privacy
-- deterministic fixed-step integration
 - server-authoritative validation
+- replay privacy / sharing metadata
 - replay storage retention
+- spectator analytics
 
-### Touch — production scale
+### Touch / physical interaction
 - handedness presets
 - dynamic control positioning
-- OS gesture conflict testing
 - haptic fatigue
 - heat / long-session grip
 - accessibility + touch interaction
-
-### UGC operations
-- version migration
-- remix permission policy
-- rating manipulation / brigading resistance
-- moderation queue prioritization
-- appeals
-- deleted-parent remix behavior
-
-### Returning-player systems
-- uncertainty tuning
-- group matchmaking
-- comeback bundle abuse
-- returner-specific telemetry
-- post-season return flows
+- semantic equivalence metrics across touch/controller/keyboard
 
 ### Arcade / public-play follow-up
-- operator-adjustable difficulty history across more Play Meter decades
-- continue / buy-in economics
+- continue / buy-in economics deeper pass
 - redemption transition in the 1990s
-- cabinet ergonomics and physical control novelty
 - public demo / convention conversion metrics
+- physical-control maintenance / calibration as design constraint
+- linked cabinets / team-vs-team social structures
+
+### Save / resilience
+- schema migration
+- corrupted-save recovery
+- cloud/local conflict handling
+- rollback/export validation
+
+### Networked action
+- rollback design
+- prediction vs input delay
+- lag compensation
+- mobile-network instability
 
 ## Next priorities — medium
 
@@ -151,9 +149,9 @@
 - crafting economy
 - accessibility across genres
 - procedural aesthetics / repetition metrics deeper pass
-- spectator analytics
 - photo/replay sharing privacy and metadata
-- physical arcade control ergonomics
+- live balance telemetry
+- economy inflation monitoring
 
 ## Rule for future runs
 
