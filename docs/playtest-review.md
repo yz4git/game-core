@@ -856,3 +856,153 @@ AI車がいることで、
 を確認する。
 
 用途不明素材がインベントリを占有していないかを見る。
+
+
+## 71. Road-Graph Audit
+
+生成都市で、
+- 主要地点間の到達経路数
+- dead end率
+- 幹線への接続
+- 交差点間隔
+を計測する。
+
+単に接続しているだけでなく都市としての道路階層が見えるか確認する。
+
+## 72. Driveability Agent Audit
+
+自動車AIで多数seedを走らせ、
+- 平均速度
+- 急ブレーキ
+- スタック
+- Uターン
+- 路外逸脱
+を記録する。
+
+到達率100%でも運転品質が悪いseedを弾く。
+
+## 73. Landmark Recall Audit
+
+一度走った地区について、プレイヤーが
+> どこを走っていたか
+をランドマーク・色・道路形状から説明できるか確認する。
+
+## 74. LOD Navigation Audit
+
+遠・中・近距離LODごとに、
+- 道路
+- 分岐
+- ランドマーク
+- 走行境界
+が判断可能か確認する。
+
+LOD切替で道が消える／位置が変わるseedを探す。
+
+## 75. Replay Determinism Audit
+
+同一入力／seedのリプレイを複数回再生し、
+- 終了状態
+- 主要イベント時刻
+- スコア
+が一致するか確認する。
+
+演出差とゲーム結果差を分けて扱う。
+
+## 76. Replay Version Audit
+
+旧バージョンのreplay / ghostを新バージョンで再生した場合、
+- compatibility
+- warning
+- archival playback
+のどれを行うか明確にする。
+
+## 77. Kill-Cause Audit
+
+死亡リプレイを見た後、プレイヤーが一文で
+> なぜ死んだか
+を説明できるか確認する。
+
+## 78. Spectator Drop-In Audit
+
+ゲームを知らない人が途中から30秒見て、
+- objective
+- leader
+- danger
+- current conflict
+を説明できるか確認する。
+
+## 79. Highlight Meaning Audit
+
+自動ハイライトが選んだ場面について、
+> なぜ重要だったか
+をゲーム状態から説明できるか確認する。
+
+派手な演出だけを拾っていないかを見る。
+
+## 80. Touch Eyes-on-Action Audit
+
+タッチ操作中、プレイヤーが指位置を確認するためにHUDへ視線を落としていないか観察する。
+
+視線が操作部へ頻繁に落ちるなら領域を広げる／動的化する。
+
+## 81. Finger-Occlusion Audit
+
+重要対象の上に指が重なる時間を測る。
+
+操作中に敵・道路・着地点が隠れていないか確認する。
+
+## 82. Grip-Posture Audit
+
+片手／両手、縦／横で主要操作へ無理なく届くか確認する。
+
+端末サイズ差も含める。
+
+## 83. Touch-Decision Preservation Audit
+
+コンソール版等から移植した場合、
+- 削除した入力
+- 統合した入力
+ごとに「失われた判断」がないか確認する。
+
+## 84. UGC Cold-Start Audit
+
+新規投稿を人気0の状態から公開し、
+- discovery surface
+- first playまでの時間
+- exposure回数
+を記録する。
+
+人気順だけで永久に埋もれないか確認する。
+
+## 85. UGC Moderation Audit
+
+投稿・共有可能な各フィールドについて、
+- report可能か
+- block可能か
+- 年齢制限対応
+- review手段
+を確認する。
+
+## 86. Creator Feedback Audit
+
+UGC作者が、
+- play count
+- completion
+- quit point
+- rating
+を見て次作へ反映できるか確認する。
+
+## 87. Return-After-Break Audit
+
+1週間／1か月休んだ想定で復帰し、
+- 現在目標理解
+- 操作再学習
+- 装備／build理解
+- catch-up
+に何分必要か測る。
+
+## 88. Absence-Penalty Audit
+
+休止中に失うものを一覧化する。
+
+失う量が大きすぎて「戻るのが怖い」状態になっていないか確認する。
