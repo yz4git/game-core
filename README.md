@@ -16,6 +16,7 @@
 
 - [Core Principles](docs/core-principles.md) — ジャンル横断の設計原則
 - [Playtest Review](docs/playtest-review.md) — プレイチェックと改善の観点
+- [Production Loop](docs/production-loop.md) — 企画からPolishまでの実践開発順序
 - [Genre Heuristics](docs/genre-heuristics.md) — ジャンル別の重点項目
 - [Copyright & Sources](docs/copyright-and-sources.md) — 参照資料の扱い方
 - [Research Notes](research/README.md) — 調査ごとの抽象化メモ
