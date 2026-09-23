@@ -2391,3 +2391,187 @@ hide / block creatorを報告導線と近づける。
 - failure count
 
 **原則:** procedural QAはtail riskを監視する。
+
+
+## 221. プロシージャル生成は「失敗seedを資産化」する
+
+一度見つけた破綻seedを直して終わりにしない。
+
+- crash
+- unreachable
+- bad road
+- LOD loss
+- performance spike
+などをcanonical regression setへ追加する。
+
+**原則:** Procedural bugは修正だけでなく、再発防止データになる。
+
+## 222. Headless生成テストは「数」だけでなく観測項目を固定する
+
+数千seedを回しても、合否条件が曖昧では意味が薄い。
+
+最低限、
+- validity
+- connectivity
+- difficulty bounds
+- generation time
+- memory
+- driveability
+を機械的に記録する。
+
+## 223. Procedural CIはhard failとquality warningを分ける
+
+Hard fail:
+- unreachable
+- invalid geometry
+- NaN
+- disconnected critical route
+
+Quality warning:
+- excessive braking
+- repetitive layout
+- weak landmark visibility
+
+**原則:** ビルドを止める条件と、設計レビューへ回す条件を分ける。
+
+## 224. 生成テストには「失敗artifact」を残す
+
+CIで落ちたseedについて、
+- seed
+- version
+- metrics
+- screenshot
+- trace
+- route
+をbundleで残す。
+
+再現手順を人間が組み立てなくても調査できる状態にする。
+
+## 225. Procedural performanceは平均ではなくseed別budgetで見る
+
+特定seedだけ生成時間やdraw callが急増する場合がある。
+
+**原則:** p95/p99とworst-Nを性能回帰にも使う。
+
+## 226. Replay checksumは「検出」、state diffは「診断」
+
+checksum一致／不一致だけでは、どの変数が原因か分からない。
+
+**原則:** 軽いhashで異常を見つけ、詳細log/state diffで最初の原因へ掘る二段階構造にする。
+
+## 227. Replayの最初のdivergenceだけを優先して調べる
+
+一度状態がずれると後続差分は雪だるま式に増える。
+
+**原則:** 最終状態の大量差分より、最初に違ったtickとfieldを探す。
+
+## 228. Replay検証ではsimulation stateとpresentation stateを分ける
+
+Particle、camera shake、UI animationなどが違っても、競技結果に影響しない場合がある。
+
+**原則:** authoritative simulation hash と cosmetic presentation を別レイヤーにする。
+
+## 229. Rollback／Replay時の副作用は再実行しない
+
+再シミュレーションで、
+- sound
+- haptic
+- analytics
+- achievement
+- network side effect
+を二重発火させない。
+
+**原則:** simulation event と committed side effect を分離する。
+
+## 230. Replay seekにはevent indexを持たせる
+
+長いrunで毎回先頭から再生すると、観戦・デバッグ・ハイライト抽出が遅い。
+
+- death
+- checkpoint
+- boss
+- split
+- lead change
+などのevent indexを作る。
+
+## 231. iPhone操作はsafe-area内でも「親指が自然に届く場所」を優先する
+
+safe-areaに入っているだけでは快適とは限らない。
+
+重要操作は、
+- landscape thumb arc
+- grip
+- device size
+を基準に配置する。
+
+## 232. 頻繁なタッチ操作は44ptを最低ではなく基準として考える
+
+小さくても技術的には押せるが、プレイ中は視線がゲームへ向いている。
+
+**原則:** 頻繁な操作ほど余裕を持ったhit areaを使う。
+
+## 233. Hapticsは「無いと分からない情報」にしない
+
+触覚は強い補助だが、オフにするプレイヤーもいる。
+
+**原則:** Hapticsは確認を強めるが、唯一の必須情報源にはしない。
+
+## 234. 長時間プレイでは操作疲労を別テストする
+
+5分では快適でも、30〜60分で、
+- thumb strain
+- grip shift
+- repeated reach
+が出る。
+
+**原則:** touch layoutは短時間性能と長時間快適性を別々に測る。
+
+## 235. UGCランキングは「品質」と「人気」を同一視しない
+
+Play数が多い作品はさらにplayされやすい。
+
+**原則:** rankingには、
+- quality signal
+- freshness
+- personalization
+- diversity
+を分けて扱う余地を持つ。
+
+## 236. UGC評価にはbrigading／revenge rating耐性を持たせる
+
+大量の低評価や組織票が実力以上に順位を動かさないようにする。
+
+例:
+- rate limit
+- confidence weighting
+- anomaly detection
+- minimum play requirement
+
+## 237. UGC moderationにはappeal経路を設計する
+
+誤判定はゼロにはできない。
+
+**原則:** creatorが、
+- action reason
+- affected version
+- appeal path
+を確認できるようにする。
+
+## 238. UGC制限は可能な範囲で「作品」や「機能」に限定する
+
+一部UGCが使えないだけでゲーム全体を不必要にブロックしない。
+
+**原則:** restricted privilegeの影響範囲を最小化し、理由を明確に伝える。
+
+## 239. 復帰者matchmakingは「適応速度」を上げる
+
+長期休止後はrating自体を大きく落とすより、
+- uncertaintyを増やす
+- update rateを上げる
+ことで現在skillへ速く収束させる。
+
+## 240. 復帰者向け補正は通常プレイヤーとの公平性も同時に測る
+
+復帰者だけ快適でも、対戦相手が極端なミスマッチを受ければ成立しない。
+
+**原則:** returner qualityとopponent qualityを同時に監視する。
