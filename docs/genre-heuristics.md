@@ -476,3 +476,17 @@
 - ratingを機械的に下げすぎていないか
 - 復帰者の適応速度が十分か
 - 相手側の不公平も同時監視しているか
+
+
+## Arcade / Public Play — economy and conversion
+
+- continueがrun継続を助けてもmastery/rankまで無条件維持していないか
+- score→reward変換時に低リスクfarmが最適化されていないか
+- score attackとreward modeで目的が衝突するならrulesetを分離すべきか
+- difficulty/timer/continue/reward設定に安全なpresetと範囲があるか
+- attract/demoがwatch→understand→startを支援しているか
+- 観戦者が10〜20秒でgoalとplayer objectを識別できるか
+- linked playで他人の意図がroute/target/timing判断を変えるか
+- team resultがkill数だけでなくassist/save/setup/objective contributionを示すか
+- starts/hourとimmediate replayを同時に評価しているか
+- 専用の高コスト機能がgenericな構成では得られない体験差を作るか
