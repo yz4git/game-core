@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 29
+最終更新: 2026-09-24 / Batch 30
 
 ## Completed / substantially sampled
 
@@ -21,6 +21,7 @@
 - Batch 27 constrained-hardware/network context cross-check: Family Computer Magazine, Technopolis, Famimaga 64, Play Meter / Monthly Coin Journal preservation sets
 - Batch 28 save-media / persistence cross-sample: Beep 1985, Family Computer Magazine 1990, PC Engine Fan 1994 + complete-run index, Famimaga 64 1996–1998, Dengeki G's Engine 1996–1997, Used Games 1996–2000, Game Lab 1999, Play Meter / Monthly Coin Journal 1996–1998
 - Batch 29 content-dependency cross-sample: Technopolis 1986/1987/1994 + complete-run history, Program Pochette 1984–1987 complete run, PC Engine Fan 1988–1997 complete-run/add-on context + Nov 1994/1995 appendix, Famimaga 64 1996–1998
+- Batch 30 divergent-save historical cross-sample: LOGiN 1983–1987, Program Pochette 1984–1987 preserved-program context, Family Computer Magazine 1985–1990, Play Meter 1978/1988/1990, Game Hihyō 1994–2006, Famimaga 64 1996–1998
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -49,6 +50,7 @@
 - Batch 27: WebKit JavaScriptCore lifecycle performance / JetStream 3, Apple Safari Web Inspector CPU/energy guidance, MDN Page Visibility / rAF / PerformanceObserver / Long Animation Frame / Device Memory capability material
 - Batch 28: WebKit Storage Policy / Safari 17 Storage API, MDN storage quota+eviction / StorageManager estimate+persist / IndexedDB transaction complete+abort, W3C IndexedDB atomic commit requirements
 - Batch 29: Steamworks DLC + ISteamApps entitlement/presence APIs, Minecraft Forge MissingMappings registry policies, Unity Addressables content-state/catalog update workflow, Bethesda save recovery/support cases
+- Batch 30: PlayFab Game Saves conflict/atomic-unit model and player conflict UX; Unity Cloud Save write locks/API and custom conflict retry; semantic three-way merge / monotonic-vs-non-monotonic progression analysis
 
 ## Well-covered batches
 
@@ -76,6 +78,7 @@
 - 27: mobile Safari rollback CPU/memory budgets / state-history bounds / allocation-stable re-simulation / fixed simulation vs display refresh / background-resume discontinuity / sustained thermal-performance QA / presentation-first degradation
 - 28: browser save quota / runtime storage estimates / IndexedDB transaction commit boundaries / origin eviction / persistence tiers / critical storage reserve / quota fault injection / recovery-aware startup
 - 29: content-dependent save compatibility / DLC-mod removal / immutable IDs-remaps-tombstones / degraded read-only loading / opaque-state quarantine / dependency closure / remove-restore round-trip QA
+- 30: divergent save branches / common-ancestor semantic diff / per-domain merge algebra / unique-grant identity / economy provenance / tombstones / atomic-unit boundaries / write-lock vs resolution / post-merge validation
 
 ## Dedicated guides
 
@@ -92,7 +95,7 @@ Core specialist set includes:
 - docs/procedural-diversity-metrics.md — expanded through Batch 26 adversarial coverage
 - docs/procedural-pacing-readability-qa.md
 - docs/adversarial-procedural-qa.md
-- docs/save-resilience-and-migration.md — expanded Batch 29 with missing-content/DLC-mod compatibility
+- docs/save-resilience-and-migration.md — expanded through Batch 30 with missing-content and semantic branch reconciliation
 - docs/sports-game-abstraction.md — expanded Batch 23 teammate/off-ball AI guidance
 
 See docs/ for remaining genre/system guides.
@@ -121,11 +124,11 @@ See docs/ for remaining genre/system guides.
 - motor-accessibility presets validated per genre
 
 ### Save / resilience — follow-up
-- semantic merge of independent progression branches
 - recovery UX/privacy and long-lived fixture corpus
 - storage reserve thresholds calibrated on real save/replay/cache growth
 - cross-origin / deployment-origin migration and save portability
 - content compatibility follow-up: scripted component quarantine, multiplayer package negotiation, compatibility-horizon fixtures
+- semantic-merge follow-up: event compaction/tombstone GC, account merge vs device merge, authoritative economy boundaries, human-readable merge previews
 
 ### Networked action — follow-up
 - empirical rollback budget calibration across iPhone performance tiers
