@@ -242,6 +242,105 @@ Large changes in these yields after a generator revision are themselves regressi
 
 **KNOWN-GOOD PARENT → SEMANTIC MUTATION → SACRED-INVARIANT CHECK → BOUNDED REPAIR → STATIC VALIDATION → MARGIN VECTOR → DYNAMIC SIMULATION → BEHAVIOR/FAILURE SIGNATURE → ARCHIVE/DISCARD → SEMANTIC SHRINK → REGRESSION FIXTURE**
 
+## Batch 40 — Genre-specific adversarial objectives
+
+Generic validity is the floor. The adversarial objective must be expressed in the **player budget that defines failure in the genre**.
+
+### Two-layer objective stack
+
+Every genre should use:
+1. **generic structural invariants** — reachability, collision, progression, legal state;
+2. **genre-specific margins** — timing, motor, resource, information and recovery budgets that predict player failure.
+
+Do not allow a good generic score to compensate for a broken genre margin.
+
+### Shooter objectives
+
+Search for:
+- minimum joint reaction slack across simultaneous threats
+- minimum safe angular sector / escape-route availability
+- unavoidable-damage lower bound
+- spawn readability and occlusion before threat activation
+- path-conditioned ammo/health slack before encounters
+- longest pressure interval without credible recovery
+
+Enemy count is only a descriptor. A smaller synchronized threat set can be more unfair than a larger readable one.
+
+Run capability-separated policies: movement-weak/aim-strong, movement-strong/aim-weak, baseline, expert and exploit-seeking. Outcome ordering should match the skills the game claims to reward.
+
+### Racing objectives
+
+Evaluate roads at gameplay speed, not as static connected geometry. Search:
+- `visible braking distance - required braking distance`
+- steering-rate/curvature saturation
+- traffic time-to-collision at decision points
+- overtaking corridor availability
+- recovery time after representative contact/spin/slowdown
+- secondary-collision probability during recovery
+
+Inject plausible mistakes. A course that is fair only for a perfect lap is not robustly fair.
+
+### RPG / dungeon / encounter objectives
+
+Separate target difficulty from contribution balance. Search for:
+- completion probability
+- role contribution inequality / role redundancy
+- one-strategy dominance
+- sensitivity to incoming HP/resources/status/cooldowns
+- cumulative resource debt across encounter chains
+- distance/time to a credible recovery/save opportunity
+- progression/key dependency fragility
+
+Validate 3–10 encounter windows with distributions of incoming campaign state. Full-health room testing hides sequence failures.
+
+### Puzzle objectives
+
+Solvability is necessary but insufficient. Search:
+- solution count and alternate-solution structure
+- shortest-solution characteristics
+- irreversible-error depth
+- dead-end/restart cost
+- knowledge/policy-conditioned solution-information proxies
+- recoverability after locally plausible mistakes
+- solver/policy disagreement
+
+A single solver trace proves existence, not good difficulty. Perturb successful traces with plausible local deviations and measure the basin of recoverable play.
+
+### Human calibration requirement
+
+For every automated severity metric record:
+- intended human judgment
+- human label/rating when sampled
+- false-positive/false-negative cases
+- calibration error by skill cohort
+
+Computational metrics are triage and search instruments, not substitutes for player studies.
+
+### Genre-contract preservation
+
+Failure search must stay plausible:
+- shooter mutations preserve encounter grammar and spawn rules
+- racing mutations preserve course/lane rules
+- RPG mutations preserve progression and authored role vocabulary
+- puzzle mutations preserve mechanic vocabulary and intended rule set
+
+Ask: **would this generated case still be plausible shippable content if the discovered failure were fixed?** If not, it is usually a weak adversarial fixture.
+
+### Recommended genre-aware pipeline
+
+**GENRE CONTRACT → SACRED INVARIANTS → PLAYER-BUDGET DESCRIPTORS → KNOWN-GOOD PARENT → SEMANTIC MUTATION → CHEAP STRUCTURAL GATES → GENRE SIMULATION → COUNTERFACTUAL POLICY PAIRS → MARGIN VECTOR → HUMAN-CALIBRATED SEVERITY → SEMANTIC SHRINK → REGRESSION FIXTURE**
+
+### Release dashboard additions
+
+Per supported genre report:
+- p1/p5/median of genre-specific margins
+- severe failure signatures / 1k simulations
+- recovery-failure rate
+- policy-order inversions
+- human-confirmed precision of top adversarial cases
+- new boundary cells / compute-hour
+- machine-vs-human severity calibration error
+
 ## Playtest questions
 
 - Are rare severe failures being searched for deliberately?
@@ -259,3 +358,9 @@ Large changes in these yields after a generator revision are themselves regressi
 - Did repair preserve the intended mutation or silently replace it?
 - Can a retained failure be explained as a short semantic delta from a known-good parent?
 - Did a generator revision make an important mutation operator lose reach?
+- For this genre, what player budget reaches zero immediately before failure?
+- In shooters, did simultaneous readable threats accidentally collapse all escape space?
+- In racing, is the road fair at taught approach speed and after one plausible mistake?
+- In RPGs, does target difficulty hide an irrelevant role or unrecoverable campaign-state debt?
+- In puzzles, is challenge insight-driven rather than restart-cost-driven?
+- Does automated severity predict human severity for novice and expert cohorts separately?
