@@ -215,6 +215,26 @@ Key rules:
 
 See `docs/host-authority-migration.md` for the production state machine and fault-injection matrix.
 
+## Prediction trust boundary — Batch 32
+
+Prediction is provisional presentation/simulation, not permission to create canonical outcomes. Prefer sending player intent that the authority can derive or bound rather than accepting final position, damage, reward or inventory claims.
+
+Validate predicted actions through:
+
+`INPUT → ID/EPOCH → TEMPORAL WINDOW → STATE/RULE INVARIANTS → AUTHORITATIVE APPLY → ACK → RECONCILE`
+
+Important additions:
+- check action rate and time ordering, not only numeric ranges
+- bound client timestamps and lag-compensation rewind
+- give irreversible requests stable IDs and idempotent handling
+- separate ownership, input authority, state authority and visibility
+- version per-object authority transfer so late former-owner packets lose
+- record session topology as result/reward provenance
+- test anti-cheat invariants against honest jitter/loss/reorder/background/migration traces
+- avoid sending hidden state merely because the client cannot modify it
+
+See `docs/client-prediction-trust-boundaries.md` for the trust matrix, validation pipeline and fault tests.
+
 ## Playtest checklist
 
 - Is local control responsive under expected RTT?
@@ -238,3 +258,8 @@ See `docs/host-authority-migration.md` for the production state machine and faul
 - Can a former host reconnect without restoring stale authority?
 - Is checkpoint age within the acceptable lost-gameplay budget?
 - Are unique rewards/scores/object ownership valid after migration at their transaction boundaries?
+- Can any predicted action create irreversible shared state before authoritative acknowledgement?
+- Are temporal/rate invariants tested as well as value/range checks?
+- Can duplicate or stale requests create a second reward/hit/purchase?
+- Is ranked/reward eligibility compatible with the session's actual trust topology?
+- Does a fully inspected client receive hidden state it does not need?
