@@ -195,6 +195,26 @@ Treat the usable rollback window as:
 
 If required rollback exceeds that envelope, transition to the defined delay/degraded/reconnect policy instead of entering an uncontrolled catch-up spiral.
 
+## Authority migration boundary — Batch 31
+
+Rollback/reconnect and host migration share state-history machinery but solve different failures. A reconnect assumes a valid authority still exists; host migration must first create a new authority and reconstruct canonical state.
+
+Keep these phases distinct:
+
+`HOST_LOST → COMMIT_BARRIER → ELECT → RESTORE → SEMANTIC_VALIDATE → RESYNC → READY`
+
+Key rules:
+- host election does not imply world-state migration
+- transport connection ID is not player identity
+- lobby/session ownership is not simulation authority
+- advance an authority epoch/term on migration so stale hosts/packets cannot overwrite new truth
+- migration checkpoints need ownership, RNG/event sequence, match phase and one-shot-event dedupe state in addition to ordinary world state
+- choose candidates only after compatibility/state-integrity gates; then rank network/compute quality
+- every network entity class needs an owner-disconnect policy
+- do not reopen actionable input until semantic invariants pass
+
+See `docs/host-authority-migration.md` for the production state machine and fault-injection matrix.
+
 ## Playtest checklist
 
 - Is local control responsive under expected RTT?
@@ -214,3 +234,7 @@ If required rollback exceeds that envelope, transition to the defined delay/degr
 - Does background/resume resynchronize rather than perform giant fixed-step catch-up?
 - Does adaptive quality shed presentation before authoritative simulation?
 - Does a sustained 20–30 minute run preserve enough rollback headroom?
+- Can asymmetric host loss ever create two active authority epochs?
+- Can a former host reconnect without restoring stale authority?
+- Is checkpoint age within the acceptable lost-gameplay budget?
+- Are unique rewards/scores/object ownership valid after migration at their transaction boundaries?
