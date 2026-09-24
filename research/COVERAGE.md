@@ -2,35 +2,19 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 39
+最終更新: 2026-09-24 / Batch 41
 
 ## Completed / substantially sampled
 
 ### Historical / magazine / preservation foundation
 - Gaming Alexandria Magazine Archive / Magazine Sets
 - Family Computer Magazine / Nintendo Fun Club News / GamePro / LOGiN / Beep / EGM / Super Play
-- PC Engine Fan — complete run indexed; 1993/1994 touch-contrast sampling
-- Gekkan PC Engine — complete 1988–1994 run indexed
-- Famimaga 64 — 1996–1998 complete holdings indexed
+- PC Engine Fan — complete run indexed; Gekkan PC Engine — complete 1988–1994 run indexed; Famimaga 64 — complete 1996–1998 holdings indexed
 - Play Meter / Monthly Coin Journal / Japan Amusement Monthly / Game Yuu II
 - Micom BASIC / Program Pochette / Technopolis / Marukatsu / K-POWER / Game Hihyō
-- Batch 23 historical sports context: Play Meter 1977/1988/1990, GamePro 1989, Technopolis 1987, Family Computer Magazine 1990, Canadian Coin Box 1990
-- Batch 24 procedural/readability historical cross-sample: Micom BASIC 1984, Family Computer Magazine 1985/1990, Comptiq 1988/1990, Canadian Coin Box 1986
-- Batch 25 replay/spectator historical cross-sample: Family Computer Magazine holdings, Famimaga 64 1996–1998, TV Gamer 1997, Monthly Coin Journal 1998, Gamejin 1999
-- Batch 26 procedural QA cross-sample: Technopolis 1987/1994, PC Engine Fan 1994, Gekkan PC Engine 1988–1994, Famimaga 64 1996, Game Yuu II 1996, Monthly Coin Journal 1998
-- Batch 27 constrained-hardware/network context: Family Computer Magazine, Technopolis, Famimaga 64, Play Meter / Monthly Coin Journal
-- Batch 28 save-media/persistence: Beep 1985, Family Computer Magazine 1990, PC Engine Fan 1994, Famimaga 64, Dengeki G's Engine, Used Games, Game Lab, arcade trade magazines
-- Batch 29 content-dependency: Technopolis 1986/1987/1994, Program Pochette, PC Engine Fan, Famimaga 64
-- Batch 30 divergent-save: LOGiN, Program Pochette, Family Computer Magazine, Play Meter, Game Hihyō, Famimaga 64
-- Batch 31 host-migration: Play Meter 1990 Directory, Famimaga 64, broader magazine index/network-multiplayer context
-- Batch 32 prediction/trust: Play Meter 1988/1990, GamePro 1989, Technopolis 1987/1994, Famimaga 64, Gamejin, Monthly Coin Journal
-- Batch 33 matchmaking/QoS: Play Meter 1988/1990, GamePro 1989, Technopolis 1987/1994, Famimaga 64
-- Batch 34 protocol/version migration: Technopolis 1986/1987/1994 + complete-run history, PC Engine Fan complete-run/add-on era + Nov 1994, Famimaga 64 1996–1998 complete-set context
-- Batch 35 procedural 3D readability: Technopolis 1986/1987/1994, Play Meter 1988/1990, PC Engine Fan complete run + 1994, Famimaga 64 complete set + 1996
-- Batch 36 cross-origin save portability: Program Pochette 1984/1985 preserved programs across puzzle/shooter/maze/drawing, Technopolis 1987/1994 + complete-run history, PC Engine Fan 1994 + complete-run/appendix history, Famimaga 64 1996 + complete-run context, Dengeki PC Engine/G's Engine transition history
-- Batch 37 dynamic 3D visibility: moving occluders, interior/multi-floor cue handoff, stateful portals, day/night identification robustness; historical context cross-sampled from Family Computer Magazine, Technopolis, GamePro, Play Meter, PC Engine Fan and Famimaga 64
-- Batch 38 schema/replay longevity: PC Engine Fan complete-run preservation, Gekkan PC Engine complete 1988–1994 run, Play Meter multi-decade holdings and broader archive/sets used as long-horizon preservation context
-- Batch 39 validity-preserving procedural mutation: Micom BASIC 1983–1985 and 1996 preserved programs, Program Pochette 1984–1985 preserved action/shooter/maze/puzzle programs, Technopolis 1987, GamePro 1989, Play Meter 1990, Famimaga 64 1996
+- Batches 23–39: sports/off-ball AI, procedural readability and adversarial QA, replay/spectator, constrained hardware/networking, save/persistence/content dependencies/divergent branches, host migration, prediction/trust, matchmaking/QoS, protocol migration, 3D visibility/roads, cross-origin save, dynamic visibility/interiors, schema/replay longevity, and validity-preserving mutation; see the corresponding dated research notes for exact source sets.
+- Batch 40 genre-adversarial cross-sample: Program Pochette/Micom BASIC preserved action, shooter, racing and puzzle programs across 1983–1996, including compact examples of finite-shot, timer, acceleration, escalating-density, pursuit and time-trial pressure structures.
+- Batch 41 production-budget cross-sample: Micom BASIC 1983–1996 (`Xemious`, `Fuwarp Fuwarp`, `PYON PYON`, `Excite Race`, `Ball & Hole`, `Let Out`, `Metal Arms`, `BATTLE BALLER`) plus Program Pochette (`The 29`, `The UFO`, `Popping Crusher`, `Thief`, `Alien`) used as compact multi-genre evidence for different simulation/player-budget shapes.
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -53,12 +37,14 @@
 - Batch 31: Unity Sessions host election/data migration; Photon host migration; PlayFab Lobby; DirectPlay host migration
 - Batch 32: Photon lag compensation/topology trust; Unity server authority; Gaffer prediction; Nakama relay trust
 - Batch 33: PlayFab matchmaking/latency expansion; Unity QoS/Relay/region allocation
-- Batch 34: Unity Netcode for Entities protocol handshake/fingerprints; Photon App/Game Version partitioning; PlayFab unique server BuildId; Unity Multiplay versioned allocation; PlayFab Party descriptor migration
-- Batch 35: Unity occlusion culling/visualization; Unreal screenshot and automation testing; 2026 road-network generation evaluation using connectivity/redundancy metrics
-- Batch 36: MDN same-origin/Web Storage/Storage Access; WebKit origin quota/eviction and Home Screen storage policy; OWASP browser-storage trust boundaries
+- Batch 34: Unity Netcode for Entities protocol handshake/fingerprints; Photon version partitioning; PlayFab server BuildId; Unity Multiplay versioned allocation
+- Batch 35: Unity occlusion culling; Unreal screenshot/automation testing; road-network connectivity/redundancy evaluation
+- Batch 36: same-origin/Web Storage/Storage Access; WebKit quota/eviction/Home Screen policy; OWASP storage trust boundaries
 - Batch 37: dynamic occlusion/render latency, landmark wayfinding hierarchy, portal-state and lighting robustness
-- Batch 38: Unreal Replay backward compatibility/version filtering; Photon Quantum deterministic replay/checksums; Protocol Buffers schema evolution; legacy Unity serialization/RPC contrast
-- Batch 39: AIIDE simulation-based PCG playability testing; coverage-guided property-based testing; counterexample shrinking; structured mutation/fuzzing concepts applied to valid procedural content
+- Batch 38: Unreal Replay compatibility; Photon Quantum deterministic replay/checksums; Protocol Buffers schema evolution
+- Batch 39: AIIDE simulation-based PCG testing; coverage-guided property testing; semantic mutation/shrinking
+- Batch 40: genre-specific adversarial objectives; Mario metric/user-study evidence, data-driven Sokoban difficulty, constrained/quality-diversity PCG and FPS topology/emergent-property contrast
+- Batch 41: cost-bounded procedural QA; simulation-based playability search-space restriction, human-calibrated cheap metrics, coverage-guided semantic generation, MAP-Elites temporal coverage, PCG Benchmark cross-problem evaluation, automated-game-testing runtime cost, runtime layered PCG validation
 
 ## Well-covered batches
 
@@ -71,31 +57,18 @@
 - 12: procedural city / replay-spectator / touch / UGC discovery / comeback
 - 13: replay determinism-regression / iPhone safe-area-haptics / UGC version-remix / returner recalibration / procedural regression
 - 14/14B: arcade operations / attract / photo mode / procedural and production operations
-- 15: physical arcade controls / embodied input / platform differentiation
-- 16: continue / redemption / kit economics / public-play conversion
-- 17: calibration / maintenance diagnostics / linked network / payout invariants
-- 18: save migration / corruption recovery / cloud conflict / fault injection
-- 19: rollback / prediction / interpolation / mobile reconnect / desync
-- 20: procedural decision signatures / heatmaps / semantic repetition
-- 21: replay lifecycle / authority / spectator scale / privacy / analytics
-- 22: adaptive touch ergonomics / handedness / reachability / occlusion / haptic density / thermal fatigue / cross-input equivalence
-- 23: sports teammate/off-ball AI / hierarchical team intent / role contracts / spatial relations / intent hysteresis / counterfactual AI QA
-- 24: procedural pacing / multi-skill difficulty / route-weighted threat / landmark readability / strategy diversity / human calibration
-- 25: automated highlights / causal clip boundaries / spectator hidden-information authorization / replay privacy
+- 15–18: physical arcade controls / platform differentiation / continue-redemption economics / calibration-maintenance / save migration-corruption-cloud conflict
+- 19–22: rollback/mobile reconnect / procedural decision signatures / replay lifecycle-authority-privacy / adaptive touch ergonomics
+- 23–25: sports teammate AI / procedural pacing-readability / automated highlights-spectator safety
 - 26: adversarial procedural seed search / semantic-depth-affordance regression / behavior-space stopping / failure minimization
-- 27: mobile Safari rollback CPU/memory budgets / allocation-stable resimulation / background-resume / thermal QA
-- 28: browser save quota / IndexedDB commit / origin eviction / critical storage reserve / recovery startup
-- 29: DLC-mod content-dependent save compatibility / remaps-tombstones / degraded read-only / dependency closure
-- 30: divergent save branches / semantic merge / economy provenance / atomic-unit boundaries / post-merge validation
-- 31: host/authority migration / authority epochs / migration checkpoints / reconnect identity / commit barriers
-- 32: client prediction trust / temporal validation / lag compensation / idempotency / topology provenance
-- 33: network-quality matchmaking / QoS vectors / hard floors / staged relaxation / population tax / calibration
-- 34: protocol/version migration / compatibility fingerprints / capability negotiation / rolling deployment / session pinning / reconnect-version safety / compatibility fixture matrix
-- 35: 3D procedural road continuity / route-weighted landmark visibility / occlusion chatter / skyline signatures / semantic visual regression / adversarial camera search
-- 36: cross-origin save portability / origin-as-persistence-ABI / explicit portable handoff / old-origin migration horizon / transactional import / origin-matrix CI
-- 37: dynamic visibility / interior-multi-floor cue hierarchy / portal-state reachability / day-night identification / worst-N combinatorial QA
-- 38: schema evolution / serialized-ID tombstones / custom serializer migration / deterministic replay provenance / mixed-version replay / transactional transcoding / compatibility retirement
-- 39: validity-preserving semantic mutation / sacred-repairable-measured invariants / bounded projection / margin-vector boundary search / compound boundaries / adaptive mutation strength / semantic shrinking / operator telemetry
+- 27–34: mobile Safari rollback budgets / browser save quota / content-dependent saves / divergent save branches / host migration / client-prediction trust / QoS matchmaking / protocol-version migration
+- 35: 3D procedural road continuity / route-weighted visibility / skyline signatures / semantic visual regression
+- 36: cross-origin save portability / transactional import / origin-matrix CI
+- 37: dynamic visibility / interior-multi-floor cue hierarchy / portal-state reachability / day-night identification
+- 38: schema evolution / serialized-ID tombstones / deterministic replay provenance / mixed-version replay / transactional transcoding
+- 39: validity-preserving semantic mutation / bounded repair / margin-vector and compound-boundary search / adaptive mutation / semantic shrinking
+- 40: genre-specific adversarial objectives for shooter/racing/RPG/puzzle / player-budget margins / counterfactual policies / human severity calibration
+- 41: production cost budgets / staged promotion / work caps / predicted-cost sharding / semantic caching / evidence-per-compute allocation / selective artifact retention / cost-regression telemetry
 
 ## Dedicated guides
 
@@ -115,7 +88,8 @@ Core specialist set includes:
 - docs/automated-highlight-spectator-safety.md
 - docs/procedural-diversity-metrics.md
 - docs/procedural-pacing-readability-qa.md
-- docs/adversarial-procedural-qa.md — through Batch 39 validity-preserving mutation and boundary search
+- docs/adversarial-procedural-qa.md — through Batch 40 genre-specific adversarial objectives
+- docs/procedural-qa-production-budgets.md — Batch 41 cost-bounded QA and CI sharding
 - docs/procedural-3d-visibility-road-qa.md — through Batch 37 dynamic/interior/lighting QA
 - docs/save-resilience-and-migration.md — through Batch 36 origin migration/portable-save guidance
 - docs/sports-game-abstraction.md
@@ -126,10 +100,9 @@ See docs/ for remaining genre/system guides.
 
 ### Procedural automated QA — follow-up
 - empirical calibration of behavior-space stopping thresholds on real generator histories
-- genre-specific adversarial objectives for shooter/racing/RPG/puzzle
 - empirical landmark/junction/cue-handoff thresholds from human play traces
 - validity-preserving mutation follow-up: learn operator priors from human-confirmed failures; boundary-pair coverage targets; repair-distance calibration
-- production cost budgets: seeds/hour, agent CPU, render-buffer storage and CI sharding
+- production-budget follow-up: calibrate evidence-per-compute thresholds on real CI history; cost-predictor accuracy; cache invalidation audit; shard-straggler telemetry
 
 ### Replay / telemetry — follow-up
 - long-term replay archival corpus and converter validation at scale
