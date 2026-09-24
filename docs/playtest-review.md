@@ -78,3 +78,20 @@
 - clientへfog-of-war/private/debug/future stateを不要にreplicateしていないか
 - security telemetryがopaque scoreだけでなく具体的なinvariant violationを残すか
 - durable rewardほどmovement predictionより強いauthority tierを要求しているか
+
+## Batch 33 — Network-quality matchmaking review
+
+- playabilityのhard floorとcandidate rankingのpreferenceを分離しているか
+- skill一致がnetwork floor違反を相殺していないか
+- 全員が許容できるcommon feasible regionを選んでいるか
+- median pingだけでなくjitter / loss / burst lossも実match品質と照合しているか
+- expansionが一気に「何でも可」にならず段階的なquality-loss curveになっているか
+- build/protocol/trust等のinvariantが待ち時間でoptionalにならないか
+- genreで最も重要な品質を最後まで保護するrelaxation順序になっているか
+- party平均が一人のunplayable edgeを隠していないか
+- queue/pool分割ごとのpopulation taxをeligible candidate数とwait p95で測っているか
+- QoS measurement ageを保存し、stale measurementを無条件に再利用していないか
+- pre-match QoSと実match RTT/jitter/loss/rollback/disconnectを同じsessionで追跡できるか
+- thresholdごとにfalse accept / false reject / added waitを比較したか
+- ranked/tournamentとcasualで同じnetwork envelopeを無条件共有していないか
+- 検索範囲を広げた場合、そのtrade-offをplayerが理解できるか
