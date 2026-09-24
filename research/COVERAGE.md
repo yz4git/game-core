@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 36
+最終更新: 2026-09-24 / Batch 38
 
 ## Completed / substantially sampled
 
@@ -28,6 +28,8 @@
 - Batch 34 protocol/version migration: Technopolis 1986/1987/1994 + complete-run history, PC Engine Fan complete-run/add-on era + Nov 1994, Famimaga 64 1996–1998 complete-set context
 - Batch 35 procedural 3D readability: Technopolis 1986/1987/1994, Play Meter 1988/1990, PC Engine Fan complete run + 1994, Famimaga 64 complete set + 1996
 - Batch 36 cross-origin save portability: Program Pochette 1984/1985 preserved programs across puzzle/shooter/maze/drawing, Technopolis 1987/1994 + complete-run history, PC Engine Fan 1994 + complete-run/appendix history, Famimaga 64 1996 + complete-run context, Dengeki PC Engine/G's Engine transition history
+- Batch 37 dynamic 3D visibility: moving occluders, interior/multi-floor cue handoff, stateful portals, day/night identification robustness; historical context cross-sampled from Family Computer Magazine, Technopolis, GamePro, Play Meter, PC Engine Fan and Famimaga 64
+- Batch 38 schema/replay longevity: PC Engine Fan complete-run preservation, Gekkan PC Engine complete 1988–1994 run, Play Meter multi-decade holdings and broader archive/sets used as long-horizon preservation context
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -53,6 +55,8 @@
 - Batch 34: Unity Netcode for Entities protocol handshake/fingerprints; Photon App/Game Version partitioning; PlayFab unique server BuildId; Unity Multiplay versioned allocation; PlayFab Party descriptor migration
 - Batch 35: Unity occlusion culling/visualization; Unreal screenshot and automation testing; 2026 road-network generation evaluation using connectivity/redundancy metrics
 - Batch 36: MDN same-origin/Web Storage/Storage Access; WebKit origin quota/eviction and Home Screen storage policy; OWASP browser-storage trust boundaries
+- Batch 37: dynamic occlusion/render latency, landmark wayfinding hierarchy, portal-state and lighting robustness
+- Batch 38: Unreal Replay backward compatibility/version filtering; Photon Quantum deterministic replay/checksums; Protocol Buffers schema evolution; legacy Unity serialization/RPC contrast
 
 ## Well-covered batches
 
@@ -87,6 +91,8 @@
 - 34: protocol/version migration / compatibility fingerprints / capability negotiation / rolling deployment / session pinning / reconnect-version safety / compatibility fixture matrix
 - 35: 3D procedural road continuity / route-weighted landmark visibility / occlusion chatter / skyline signatures / semantic visual regression / adversarial camera search
 - 36: cross-origin save portability / origin-as-persistence-ABI / explicit portable handoff / old-origin migration horizon / transactional import / origin-matrix CI
+- 37: dynamic visibility / interior-multi-floor cue hierarchy / portal-state reachability / day-night identification / worst-N combinatorial QA
+- 38: schema evolution / serialized-ID tombstones / custom serializer migration / deterministic replay provenance / mixed-version replay / transactional transcoding / compatibility retirement
 
 ## Dedicated guides
 
@@ -100,14 +106,14 @@ Core specialist set includes:
 - docs/host-authority-migration.md
 - docs/client-prediction-trust-boundaries.md
 - docs/network-quality-matchmaking.md
-- docs/protocol-version-migration.md
+- docs/protocol-version-migration.md — through Batch 38 schema evolution and replay compatibility
 - docs/replay-spectator-telemetry.md
 - docs/replay-lifecycle-privacy.md
 - docs/automated-highlight-spectator-safety.md
 - docs/procedural-diversity-metrics.md
 - docs/procedural-pacing-readability-qa.md
 - docs/adversarial-procedural-qa.md
-- docs/procedural-3d-visibility-road-qa.md — Batch 35 road/occlusion/skyline semantic QA
+- docs/procedural-3d-visibility-road-qa.md — through Batch 37 dynamic/interior/lighting QA
 - docs/save-resilience-and-migration.md — through Batch 36 origin migration/portable-save guidance
 - docs/sports-game-abstraction.md
 
@@ -118,12 +124,12 @@ See docs/ for remaining genre/system guides.
 ### Procedural automated QA — follow-up
 - empirical calibration of behavior-space stopping thresholds on real generator histories
 - genre-specific adversarial objectives for shooter/racing/RPG/puzzle
-- 3D visibility follow-up: empirical landmark/junction thresholds, multi-floor/interior portal cases, moving occluders and day/night robustness
+- empirical landmark/junction/cue-handoff thresholds from human play traces
 - mutation operators that preserve validity while searching near failure boundaries
 - production cost budgets: seeds/hour, agent CPU, render-buffer storage and CI sharding
 
 ### Replay / telemetry — follow-up
-- long-term format migration and archival corpus
+- long-term replay archival corpus and converter validation at scale
 - replay storage quotas / eviction stress tests
 - privacy-preserving highlight model evaluation across genres
 - highlight-signature thresholds calibrated against human comprehension
@@ -148,7 +154,7 @@ See docs/ for remaining genre/system guides.
 - host migration: election scoring calibration, checkpoint cadence, split-brain/partition recovery, dedicated-server fallback
 - matchmaking: empirical per-genre QoS thresholds, party/worst-edge policy, sparse-region population simulation, prediction error
 - prediction/security: per-genre trust matrices, rewind calibration, enforcement escalation/privacy
-- protocol migration follow-up: schema-evolution rules, mixed-version replay/spectator compatibility, forced-update UX, adoption/retirement thresholds
+- protocol/replay follow-up: real fixture corpus, converter fuzzing, adoption/retirement thresholds, forced-update UX
 
 ## Next priorities — medium
 
