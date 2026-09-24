@@ -320,6 +320,86 @@ Supporting every historical schema/content combination forever may be impossible
 
 Beyond the support horizon, failure must still avoid overwriting user data.
 
+## 33. Model divergent saves as branches
+
+When two devices modify state after a shared revision, preserve enough ancestry to identify a true fork rather than choosing by timestamp.
+
+Prefer a three-way semantic comparison:
+
+`base → branch A`
+
+`base → branch B`
+
+This distinguishes inherited old values from actual edits.
+
+## 34. Assign merge semantics per persistent domain
+
+A save blob contains values with different algebra. Declare the policy explicitly rather than applying one merge rule to everything.
+
+Examples:
+- discovered codex IDs: set union may be safe
+- monotonic achievements: union may be safe
+- best score: max may be safe if the scoring rule permits it
+- currency / consumables: final balances alone are generally unsafe to merge
+- mutually exclusive quest choices: branch conflict, not numeric max
+
+Technical convergence is not proof of gameplay validity.
+
+## 35. Give one-time rewards stable grant identity
+
+If the same unique reward is earned independently on two branches, adding inventory counts duplicates it.
+
+Persist stable grant/reward IDs where cross-device reconciliation matters. Merge grant identity first, then derive or validate inventory effects.
+
+## 36. Treat deletion as persistent information
+
+For mergeable objects, absence is ambiguous. A deleted object can otherwise reappear when reconciled with an unchanged ancestor copy.
+
+Keep tombstones or equivalent operation provenance through the reconciliation horizon. Compact them only after relevant branches can no longer return.
+
+## 37. Partition atomic units around invariants
+
+Conflict granularity should reflect gameplay coupling, not file convenience.
+
+Keep state that must change consistently in the same atomic/reconciliation unit. Separate truly independent slots or collections so unrelated changes do not create needless conflicts.
+
+## 38. Separate race detection from semantic resolution
+
+Write locks/version tokens detect that the base changed. They do not decide whether the new gameplay states can be joined.
+
+On a conflict:
+1. refetch current state
+2. find ancestry if available
+3. compute semantic deltas
+4. apply domain-specific merge policies
+5. validate the candidate globally
+6. retry against the new concurrency token
+
+Blind retry/overwrite is not conflict resolution.
+
+## 39. Stage and validate merge candidates
+
+Treat automatically merged state like an untrusted migration result.
+
+Validate both local and cross-domain invariants before commit: inventory/equipment, economy, quests, world position/topology, unlock exclusivity, unique rewards, and content references.
+
+Preserve both parent revisions until the merged candidate has become a later known-good generation.
+
+## 40. Design progression for future mergeability
+
+Offline/cloud reconciliation often requires information that a final snapshot does not contain: grant IDs, transaction provenance, explicit decisions, deletion history, authority and ancestry.
+
+For every persistent domain, define before shipping:
+- stable identity
+- authority
+- monotonic vs non-monotonic behavior
+- legal merge operator (if any)
+- exclusivity/invariants
+- deletion policy
+- provenance needed
+- post-merge validator
+- automatic vs assisted vs branch-choice-only resolution
+
 ## Playtest / QA checklist
 
 - Can every shipped save fixture migrate to current?
@@ -348,3 +428,13 @@ Beyond the support horizon, failure must still avoid overwriting user data.
 - Are transitive package dependencies checked?
 - Can QA reproduce a save against its historical content manifest?
 - Does remove → restore round-trip recover the same important semantic state?
+- Can the system identify a common ancestor for divergent offline branches?
+- Is each persistent domain's merge operator documented and semantically justified?
+- Can currency or consumables duplicate through branch merge?
+- Does earning the same unique reward on both branches deduplicate by grant identity?
+- Can an explicit deletion resurrect after sync?
+- Can mutually exclusive quest facts coexist after an automatic merge?
+- Does a write-lock conflict trigger semantic re-evaluation rather than blind overwrite?
+- Is a merged candidate globally validated before commit?
+- Are both parent branches recoverable after a bad merge?
+- Is repeated reconciliation idempotent where declared mergeable?
