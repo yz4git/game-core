@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 32
+最終更新: 2026-09-24 / Batch 33
 
 ## Completed / substantially sampled
 
@@ -24,6 +24,7 @@
 - Batch 30 divergent-save historical cross-sample: LOGiN 1983–1987, Program Pochette 1984–1987 preserved-program context, Family Computer Magazine 1985–1990, Play Meter 1978/1988/1990, Game Hihyō 1994–2006, Famimaga 64 1996–1998
 - Batch 31 host-migration historical cross-check: Play Meter 1990 Directory, Famimaga 64 1996–1998 holdings, broader Gaming Alexandria magazine index/network-multiplayer-era context
 - Batch 32 prediction/trust historical cross-sample: Play Meter 1988/1990, GamePro 1989, Technopolis 1987/1994, Famimaga 64 1996–1998, Gamejin 1998/1999, Monthly Coin Journal 1989/1998
+- Batch 33 matchmaking/QoS historical cross-sample: Play Meter 1988 and 1990 Directory/August/November, GamePro 1989 Issues 1/3, Technopolis 1987/1994, Famimaga 64 1996–1998 complete-set context
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -55,6 +56,7 @@
 - Batch 30: PlayFab Game Saves conflict/atomic-unit model and player conflict UX; Unity Cloud Save write locks/API and custom conflict retry; semantic three-way merge / monotonic-vs-non-monotonic progression analysis
 - Batch 31: Unity Multiplayer Sessions host election/data migration; legacy UNet reconnect identity; Photon Fusion host-migration snapshots/reconnect; Photon PUN ownership/control; PlayFab Lobby owner migration/server recovery; DirectPlay 8 P2P host election/migration
 - Batch 32: Photon Fusion lag compensation/topology trust; Unity Cloud Code cheat prevention/server authority/game-state management; Gaffer client/server prediction and authority/ownership sequences; Nakama relayed/client-authoritative trust model
+- Batch 33: PlayFab Matchmaking rule weights/region selection/latency attributes/time expansion; Unity Multiplayer Services advanced matchmaking QoS; Unity Relay QoS and Multiplay region-allocation flow
 
 ## Well-covered batches
 
@@ -85,6 +87,7 @@
 - 30: divergent save branches / common-ancestor semantic diff / per-domain merge algebra / unique-grant identity / economy provenance / tombstones / atomic-unit boundaries / write-lock vs resolution / post-merge validation
 - 31: host/authority migration / election-vs-state restoration / authority epochs / migration checkpoints / stable reconnect identity / orphan ownership policy / commit barriers / semantic resume validation / migration fault injection
 - 32: client prediction trust boundaries / intent-vs-result messages / temporal validation / bounded lag compensation / idempotent irreversible actions / ownership-vs-authority / topology provenance / hidden-information minimization / anti-cheat false-positive fault QA
+- 33: network-quality matchmaking / common feasible regions / QoS vectors / hard floor vs weighted preference / staged queue relaxation / population tax / QoS freshness / pre-to-post-match calibration / false-accept-vs-false-reject threshold tuning
 
 ## Dedicated guides
 
@@ -97,6 +100,7 @@ Core specialist set includes:
 - docs/rollback-mobile-network-design.md — expanded through Batch 32 with authority migration and prediction trust boundaries
 - docs/host-authority-migration.md — Batch 31 production migration state machine and QA
 - docs/client-prediction-trust-boundaries.md — Batch 32 prediction/authority/security trust matrix and fault QA
+- docs/network-quality-matchmaking.md — Batch 33 QoS gates, staged relaxation, population-cost and calibration guide
 - docs/replay-spectator-telemetry.md
 - docs/replay-lifecycle-privacy.md
 - docs/automated-highlight-spectator-safety.md
@@ -141,7 +145,7 @@ See docs/ for remaining genre/system guides.
 ### Networked action — follow-up
 - empirical rollback budget calibration across iPhone performance tiers
 - host migration follow-up: election scoring calibration, checkpoint cadence, split-brain/partition recovery, dedicated-server fallback
-- matchmaking network-quality thresholds
+- matchmaking follow-up: empirical per-genre QoS threshold calibration, party/worst-edge policy, sparse-region population simulation, pre-match-to-in-match prediction error
 - prediction/security follow-up: per-genre trust matrices, rewind threshold calibration, enforcement escalation and privacy boundaries
 - protocol/version migration
 
