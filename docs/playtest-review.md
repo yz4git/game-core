@@ -164,3 +164,21 @@
 - oldest-supported replay fixtureを毎releaseで再生しているか
 - corrupt/truncated/unknown-field/changed-enum/content-driftをfailure fixtureに含めているか
 - compatibility readerのretirementを年齢だけで決めず、利用率・security risk・migration成功率で判断しているか
+
+## Batch 40 — Genre-specific procedural adversarial review
+
+- generic playability scoreだけでshooter/racing/RPG/puzzleのfairnessを判定していないか
+- genreで失敗直前に枯渇するplayer budgetをsigned marginとして出しているか
+- shooterでenemy countではなくjoint reaction slack / escape-space / unavoidable damageを測っているか
+- shooter resource配置を総量ではなくroute・accuracy policy別のpre-encounter slackで検証しているか
+- racerを静止状態のconnected roadだけでなく通常approach speedから走破検証しているか
+- racerで壁接触/spin/slowdown後のsecondary collisionとtime-to-recoveryを測っているか
+- RPG encounterのwin rateが適切でも一つのroleが不要、または一戦略だけが支配的になっていないか
+- RPGをfull HPの単体戦だけでなく直前3–10 encounterからのincoming state分布で検証しているか
+- puzzleでsolvable=trueだけでなくirreversible-error depth / restart cost / alternate solution / recoverabilityを測っているか
+- puzzleの成功traceへplausible local mistakeを入れ、solution周辺のrecoverable basinを検査しているか
+- novice/baseline/expert/exploit policyの結果順がゲームの意図するskill orderingと一致するか
+- adversarial mutationがgenre grammarを壊して「直しても出荷しないケース」を大量生成していないか
+- machine severityとhuman severityの誤差をskill cohort別に追跡しているか
+- top adversarial casesのhuman-confirmed precisionをreleaseごとに測っているか
+- p1/p5 genre marginが前releaseより悪化していないか
