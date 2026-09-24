@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 26
+最終更新: 2026-09-24 / Batch 27
 
 ## Completed / substantially sampled
 
@@ -18,6 +18,7 @@
 - Batch 24 procedural/readability historical cross-sample: Micom BASIC 1984, Family Computer Magazine 1985/1990, Comptiq 1988/1990, Canadian Coin Box 1986
 - Batch 25 replay/spectator historical cross-sample: Family Computer Magazine holdings, Famimaga 64 1996–1998, TV Gamer 1997, Monthly Coin Journal 1998, Gamejin 1999
 - Batch 26 procedural QA cross-sample: Technopolis 1987/1994, PC Engine Fan 1994, Gekkan PC Engine 1988–1994, Famimaga 64 1996, Game Yuu II 1996, Monthly Coin Journal 1998
+- Batch 27 constrained-hardware/network context cross-check: Family Computer Magazine, Technopolis, Famimaga 64, Play Meter / Monthly Coin Journal preservation sets
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -43,6 +44,7 @@
 - space-time WFC and local-vs-global solvability research
 - Quality Diversity / constrained MAP-Elites game-content research
 - 2026 FPS MAP-Elites topology vs emergent gameplay evaluation
+- Batch 27: WebKit JavaScriptCore lifecycle performance / JetStream 3, Apple Safari Web Inspector CPU/energy guidance, MDN Page Visibility / rAF / PerformanceObserver / Long Animation Frame / Device Memory capability material
 
 ## Well-covered batches
 
@@ -67,6 +69,7 @@
 - 24: procedural pacing signatures / multi-skill difficulty curves / route-weighted threat / recovery budget / landmark-junction readability / clustered strategy heatmaps / counterfactual strategy diversity / human metric calibration
 - 25: automated highlight quality / hard-negative highlight QA / causal clip boundaries / highlight diversity / spectator hidden-information authorization / field-level replay privacy / collusion-delay testing
 - 26: adversarial procedural seed search / near-failure margins / static-vs-dynamic gates / semantic-depth-affordance visual regression / behavior-space coverage stopping / failure minimization / human-machine QA loop
+- 27: mobile Safari rollback CPU/memory budgets / state-history bounds / allocation-stable re-simulation / fixed simulation vs display refresh / background-resume discontinuity / sustained thermal-performance QA / presentation-first degradation
 
 ## Dedicated guides
 
@@ -76,7 +79,7 @@ Core specialist set includes:
 - docs/touch-production-qa.md
 - docs/physical-arcade-interface-design.md
 - docs/input-calibration-and-diagnostics.md
-- docs/rollback-mobile-network-design.md
+- docs/rollback-mobile-network-design.md — expanded Batch 27 with browser/mobile performance budgets
 - docs/replay-spectator-telemetry.md
 - docs/replay-lifecycle-privacy.md
 - docs/automated-highlight-spectator-safety.md
@@ -118,7 +121,7 @@ See docs/ for remaining genre/system guides.
 - recovery UX/privacy and long-lived fixture corpus
 
 ### Networked action — follow-up
-- rollback CPU/memory budgets on mobile Safari
+- empirical rollback budget calibration across iPhone performance tiers
 - host/authority migration under dropout
 - matchmaking network-quality thresholds
 - cheating/security boundaries for client prediction
