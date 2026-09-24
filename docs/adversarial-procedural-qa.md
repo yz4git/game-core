@@ -144,6 +144,104 @@ Track at minimum:
 - semantic/depth regression magnitude
 - minimized repro size
 
+## Batch 39 — Validity-preserving mutation
+
+Adversarial search should stay near the **valid-content manifold** instead of spending most of its budget producing trivial corruption.
+
+### Semantic mutation vocabulary
+
+Prefer mutations that preserve domain meaning:
+- move a junction rather than randomize road vertices
+- move an objective to another reachable branch rather than randomize coordinates
+- redistribute encounter budget rather than add arbitrary enemies
+- move a resource later in a valid progression rather than delete it
+- alter landmark reveal timing rather than randomize every building
+
+If a mutation cannot be described in gameplay language, check whether it is testing a useful production risk.
+
+### Invariant classes
+
+Before mutation, classify constraints:
+
+- **Sacred** — must never break during this experiment.
+- **Repairable** — may be restored by a bounded local repair.
+- **Measured** — the target margin; allowed to approach zero or fail.
+
+A repair must be logged. Large repair distance means the child is no longer a useful local experiment and should normally be rejected.
+
+### Margin-vector search
+
+Do not reduce playability to one boolean. Export signed margins such as:
+- clearance
+- reaction-time slack
+- resource slack
+- move-count surplus
+- alternate-route cost
+- visibility-before-decision
+- unavoidable damage
+- recovery distance
+
+Search toward zero while remaining valid. Keep Pareto/frontier cases so one failure dimension does not erase another.
+
+### Compound boundaries
+
+After mapping individual margins, search intersections: narrow clearance + late cue; low ammo + long pressure; weak route redundancy + moving occlusion. Many production failures emerge from combinations of individually acceptable conditions.
+
+Track boundary-pair and boundary-triple coverage separately from single-margin extremes.
+
+### Adaptive mutation strength
+
+Per operator, adapt step size from:
+- valid-offspring rate
+- behavior novelty
+- margin improvement
+- repair distance
+
+Increase step size when children remain valid but behavior is stagnant. Decrease it when validity collapses or when refining a discovered boundary.
+
+### Archive parents by information gain
+
+Do not keep only the single worst seed. Preserve parents representing:
+- distinct behavior cells
+- distinct failure signatures
+- different margin-frontier regions
+- policy/human disagreement clusters
+
+This prevents search from collapsing into one bug basin.
+
+### Ancestry and semantic shrinking
+
+For every retained adversarial case store:
+- parent fixture/seed
+- mutation operator and parameters
+- semantic delta
+- repair delta
+- generator/build version
+- margin vector
+- behavior/failure signature
+
+Shrink failures using the same semantic vocabulary as mutation. Minimize semantic delta before raw object count, while preserving sacred invariants and the failure predicate.
+
+### Operator telemetry
+
+Per release and per mutation operator track:
+- attempts
+- valid-before-repair rate
+- valid-after-repair rate
+- median/p95 repair distance
+- new behavior cells / 1k attempts
+- new boundary cells / 1k attempts
+- new severe failure signatures / 1k simulations
+- duplicate failure ratio
+- human-confirmed issue precision
+- simulation/render cost
+
+Large changes in these yields after a generator revision are themselves regression signals.
+
+### Recommended pipeline
+
+**KNOWN-GOOD PARENT → SEMANTIC MUTATION → SACRED-INVARIANT CHECK → BOUNDED REPAIR → STATIC VALIDATION → MARGIN VECTOR → DYNAMIC SIMULATION → BEHAVIOR/FAILURE SIGNATURE → ARCHIVE/DISCARD → SEMANTIC SHRINK → REGRESSION FIXTURE**
+
 ## Playtest questions
 
 - Are rare severe failures being searched for deliberately?
@@ -156,3 +254,8 @@ Track at minimum:
 - Are current descriptors hiding human-perceived differences?
 - Can each severe procedural bug be reproduced compactly?
 - Did human review improve the next automated search?
+- Which mutation operators mostly create trivial invalidity?
+- Which valid cases lie near two or more failure boundaries at once?
+- Did repair preserve the intended mutation or silently replace it?
+- Can a retained failure be explained as a short semantic delta from a known-good parent?
+- Did a generator revision make an important mutation operator lose reach?
