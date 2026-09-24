@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 41
+最終更新: 2026-09-25 / Batch 42
 
 ## Completed / substantially sampled
 
