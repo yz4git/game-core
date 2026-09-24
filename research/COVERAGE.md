@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 28
+最終更新: 2026-09-24 / Batch 29
 
 ## Completed / substantially sampled
 
@@ -20,6 +20,7 @@
 - Batch 26 procedural QA cross-sample: Technopolis 1987/1994, PC Engine Fan 1994, Gekkan PC Engine 1988–1994, Famimaga 64 1996, Game Yuu II 1996, Monthly Coin Journal 1998
 - Batch 27 constrained-hardware/network context cross-check: Family Computer Magazine, Technopolis, Famimaga 64, Play Meter / Monthly Coin Journal preservation sets
 - Batch 28 save-media / persistence cross-sample: Beep 1985, Family Computer Magazine 1990, PC Engine Fan 1994 + complete-run index, Famimaga 64 1996–1998, Dengeki G's Engine 1996–1997, Used Games 1996–2000, Game Lab 1999, Play Meter / Monthly Coin Journal 1996–1998
+- Batch 29 content-dependency cross-sample: Technopolis 1986/1987/1994 + complete-run history, Program Pochette 1984–1987 complete run, PC Engine Fan 1988–1997 complete-run/add-on context + Nov 1994/1995 appendix, Famimaga 64 1996–1998
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -47,6 +48,7 @@
 - 2026 FPS MAP-Elites topology vs emergent gameplay evaluation
 - Batch 27: WebKit JavaScriptCore lifecycle performance / JetStream 3, Apple Safari Web Inspector CPU/energy guidance, MDN Page Visibility / rAF / PerformanceObserver / Long Animation Frame / Device Memory capability material
 - Batch 28: WebKit Storage Policy / Safari 17 Storage API, MDN storage quota+eviction / StorageManager estimate+persist / IndexedDB transaction complete+abort, W3C IndexedDB atomic commit requirements
+- Batch 29: Steamworks DLC + ISteamApps entitlement/presence APIs, Minecraft Forge MissingMappings registry policies, Unity Addressables content-state/catalog update workflow, Bethesda save recovery/support cases
 
 ## Well-covered batches
 
@@ -73,6 +75,7 @@
 - 26: adversarial procedural seed search / near-failure margins / static-vs-dynamic gates / semantic-depth-affordance visual regression / behavior-space coverage stopping / failure minimization / human-machine QA loop
 - 27: mobile Safari rollback CPU/memory budgets / state-history bounds / allocation-stable re-simulation / fixed simulation vs display refresh / background-resume discontinuity / sustained thermal-performance QA / presentation-first degradation
 - 28: browser save quota / runtime storage estimates / IndexedDB transaction commit boundaries / origin eviction / persistence tiers / critical storage reserve / quota fault injection / recovery-aware startup
+- 29: content-dependent save compatibility / DLC-mod removal / immutable IDs-remaps-tombstones / degraded read-only loading / opaque-state quarantine / dependency closure / remove-restore round-trip QA
 
 ## Dedicated guides
 
@@ -89,7 +92,7 @@ Core specialist set includes:
 - docs/procedural-diversity-metrics.md — expanded through Batch 26 adversarial coverage
 - docs/procedural-pacing-readability-qa.md
 - docs/adversarial-procedural-qa.md
-- docs/save-resilience-and-migration.md — expanded Batch 28 with browser quota/eviction resilience
+- docs/save-resilience-and-migration.md — expanded Batch 29 with missing-content/DLC-mod compatibility
 - docs/sports-game-abstraction.md — expanded Batch 23 teammate/off-ball AI guidance
 
 See docs/ for remaining genre/system guides.
@@ -119,10 +122,10 @@ See docs/ for remaining genre/system guides.
 
 ### Save / resilience — follow-up
 - semantic merge of independent progression branches
-- content-DLC removal / missing-mod compatibility
 - recovery UX/privacy and long-lived fixture corpus
 - storage reserve thresholds calibrated on real save/replay/cache growth
 - cross-origin / deployment-origin migration and save portability
+- content compatibility follow-up: scripted component quarantine, multiplayer package negotiation, compatibility-horizon fixtures
 
 ### Networked action — follow-up
 - empirical rollback budget calibration across iPhone performance tiers
