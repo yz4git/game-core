@@ -63,3 +63,18 @@
 - rolling severe-failure discoveryもrandom/adversarial双方で飽和したか
 - severe failureを小さなreproへ自動縮小できるか
 - 人間が発見した反復・迷い・理不尽を次回からmachine predicateへ変換したか
+
+## Batch 32 — Client prediction / trust-boundary review
+
+- clientがfinal position/damage/reward等、authorityが再導出できない結果を直接確定できないか
+- 値の範囲だけでなく入力順序・action rate・cooldown・tick windowを検証しているか
+- lag compensationの最大rewindとclient timestamp clampが明示されているか
+- duplicate/retry/reconnect replayでhit・pickup・purchase・unique rewardが二重確定しないか
+- ownership取得が不要なstate write権限まで与えていないか
+- authority transfer後の旧generation packetが勝てないか
+- listen-host/shared/relay matchの結果がtrusted-server matchと同じrank/reward poolへ無条件で入らないか
+- correctionはcanonical stateを優先し、visual smoothingがcollisionやaffordanceへ逆流しないか
+- anti-cheat invariantをhonest jitter/loss/reorder/background/resume/host migrationでfalse-positive検証したか
+- clientへfog-of-war/private/debug/future stateを不要にreplicateしていないか
+- security telemetryがopaque scoreだけでなく具体的なinvariant violationを残すか
+- durable rewardほどmovement predictionより強いauthority tierを要求しているか
