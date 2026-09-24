@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 33
+最終更新: 2026-09-24 / Batch 34
 
 ## Completed / substantially sampled
 
@@ -18,13 +18,14 @@
 - Batch 24 procedural/readability historical cross-sample: Micom BASIC 1984, Family Computer Magazine 1985/1990, Comptiq 1988/1990, Canadian Coin Box 1986
 - Batch 25 replay/spectator historical cross-sample: Family Computer Magazine holdings, Famimaga 64 1996–1998, TV Gamer 1997, Monthly Coin Journal 1998, Gamejin 1999
 - Batch 26 procedural QA cross-sample: Technopolis 1987/1994, PC Engine Fan 1994, Gekkan PC Engine 1988–1994, Famimaga 64 1996, Game Yuu II 1996, Monthly Coin Journal 1998
-- Batch 27 constrained-hardware/network context cross-check: Family Computer Magazine, Technopolis, Famimaga 64, Play Meter / Monthly Coin Journal preservation sets
-- Batch 28 save-media / persistence cross-sample: Beep 1985, Family Computer Magazine 1990, PC Engine Fan 1994 + complete-run index, Famimaga 64 1996–1998, Dengeki G's Engine 1996–1997, Used Games 1996–2000, Game Lab 1999, Play Meter / Monthly Coin Journal 1996–1998
-- Batch 29 content-dependency cross-sample: Technopolis 1986/1987/1994 + complete-run history, Program Pochette 1984–1987 complete run, PC Engine Fan 1988–1997 complete-run/add-on context + Nov 1994/1995 appendix, Famimaga 64 1996–1998
-- Batch 30 divergent-save historical cross-sample: LOGiN 1983–1987, Program Pochette 1984–1987 preserved-program context, Family Computer Magazine 1985–1990, Play Meter 1978/1988/1990, Game Hihyō 1994–2006, Famimaga 64 1996–1998
-- Batch 31 host-migration historical cross-check: Play Meter 1990 Directory, Famimaga 64 1996–1998 holdings, broader Gaming Alexandria magazine index/network-multiplayer-era context
-- Batch 32 prediction/trust historical cross-sample: Play Meter 1988/1990, GamePro 1989, Technopolis 1987/1994, Famimaga 64 1996–1998, Gamejin 1998/1999, Monthly Coin Journal 1989/1998
-- Batch 33 matchmaking/QoS historical cross-sample: Play Meter 1988 and 1990 Directory/August/November, GamePro 1989 Issues 1/3, Technopolis 1987/1994, Famimaga 64 1996–1998 complete-set context
+- Batch 27 constrained-hardware/network context: Family Computer Magazine, Technopolis, Famimaga 64, Play Meter / Monthly Coin Journal
+- Batch 28 save-media/persistence: Beep 1985, Family Computer Magazine 1990, PC Engine Fan 1994, Famimaga 64, Dengeki G's Engine, Used Games, Game Lab, arcade trade magazines
+- Batch 29 content-dependency: Technopolis 1986/1987/1994, Program Pochette, PC Engine Fan, Famimaga 64
+- Batch 30 divergent-save: LOGiN, Program Pochette, Family Computer Magazine, Play Meter, Game Hihyō, Famimaga 64
+- Batch 31 host-migration: Play Meter 1990 Directory, Famimaga 64, broader magazine index/network-multiplayer context
+- Batch 32 prediction/trust: Play Meter 1988/1990, GamePro 1989, Technopolis 1987/1994, Famimaga 64, Gamejin, Monthly Coin Journal
+- Batch 33 matchmaking/QoS: Play Meter 1988/1990, GamePro 1989, Technopolis 1987/1994, Famimaga 64
+- Batch 34 protocol/version migration: Technopolis 1986/1987/1994 + complete-run history, PC Engine Fan complete-run/add-on era + Nov 1994, Famimaga 64 1996–1998 complete-set context
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -36,27 +37,18 @@
 - GGPO / Source networking / deterministic and snapshot networking references
 - Blizzard Overwatch replay/spectator and Unity authority/spectator material
 - smartphone thumb-reach / grip-span ergonomics research
-- FIFA 13/17/22 and EA SPORTS FC 25 tactical/off-ball AI developer material
-- TacticAI football tactical graph-model research
-- AIIDE PCG evaluation / expressive-range / survival-analysis references
-- multi-agent PCGRL and multi-agent behavioural-diversity research
-- Neon Chrome procedural-generation public breakdown
-- Riot Games League of Legends Replay API
-- FDG / Honor of Kings / gameplay-video multi-modal highlight detection research
-- player-reaction / outlying-behavior highlight research
-- spectator state-delay and replay privacy implementation references
-- AIIDE generic level evaluation / gameplay action-graph constraints / static+dynamic puzzle validation
-- PCG solution-action-sequence similarity / affordance-rich tile embeddings
-- space-time WFC and local-vs-global solvability research
+- FIFA / EA SPORTS FC tactical/off-ball AI developer material and TacticAI
+- AIIDE PCG evaluation / expressive-range / survival-analysis / multi-agent PCGRL / Neon Chrome procedural breakdown
+- Riot Games League of Legends Replay API and highlight-detection research
 - Quality Diversity / constrained MAP-Elites game-content research
-- 2026 FPS MAP-Elites topology vs emergent gameplay evaluation
-- Batch 27: WebKit JavaScriptCore lifecycle performance / JetStream 3, Apple Safari Web Inspector CPU/energy guidance, MDN Page Visibility / rAF / PerformanceObserver / Long Animation Frame / Device Memory capability material
-- Batch 28: WebKit Storage Policy / Safari 17 Storage API, MDN storage quota+eviction / StorageManager estimate+persist / IndexedDB transaction complete+abort, W3C IndexedDB atomic commit requirements
-- Batch 29: Steamworks DLC + ISteamApps entitlement/presence APIs, Minecraft Forge MissingMappings registry policies, Unity Addressables content-state/catalog update workflow, Bethesda save recovery/support cases
-- Batch 30: PlayFab Game Saves conflict/atomic-unit model and player conflict UX; Unity Cloud Save write locks/API and custom conflict retry; semantic three-way merge / monotonic-vs-non-monotonic progression analysis
-- Batch 31: Unity Multiplayer Sessions host election/data migration; legacy UNet reconnect identity; Photon Fusion host-migration snapshots/reconnect; Photon PUN ownership/control; PlayFab Lobby owner migration/server recovery; DirectPlay 8 P2P host election/migration
-- Batch 32: Photon Fusion lag compensation/topology trust; Unity Cloud Code cheat prevention/server authority/game-state management; Gaffer client/server prediction and authority/ownership sequences; Nakama relayed/client-authoritative trust model
-- Batch 33: PlayFab Matchmaking rule weights/region selection/latency attributes/time expansion; Unity Multiplayer Services advanced matchmaking QoS; Unity Relay QoS and Multiplay region-allocation flow
+- Batch 27: WebKit JavaScriptCore lifecycle performance, Safari Web Inspector CPU/energy, Page Visibility/rAF/performance APIs
+- Batch 28: WebKit Storage Policy, Storage API, IndexedDB transaction/atomic commit requirements
+- Batch 29: Steamworks DLC/ISteamApps, Forge MissingMappings, Unity Addressables content-state/catalog updates
+- Batch 30: PlayFab Game Saves conflict model; Unity Cloud Save write locks; semantic three-way merge
+- Batch 31: Unity Sessions host election/data migration; Photon host migration; PlayFab Lobby; DirectPlay host migration
+- Batch 32: Photon lag compensation/topology trust; Unity server authority; Gaffer prediction; Nakama relay trust
+- Batch 33: PlayFab matchmaking/latency expansion; Unity QoS/Relay/region allocation
+- Batch 34: Unity Netcode for Entities protocol handshake/fingerprints; Photon App/Game Version partitioning; PlayFab unique server BuildId; Unity Multiplay versioned allocation; PlayFab Party descriptor migration
 
 ## Well-covered batches
 
@@ -78,16 +70,17 @@
 - 21: replay lifecycle / authority / spectator scale / privacy / analytics
 - 22: adaptive touch ergonomics / handedness / reachability / occlusion / haptic density / thermal fatigue / cross-input equivalence
 - 23: sports teammate/off-ball AI / hierarchical team intent / role contracts / spatial relations / intent hysteresis / counterfactual AI QA
-- 24: procedural pacing signatures / multi-skill difficulty curves / route-weighted threat / recovery budget / landmark-junction readability / clustered strategy heatmaps / counterfactual strategy diversity / human metric calibration
-- 25: automated highlight quality / hard-negative highlight QA / causal clip boundaries / highlight diversity / spectator hidden-information authorization / field-level replay privacy / collusion-delay testing
-- 26: adversarial procedural seed search / near-failure margins / static-vs-dynamic gates / semantic-depth-affordance visual regression / behavior-space coverage stopping / failure minimization / human-machine QA loop
-- 27: mobile Safari rollback CPU/memory budgets / state-history bounds / allocation-stable re-simulation / fixed simulation vs display refresh / background-resume discontinuity / sustained thermal-performance QA / presentation-first degradation
-- 28: browser save quota / runtime storage estimates / IndexedDB transaction commit boundaries / origin eviction / persistence tiers / critical storage reserve / quota fault injection / recovery-aware startup
-- 29: content-dependent save compatibility / DLC-mod removal / immutable IDs-remaps-tombstones / degraded read-only loading / opaque-state quarantine / dependency closure / remove-restore round-trip QA
-- 30: divergent save branches / common-ancestor semantic diff / per-domain merge algebra / unique-grant identity / economy provenance / tombstones / atomic-unit boundaries / write-lock vs resolution / post-merge validation
-- 31: host/authority migration / election-vs-state restoration / authority epochs / migration checkpoints / stable reconnect identity / orphan ownership policy / commit barriers / semantic resume validation / migration fault injection
-- 32: client prediction trust boundaries / intent-vs-result messages / temporal validation / bounded lag compensation / idempotent irreversible actions / ownership-vs-authority / topology provenance / hidden-information minimization / anti-cheat false-positive fault QA
-- 33: network-quality matchmaking / common feasible regions / QoS vectors / hard floor vs weighted preference / staged queue relaxation / population tax / QoS freshness / pre-to-post-match calibration / false-accept-vs-false-reject threshold tuning
+- 24: procedural pacing / multi-skill difficulty / route-weighted threat / landmark readability / strategy diversity / human calibration
+- 25: automated highlights / causal clip boundaries / spectator hidden-information authorization / replay privacy
+- 26: adversarial procedural seed search / semantic-depth-affordance regression / behavior-space stopping / failure minimization
+- 27: mobile Safari rollback CPU/memory budgets / allocation-stable resimulation / background-resume / thermal QA
+- 28: browser save quota / IndexedDB commit / origin eviction / critical storage reserve / recovery startup
+- 29: DLC-mod content-dependent save compatibility / remaps-tombstones / degraded read-only / dependency closure
+- 30: divergent save branches / semantic merge / economy provenance / atomic-unit boundaries / post-merge validation
+- 31: host/authority migration / authority epochs / migration checkpoints / reconnect identity / commit barriers
+- 32: client prediction trust / temporal validation / lag compensation / idempotency / topology provenance
+- 33: network-quality matchmaking / QoS vectors / hard floors / staged relaxation / population tax / calibration
+- 34: protocol/version migration / compatibility fingerprints / capability negotiation / rolling deployment / session pinning / reconnect-version safety / compatibility fixture matrix
 
 ## Dedicated guides
 
@@ -97,18 +90,19 @@ Core specialist set includes:
 - docs/touch-production-qa.md
 - docs/physical-arcade-interface-design.md
 - docs/input-calibration-and-diagnostics.md
-- docs/rollback-mobile-network-design.md — expanded through Batch 32 with authority migration and prediction trust boundaries
-- docs/host-authority-migration.md — Batch 31 production migration state machine and QA
-- docs/client-prediction-trust-boundaries.md — Batch 32 prediction/authority/security trust matrix and fault QA
-- docs/network-quality-matchmaking.md — Batch 33 QoS gates, staged relaxation, population-cost and calibration guide
+- docs/rollback-mobile-network-design.md
+- docs/host-authority-migration.md
+- docs/client-prediction-trust-boundaries.md
+- docs/network-quality-matchmaking.md
+- docs/protocol-version-migration.md — Batch 34 compatibility fingerprint, rolling deployment, session epoch and mixed-version QA guide
 - docs/replay-spectator-telemetry.md
 - docs/replay-lifecycle-privacy.md
 - docs/automated-highlight-spectator-safety.md
-- docs/procedural-diversity-metrics.md — expanded through Batch 26 adversarial coverage
+- docs/procedural-diversity-metrics.md
 - docs/procedural-pacing-readability-qa.md
 - docs/adversarial-procedural-qa.md
-- docs/save-resilience-and-migration.md — expanded through Batch 30 with missing-content and semantic branch reconciliation
-- docs/sports-game-abstraction.md — expanded Batch 23 teammate/off-ball AI guidance
+- docs/save-resilience-and-migration.md
+- docs/sports-game-abstraction.md
 
 See docs/ for remaining genre/system guides.
 
@@ -139,20 +133,20 @@ See docs/ for remaining genre/system guides.
 - recovery UX/privacy and long-lived fixture corpus
 - storage reserve thresholds calibrated on real save/replay/cache growth
 - cross-origin / deployment-origin migration and save portability
-- content compatibility follow-up: scripted component quarantine, multiplayer package negotiation, compatibility-horizon fixtures
-- semantic-merge follow-up: event compaction/tombstone GC, account merge vs device merge, authoritative economy boundaries, human-readable merge previews
+- content compatibility: scripted component quarantine, multiplayer package negotiation, compatibility-horizon fixtures
+- semantic merge: event compaction/tombstone GC, account merge vs device merge, authoritative economy boundaries, human-readable merge previews
 
 ### Networked action — follow-up
 - empirical rollback budget calibration across iPhone performance tiers
-- host migration follow-up: election scoring calibration, checkpoint cadence, split-brain/partition recovery, dedicated-server fallback
-- matchmaking follow-up: empirical per-genre QoS threshold calibration, party/worst-edge policy, sparse-region population simulation, pre-match-to-in-match prediction error
-- prediction/security follow-up: per-genre trust matrices, rewind threshold calibration, enforcement escalation and privacy boundaries
-- protocol/version migration
+- host migration: election scoring calibration, checkpoint cadence, split-brain/partition recovery, dedicated-server fallback
+- matchmaking: empirical per-genre QoS thresholds, party/worst-edge policy, sparse-region population simulation, prediction error
+- prediction/security: per-genre trust matrices, rewind calibration, enforcement escalation/privacy
+- protocol migration follow-up: schema-evolution rules, mixed-version replay/spectator compatibility, forced-update UX, adoption/retirement thresholds
 
 ## Next priorities — medium
 
 - narrative consequence telemetry
-- sports AI follow-up: multi-agent assignment conflict / role-transition hysteresis / teammate option-quality benchmark corpus
+- sports AI assignment conflict / role-transition hysteresis / option-quality benchmark corpus
 - crafting economy
 - accessibility across genres
 - photo/replay sharing privacy and metadata
