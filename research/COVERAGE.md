@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 34
+最終更新: 2026-09-24 / Batch 35
 
 ## Completed / substantially sampled
 
@@ -26,6 +26,7 @@
 - Batch 32 prediction/trust: Play Meter 1988/1990, GamePro 1989, Technopolis 1987/1994, Famimaga 64, Gamejin, Monthly Coin Journal
 - Batch 33 matchmaking/QoS: Play Meter 1988/1990, GamePro 1989, Technopolis 1987/1994, Famimaga 64
 - Batch 34 protocol/version migration: Technopolis 1986/1987/1994 + complete-run history, PC Engine Fan complete-run/add-on era + Nov 1994, Famimaga 64 1996–1998 complete-set context
+- Batch 35 procedural 3D readability: Technopolis 1986/1987/1994, Play Meter 1988/1990, PC Engine Fan complete run + 1994, Famimaga 64 complete set + 1996
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -49,6 +50,7 @@
 - Batch 32: Photon lag compensation/topology trust; Unity server authority; Gaffer prediction; Nakama relay trust
 - Batch 33: PlayFab matchmaking/latency expansion; Unity QoS/Relay/region allocation
 - Batch 34: Unity Netcode for Entities protocol handshake/fingerprints; Photon App/Game Version partitioning; PlayFab unique server BuildId; Unity Multiplay versioned allocation; PlayFab Party descriptor migration
+- Batch 35: Unity occlusion culling/visualization; Unreal screenshot and automation testing; 2026 road-network generation evaluation using connectivity/redundancy metrics
 
 ## Well-covered batches
 
@@ -81,6 +83,7 @@
 - 32: client prediction trust / temporal validation / lag compensation / idempotency / topology provenance
 - 33: network-quality matchmaking / QoS vectors / hard floors / staged relaxation / population tax / calibration
 - 34: protocol/version migration / compatibility fingerprints / capability negotiation / rolling deployment / session pinning / reconnect-version safety / compatibility fixture matrix
+- 35: 3D procedural road continuity / route-weighted landmark visibility / occlusion chatter / skyline signatures / semantic visual regression / adversarial camera search
 
 ## Dedicated guides
 
@@ -94,13 +97,14 @@ Core specialist set includes:
 - docs/host-authority-migration.md
 - docs/client-prediction-trust-boundaries.md
 - docs/network-quality-matchmaking.md
-- docs/protocol-version-migration.md — Batch 34 compatibility fingerprint, rolling deployment, session epoch and mixed-version QA guide
+- docs/protocol-version-migration.md
 - docs/replay-spectator-telemetry.md
 - docs/replay-lifecycle-privacy.md
 - docs/automated-highlight-spectator-safety.md
 - docs/procedural-diversity-metrics.md
 - docs/procedural-pacing-readability-qa.md
 - docs/adversarial-procedural-qa.md
+- docs/procedural-3d-visibility-road-qa.md — Batch 35 road/occlusion/skyline semantic QA
 - docs/save-resilience-and-migration.md
 - docs/sports-game-abstraction.md
 
@@ -111,7 +115,7 @@ See docs/ for remaining genre/system guides.
 ### Procedural automated QA — follow-up
 - empirical calibration of behavior-space stopping thresholds on real generator histories
 - genre-specific adversarial objectives for shooter/racing/RPG/puzzle
-- 3D occlusion / skyline / road continuity semantic visual tests
+- 3D visibility follow-up: empirical landmark/junction thresholds, multi-floor/interior portal cases, moving occluders and day/night robustness
 - mutation operators that preserve validity while searching near failure boundaries
 - production cost budgets: seeds/hour, agent CPU, render-buffer storage and CI sharding
 
