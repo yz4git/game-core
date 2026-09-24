@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 35
+最終更新: 2026-09-24 / Batch 36
 
 ## Completed / substantially sampled
 
@@ -27,6 +27,7 @@
 - Batch 33 matchmaking/QoS: Play Meter 1988/1990, GamePro 1989, Technopolis 1987/1994, Famimaga 64
 - Batch 34 protocol/version migration: Technopolis 1986/1987/1994 + complete-run history, PC Engine Fan complete-run/add-on era + Nov 1994, Famimaga 64 1996–1998 complete-set context
 - Batch 35 procedural 3D readability: Technopolis 1986/1987/1994, Play Meter 1988/1990, PC Engine Fan complete run + 1994, Famimaga 64 complete set + 1996
+- Batch 36 cross-origin save portability: Program Pochette 1984/1985 preserved programs across puzzle/shooter/maze/drawing, Technopolis 1987/1994 + complete-run history, PC Engine Fan 1994 + complete-run/appendix history, Famimaga 64 1996 + complete-run context, Dengeki PC Engine/G's Engine transition history
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -51,6 +52,7 @@
 - Batch 33: PlayFab matchmaking/latency expansion; Unity QoS/Relay/region allocation
 - Batch 34: Unity Netcode for Entities protocol handshake/fingerprints; Photon App/Game Version partitioning; PlayFab unique server BuildId; Unity Multiplay versioned allocation; PlayFab Party descriptor migration
 - Batch 35: Unity occlusion culling/visualization; Unreal screenshot and automation testing; 2026 road-network generation evaluation using connectivity/redundancy metrics
+- Batch 36: MDN same-origin/Web Storage/Storage Access; WebKit origin quota/eviction and Home Screen storage policy; OWASP browser-storage trust boundaries
 
 ## Well-covered batches
 
@@ -84,6 +86,7 @@
 - 33: network-quality matchmaking / QoS vectors / hard floors / staged relaxation / population tax / calibration
 - 34: protocol/version migration / compatibility fingerprints / capability negotiation / rolling deployment / session pinning / reconnect-version safety / compatibility fixture matrix
 - 35: 3D procedural road continuity / route-weighted landmark visibility / occlusion chatter / skyline signatures / semantic visual regression / adversarial camera search
+- 36: cross-origin save portability / origin-as-persistence-ABI / explicit portable handoff / old-origin migration horizon / transactional import / origin-matrix CI
 
 ## Dedicated guides
 
@@ -105,7 +108,7 @@ Core specialist set includes:
 - docs/procedural-pacing-readability-qa.md
 - docs/adversarial-procedural-qa.md
 - docs/procedural-3d-visibility-road-qa.md — Batch 35 road/occlusion/skyline semantic QA
-- docs/save-resilience-and-migration.md
+- docs/save-resilience-and-migration.md — through Batch 36 origin migration/portable-save guidance
 - docs/sports-game-abstraction.md
 
 See docs/ for remaining genre/system guides.
@@ -136,7 +139,7 @@ See docs/ for remaining genre/system guides.
 ### Save / resilience — follow-up
 - recovery UX/privacy and long-lived fixture corpus
 - storage reserve thresholds calibrated on real save/replay/cache growth
-- cross-origin / deployment-origin migration and save portability
+- cross-origin follow-up: adoption/retirement telemetry, accountless QR/device handoff, custom-domain cutover runbook
 - content compatibility: scripted component quarantine, multiplayer package negotiation, compatibility-horizon fixtures
 - semantic merge: event compaction/tombstone GC, account merge vs device merge, authoritative economy boundaries, human-readable merge previews
 
