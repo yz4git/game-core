@@ -112,3 +112,20 @@
 - stale web/PWA clientを通常のcompatibility caseとして試験しているか
 - unsupported clientがgeneric network errorではなく明確なupdate/compatibility理由を受け取るか
 - old cohort retirementをactive-session数とversion adoption率で判断しているか
+
+## Batch 35 — Procedural 3D visibility / road continuity review
+
+- roadが見た目で接続しているだけでなくnav graph / lane / collisionでも連続しているか
+- connected component数だけでなくarticulation point / bridge / alternate-route余裕を測っているか
+- seamで曲率・勾配・幅が急変し、想定速度では実質通れなくなっていないか
+- baseline driverが道路継ぎ目で緊急steer/brake/reverseを要求されないか
+- landmarkをeditor cameraではなく実際のgameplay camera/FOVから評価しているか
+- landmarkのvisible frame数だけでなくfirst-visible距離・最長遮蔽・decision前の連続可視時間を測っているか
+- landmarkが細い遮蔽物やLOD境界でvisible/hiddenを短時間に繰り返していないか
+- junctionの分岐差が安全なsteer/brake deadlineより前に読めるか
+- RGB差分だけでなくdepth / semantic / road-lane / collision bufferを比較しているか
+- facade/weather差で同じ都市構造を多様と誤認せずskyline signatureを比較しているか
+- landmarkを常時見せるのではなく、必要なdecisionで再出現するreveal scheduleになっているか
+- random screenshotだけでなくvisibility marginを最小化するadversarial camera searchを行ったか
+- worst-N seedだけでなくworst-N camera/route positionもregression fixtureに残しているか
+- 人間が「道が消えた・分岐が読めない・街が全部同じ」と感じたケースを次の自動predicateへ変換したか
