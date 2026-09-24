@@ -231,3 +231,14 @@ Track at minimum:
 - Are rich artifacts retained because they aid reproduction, or merely because they are easy to collect?
 - Did a generator change make validation materially more expensive despite the same pass rate?
 - What residual risk remains when the declared budget is exhausted?
+
+
+## Empirical stopping calibration — Batch 42
+
+Calibrate adaptive-search stopping thresholds from completed histories for the same generator, ruleset and descriptor family rather than from a universal seed count. Replay candidate stop points against later portions of historical campaigns and measure compute saved versus consequential discoveries that would have arrived later.
+
+Keep raw descriptor occupancy separate from consequence-weighted occupancy and from beliefs about whether an empty cell is impossible, merely hard to reach, or still unknown. Before ending optional exploration, run a bounded challenge phase with a changed search policy; renewed discovery means the prior plateau described the search policy rather than the generator.
+
+Use repeated windows and uncertainty estimates rather than one quiet interval. Version every calibration by generator, ruleset/content epoch, descriptor schema, agent policy and severity model. Reopen exploration after those dependencies change or after a novel human-confirmed failure family appears.
+
+Canonical regression fixtures and the declared unbiased sample floor always complete; empirical saturation controls only the optional adaptive remainder.
