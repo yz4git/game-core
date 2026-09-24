@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 38
+最終更新: 2026-09-24 / Batch 39
 
 ## Completed / substantially sampled
 
@@ -30,6 +30,7 @@
 - Batch 36 cross-origin save portability: Program Pochette 1984/1985 preserved programs across puzzle/shooter/maze/drawing, Technopolis 1987/1994 + complete-run history, PC Engine Fan 1994 + complete-run/appendix history, Famimaga 64 1996 + complete-run context, Dengeki PC Engine/G's Engine transition history
 - Batch 37 dynamic 3D visibility: moving occluders, interior/multi-floor cue handoff, stateful portals, day/night identification robustness; historical context cross-sampled from Family Computer Magazine, Technopolis, GamePro, Play Meter, PC Engine Fan and Famimaga 64
 - Batch 38 schema/replay longevity: PC Engine Fan complete-run preservation, Gekkan PC Engine complete 1988–1994 run, Play Meter multi-decade holdings and broader archive/sets used as long-horizon preservation context
+- Batch 39 validity-preserving procedural mutation: Micom BASIC 1983–1985 and 1996 preserved programs, Program Pochette 1984–1985 preserved action/shooter/maze/puzzle programs, Technopolis 1987, GamePro 1989, Play Meter 1990, Famimaga 64 1996
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -57,6 +58,7 @@
 - Batch 36: MDN same-origin/Web Storage/Storage Access; WebKit origin quota/eviction and Home Screen storage policy; OWASP browser-storage trust boundaries
 - Batch 37: dynamic occlusion/render latency, landmark wayfinding hierarchy, portal-state and lighting robustness
 - Batch 38: Unreal Replay backward compatibility/version filtering; Photon Quantum deterministic replay/checksums; Protocol Buffers schema evolution; legacy Unity serialization/RPC contrast
+- Batch 39: AIIDE simulation-based PCG playability testing; coverage-guided property-based testing; counterexample shrinking; structured mutation/fuzzing concepts applied to valid procedural content
 
 ## Well-covered batches
 
@@ -93,6 +95,7 @@
 - 36: cross-origin save portability / origin-as-persistence-ABI / explicit portable handoff / old-origin migration horizon / transactional import / origin-matrix CI
 - 37: dynamic visibility / interior-multi-floor cue hierarchy / portal-state reachability / day-night identification / worst-N combinatorial QA
 - 38: schema evolution / serialized-ID tombstones / custom serializer migration / deterministic replay provenance / mixed-version replay / transactional transcoding / compatibility retirement
+- 39: validity-preserving semantic mutation / sacred-repairable-measured invariants / bounded projection / margin-vector boundary search / compound boundaries / adaptive mutation strength / semantic shrinking / operator telemetry
 
 ## Dedicated guides
 
@@ -112,7 +115,7 @@ Core specialist set includes:
 - docs/automated-highlight-spectator-safety.md
 - docs/procedural-diversity-metrics.md
 - docs/procedural-pacing-readability-qa.md
-- docs/adversarial-procedural-qa.md
+- docs/adversarial-procedural-qa.md — through Batch 39 validity-preserving mutation and boundary search
 - docs/procedural-3d-visibility-road-qa.md — through Batch 37 dynamic/interior/lighting QA
 - docs/save-resilience-and-migration.md — through Batch 36 origin migration/portable-save guidance
 - docs/sports-game-abstraction.md
@@ -125,7 +128,7 @@ See docs/ for remaining genre/system guides.
 - empirical calibration of behavior-space stopping thresholds on real generator histories
 - genre-specific adversarial objectives for shooter/racing/RPG/puzzle
 - empirical landmark/junction/cue-handoff thresholds from human play traces
-- mutation operators that preserve validity while searching near failure boundaries
+- validity-preserving mutation follow-up: learn operator priors from human-confirmed failures; boundary-pair coverage targets; repair-distance calibration
 - production cost budgets: seeds/hour, agent CPU, render-buffer storage and CI sharding
 
 ### Replay / telemetry — follow-up
