@@ -95,3 +95,20 @@
 - thresholdごとにfalse accept / false reject / added waitを比較したか
 - ranked/tournamentとcasualで同じnetwork envelopeを無条件共有していないか
 - 検索範囲を広げた場合、そのtrade-offをplayerが理解できるか
+
+## Batch 34 — Protocol / version migration review
+
+- player-facing version文字列だけで互換性を判定していないか
+- RPC/command/replicated-state schemaのfingerprint mismatchをREADY前に拒否できるか
+- build IDの違いとprotocol incompatibilityを同一視してpopulationを不要に分断していないか
+- N/N-1などadvertiseしたmixed-version pathを実際にpairwise CIしているか
+- required capabilityとoptional capabilityを分離してnegotiationしているか
+- queue expansionがprotocol cohortを越えないか
+- rolling deploy中に旧clientが接続可能な旧server cohortを失わないか
+- running matchのsession protocol epochがdeploymentで途中変更されないか
+- app update後のreconnectが元session epochを再検証するか
+- host migration候補がlatency評価より前にcheckpoint/schema compatibilityを通過するか
+- 古いinvite/reconnect tokenがdeployment後にcached endpointへ直結しないか
+- stale web/PWA clientを通常のcompatibility caseとして試験しているか
+- unsupported clientがgeneric network errorではなく明確なupdate/compatibility理由を受け取るか
+- old cohort retirementをactive-session数とversion adoption率で判断しているか
