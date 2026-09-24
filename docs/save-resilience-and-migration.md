@@ -220,6 +220,106 @@ Useful diagnostics:
 
 Avoid uploading raw save payloads when these structural metrics are sufficient.
 
+## 22. Version content dependencies separately from the save schema
+
+A save can have a supported schema but still reference absent DLC, mods, remote catalogs, maps, scripts, items or quests.
+
+Persist a content manifest or manifest hash and enough stable dependency identity to diagnose the mismatch before mutating state.
+
+## 23. Classify missing dependencies by criticality
+
+Useful classes:
+- OPTIONAL — cosmetic/presentation-only; safe placeholder may exist
+- DEGRADABLE — gameplay state can continue under an explicit fallback
+- REQUIRED — normal play should not continue until restored/remapped
+- WORLD-CRITICAL — defines the current simulation space or indispensable progression
+
+Do not use one universal `null` fallback.
+
+## 24. Use immutable persistent IDs, remaps and tombstones
+
+Display names, asset paths and package layout change over time. Persist logical IDs that survive refactors.
+
+For shipped IDs:
+- rename via explicit remap/alias tables
+- never guess from similar strings
+- tombstone removed IDs so unrelated future content cannot accidentally reuse them
+
+## 25. Separate entitlement from content presence
+
+DLC can be owned but not currently installed or available. Likewise, local files alone do not necessarily prove current entitlement.
+
+Model at least:
+- owned/entitled
+- installed/present
+- available/retrievable
+- version-compatible
+
+Recovery UX should point to the correct failure dimension.
+
+## 26. Make degraded loads read-only
+
+If required dependencies are unresolved, do not allow normal autosave/overwrite. Otherwise a temporary missing-DLC/mod condition can permanently erase objects that would have returned after reinstall.
+
+Prefer:
+
+`PREFLIGHT → DEPENDENCY_CHECK → READY | DEGRADED_READONLY | BLOCKED_RECOVERABLE | UNSUPPORTED`
+
+Only enter the normal save loop from a fully validated playable state.
+
+## 27. Preserve unknown state when safe
+
+When content is temporarily unavailable, preserve unresolved records as opaque/quarantined state where feasible instead of dropping them.
+
+If the package later returns, attempt explicit rehydration and semantic validation. Unknown state must never execute as trusted gameplay logic merely because bytes were preserved.
+
+## 28. Validate semantics after fallback/remap
+
+Preventing a crash is not sufficient. Missing content can break:
+- inventory/equipment invariants
+- quest progression
+- economy totals
+- companion ownership
+- map/world topology
+- return portals/checkpoints
+
+Run subsystem validation after every remap, placeholder or evacuation operation.
+
+## 29. Archive released content manifests
+
+Long-lived save compatibility depends on knowing which content catalog a historical save referenced.
+
+Keep released manifest/catalog identities and representative save fixtures. Test historical save → historical manifest → supported upgrade path, not only old schema → current executable.
+
+## 30. Test removal and restoration as a round trip
+
+A game that merely boots after content removal may still destroy state.
+
+CI should exercise:
+- disable/remove dependency
+- inspect degraded state without destructive save
+- restore dependency
+- reload/rehydrate
+- compare stable semantic summaries against the original
+
+The restoration half is essential.
+
+## 31. Validate transitive dependencies
+
+A directly referenced package can itself depend on another package/catalog/version.
+
+Resolve dependency closure during preflight and report the root missing requirement where possible. In multiplayer/shared state, negotiate required content capabilities before entering authoritative simulation.
+
+## 32. Define a compatibility horizon
+
+Supporting every historical schema/content combination forever may be impossible. Make the boundary explicit:
+- fully migrate
+- read-only recovery/export
+- requires stepping-stone build/content
+- unsupported but preserved
+
+Beyond the support horizon, failure must still avoid overwriting user data.
+
 ## Playtest / QA checklist
 
 - Can every shipped save fixture migrate to current?
@@ -238,3 +338,13 @@ Avoid uploading raw save payloads when these structural metrics are sufficient.
 - Can an origin-wide local-data loss be distinguished from save corruption?
 - Does persistence denial degrade safely?
 - Can the player recover after deliberate local website-data deletion using export/cloud where supported?
+- Does preflight distinguish unsupported schema from missing content?
+- What happens when DLC is owned but not installed?
+- Can optional, required and world-critical missing content follow different policies?
+- Does a degraded load disable autosave and overwrite?
+- Can removed content be restored without losing its previous state?
+- Do renamed IDs use explicit remaps rather than heuristics?
+- Are removed persistent IDs protected from accidental reuse?
+- Are transitive package dependencies checked?
+- Can QA reproduce a save against its historical content manifest?
+- Does remove → restore round-trip recover the same important semantic state?
