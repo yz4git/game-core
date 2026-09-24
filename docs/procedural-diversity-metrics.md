@@ -78,6 +78,20 @@ A useful landmark is **visible × distinctive × stable × decision-relevant**. 
 
 Also compare branch heading, width, elevation, lighting/biome class and destination role. Flag forks where alternatives are perceptually too similar before the player commits.
 
+For 3D generators, measure visibility along actual gameplay trajectories. Store first-visible distance, route-visible fraction, longest occluded interval, last visible distance before a consequential junction, and visibility transition rate. Rendering-correct occlusion is not equivalent to gameplay-readable occlusion.
+
+Treat rapid visible/hidden transitions as **occlusion chatter**. Critical cues need enough continuous exposure to be identified, not merely a high count of visible frames.
+
+## 3D road continuity
+
+Validate generated roads at four layers: topology, geometry, traversal dynamics and semantics. A visually continuous surface can still have disconnected nav edges, collision seams, illegal lane direction or an undrivable curvature/grade jump.
+
+Track connected components, articulation points, graph bridges/cut-edges, alternate-route ratio, lane endpoint mismatch, curvature/grade/width discontinuities and deterministic baseline-driver completion. Connectivity is stronger when useful alternate routes survive a blocked edge.
+
+## Skyline signatures
+
+For canonical gameplay viewpoints, sample horizon elevation by azimuth and retain dominant peak/landmark IDs, height-band occupancy and peak spacing. Compare these structural signatures across seeds/districts rather than relying on RGB difference. Cosmetic facade/weather changes should not hide repeated large-scale massing.
+
 ## Strategy diversity
 
 Trace distance alone can reward meaningless variation. Where multiple agents/policies are available, compare their outcome vectors across the same seed/opponent/context matrix. Useful strategies should have different response strengths and weaknesses, not merely different paths.
@@ -92,12 +106,14 @@ Where feasible export:
 - semantic class
 - gameplay affordance
 - landmark/object identity
+- road/lane/drivable mask for generated driving worlds
+- major occluder identity for critical-cue diagnostics
 
 Compare objective, road/room topology, hazard/cover layout, landmark placement/silhouette, enemy-space and large-scale spatial rhythm. Weight gameplay-relevant classes more heavily than decorative foliage/particles.
 
 Cosmetic noise should not trick the test into calling two structurally identical worlds diverse, and similar colors should not hide major geometry movement.
 
-## Adversarial seed search
+## Adversarial seed and camera search
 
 After baseline random sampling, deliberately search sparse behavior cells and failure boundaries. Useful objectives include:
 
@@ -110,7 +126,9 @@ After baseline random sampling, deliberately search sparse behavior cells and fa
 - low route redundancy
 - high policy disagreement
 
-Preserve and mutate near-failures, not only hard failures. Borderline valid seeds reveal fragile margins that simple invariant rejection can hide.
+For 3D worlds, also search route/camera parameter space for minimum landmark visibility, maximum pre-junction ambiguity, road-mask seam discontinuity, semantic/depth disagreement and occlusion chatter. Rare alignment failures often occupy too little viewpoint space for random screenshots to find efficiently.
+
+Preserve and mutate near-failures, not only hard failures. Borderline valid seeds and camera positions reveal fragile margins that simple invariant rejection can hide.
 
 ## Coverage stopping criteria
 
@@ -136,6 +154,8 @@ Run fixed canonical seeds, large fresh random cohorts and adversarial cohorts. C
 
 A generator update can keep mean difficulty unchanged while silently making runs flatter, spikier, more exhausting, or collapsing previously viable strategy clusters. Compare cluster occupancy and tails, not only means.
 
+For 3D worlds, canonical fixtures must include shipped camera semantics (height, pitch, FOV, aspect and follow offset). Free-editor-camera screenshots are not equivalent regression evidence.
+
 ## Human calibration
 
 Automated metrics filter and diagnose; they do not replace playtests. Periodically compare metric predictions with blind human judgments of repetition, difficulty, pacing, fatigue, readability and memorability.
@@ -146,7 +166,7 @@ Use a feedback loop: **automated search → worst/novel/disagreement seeds → h
 
 ## Recommended pipeline
 
-Canonical regression → random cohort → static invariant gates → dynamic multi-policy simulation → decision/strategy clustering → pacing signatures → route-weighted heatmaps → junction/landmark analysis → behavior coverage → adversarial boundary/sparse-cell search → RGB/depth/semantic regression → failure minimization → worst/novel/disagreement review → human calibration → repeat until discovery saturation.
+Canonical regression → random cohort → static invariant gates → road/topology seam gates when applicable → dynamic multi-policy simulation → decision/strategy clustering → pacing signatures → route-weighted heatmaps → gameplay-camera landmark/junction analysis → skyline signatures → behavior coverage → adversarial seed/camera search → RGB/depth/semantic regression → failure minimization → worst/novel/disagreement review → human calibration → repeat until discovery saturation.
 
 ## Playtest checklist
 
@@ -159,6 +179,11 @@ Canonical regression → random cohort → static invariant gates → dynamic mu
 - Is recovery available soon enough after peaks?
 - Do important forks have distinguishable cues before commitment?
 - Are landmarks visible from the decisions they are meant to support?
+- Do critical landmarks remain visible long enough to identify rather than chatter?
+- Are generated roads connected in nav/collision/lane semantics as well as pixels?
+- Do connected roads remain drivable at intended speed across seams?
+- Does the road graph have useful redundancy rather than one fragile bridge edge?
+- Do skyline signatures reveal structural repetition hidden by decorative variance?
 - Are novel seeds valid rather than pathological?
 - Which valid seeds have the smallest safety margins?
 - Which seeds pass static checks but fail dynamically?
