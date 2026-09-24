@@ -33,7 +33,7 @@
 
 - 自動highlight top-kに「派手だが意味の薄い」hard negativeが混ざらないか
 - clipがpeak瞬間だけでなくsetup→decision→resolutionを含むか
-- 初見viewerが「何が変わったか／なぜ重要か」を説明できるか
+- 初見viewerが「何が変わったか／なぜ重要だったか」を説明できるか
 - 5本のhighlightが同じkill/score型だけにcollapseしていないか
 - coaching / entertainment / personal memoryで同じrankingを無理に共有していないか
 - modality別scoreを保持し、映像・音・reactionの不一致を調査できるか
@@ -128,4 +128,22 @@
 - landmarkを常時見せるのではなく、必要なdecisionで再出現するreveal scheduleになっているか
 - random screenshotだけでなくvisibility marginを最小化するadversarial camera searchを行ったか
 - worst-N seedだけでなくworst-N camera/route positionもregression fixtureに残しているか
-- 人間が「道が消えた・分岐が読めない・街が全部同じ」と感じたケースを次の自動predicateへ変換したか
+- 人間が「道が消えた・分岐が読めない・街が全部同じ」と感じったケースを次の自動predicateへ変換したか
+
+## Batch 37 — Dynamic visibility / interior / lighting review
+
+- moving traffic/crowd/door/enemyがdecision直前だけcritical cueを隠していないか
+- visibilityを静止画ではなく時間列として記録し、commitment前のstable-visible時間を測っているか
+- dynamic objectのrenderer上のoccluder/occludee設定とgameplay上の遮蔽役割を混同していないか
+- 高速camera旋回時の1-frame popと、配置そのものによる長時間遮蔽を別原因として扱っているか
+- traffic/crowd seedを変えたときのdeadline occlusion確率とp5 visibilityを測っているか
+- global landmarkが見えなくなるinteriorでfloor/zone/junction-local cueへ自然にhandoffするか
+- 「見える物体数」が増えただけでwayfinding改善と判定せず、branch ambiguityが減ったか確認しているか
+- stairs/elevator/ramp後にfloor/zoneとfacing directionをmapなしで再構築できるか
+- open/closed/locked/destroyed等のportal stateごとにreachabilityとvisibility graphを再検査しているか
+- day/dusk/night/weatherでline-of-sightだけでなくlandmark identification marginを確認しているか
+- tunnel出入口やauto-exposure遷移中にmandatory decisionを置いていないか
+- doorframe/window/corner/stair mouth等のvisibility-cell境界をworst-case fixtureとして残しているか
+- route全体でglobal→district→floor→junction→destinationのcue handoff gapを測っているか
+- occlusion severityを時間だけでなくpredictability / agency / consequenceでも評価しているか
+- camera × portal × occupancy × lighting × deviceの全組合せを盲目的にrenderせず、cheap predicateでworst-Nを選んでいるか
