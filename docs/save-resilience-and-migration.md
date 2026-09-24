@@ -400,6 +400,71 @@ For every persistent domain, define before shipping:
 - post-merge validator
 - automatic vs assisted vs branch-choice-only resolution
 
+## 41. Treat origin as part of persistence compatibility
+
+Browser-local storage is scoped to origin. A deployment that changes scheme, host or port can make an otherwise valid save unreachable.
+
+Separate persistence preflight into:
+1. locate/acquire the save
+2. parse/migrate/validate the save
+
+A redirect to a new host does not migrate IndexedDB or `localStorage`.
+
+## 42. Preserve an old-origin migration path
+
+Before changing a public web-game origin, ship export/migration support on the old origin. Keep a minimal migration shell available for a defined compatibility horizon rather than replacing it immediately with a redirect-only endpoint.
+
+Dormant players may skip every intermediate release; source retirement should therefore be based on migration/returner evidence, not only deployment age.
+
+## 43. Prefer explicit portable handoff over ambient cross-origin access
+
+Cross-site storage-access mechanisms are privacy/permission features and are not a general substitute for first-party save transfer.
+
+Prefer one of:
+- explicit validated export/import
+- short-lived one-time server handoff
+- authenticated cloud/account reconciliation
+
+Migration should still work when third-party storage is blocked.
+
+## 44. Give portable saves an identity/integrity envelope
+
+A portable package should carry enough context to reject wrong-game, wrong-profile, stale or incompatible imports before they replace local progress.
+
+Useful fields include:
+- format/schema version
+- game ID
+- save UUID and revision
+- profile/world identity
+- source origin and timestamp
+- content compatibility identity
+- integrity/authenticity metadata appropriate to the trust model
+
+Local browser state is persistence, not authority: server-authoritative economy, entitlements and ranked facts must be reconciled with their authority source.
+
+## 45. Stage cross-origin imports transactionally
+
+Use:
+
+`ACQUIRE → VERIFY ENVELOPE → STAGE → IDENTITY CHECK → MIGRATE → SEMANTIC VALIDATE → AUTHORITY RECONCILE → COMMIT → ACK`
+
+Do not delete source state or overwrite the destination's only known-good generation before destination commit succeeds.
+
+If server-assisted transfer tokens are used, make them short-lived, one-time and narrowly scoped.
+
+## 46. Add origin transitions to persistence CI
+
+Do not test only old-save/new-build pairs on one localhost origin. Include real distinct-origin fixtures:
+- old host → new host
+- source available / unavailable
+- browser tab / Home Screen PWA
+- third-party storage blocked
+- destination quota failure
+- wrong profile/game import
+- dormant returner skipping intermediate builds
+
+The test must prove that the transfer mechanism recovered progress rather than accidentally sharing a test storage namespace.
+
 ## Playtest / QA checklist
 
 - Can every shipped save fixture migrate to current?
@@ -438,3 +503,11 @@ For every persistent domain, define before shipping:
 - Is a merged candidate globally validated before commit?
 - Are both parent branches recoverable after a bad merge?
 - Is repeated reconciliation idempotent where declared mergeable?
+- If the deployment origin changes, can the system distinguish inaccessible legacy storage from a genuinely new player?
+- Has a real old-origin save been transferred without relying on redirect behavior?
+- Can migration succeed with third-party storage blocked?
+- Can a wrong-game/wrong-profile portable save be rejected before destructive write?
+- Does a destination quota failure leave both source and destination known-good state recoverable?
+- Can a one-time migration token be replayed after successful claim?
+- Are server-authoritative economy/entitlement facts revalidated rather than trusted from portable local state?
+- Have normal Safari and Home Screen PWA origin-migration paths both been exercised?
