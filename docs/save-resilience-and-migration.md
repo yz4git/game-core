@@ -45,6 +45,8 @@ Use the conceptual sequence:
 
 Never overwrite the only known-good state before the replacement is validated.
 
+For IndexedDB, treat transaction `complete` as the success boundary. A successful individual request is not enough to display SAVE COMPLETE.
+
 ## 5. Keep a recovery horizon
 
 Do not keep only several nearly identical autosaves.
@@ -141,6 +143,83 @@ Test more than normal save/load:
 
 The key metric is not “did load fail?” but “could this fault erase all recoverable progress?”
 
+## 14. Treat browser quota as runtime state
+
+Do not hardcode a presumed browser save capacity. Query `navigator.storage.estimate()` where supported and treat both usage and quota as approximate values.
+
+Keep headroom rather than filling the reported quota. A valid write can still fail with `QuotaExceededError`.
+
+## 15. Separate atomicity from retention
+
+An IndexedDB transaction can commit atomically and the origin can still be evicted later under browser/device storage policy.
+
+These are different guarantees:
+- transaction atomicity: this save operation is all-or-nothing
+- persistence/retention: committed data remains available later
+
+Request persistent storage where appropriate, but treat grant/denial as a runtime capability rather than a correctness prerequisite.
+
+## 16. Give storage classes explicit priority
+
+Recommended order under pressure:
+
+1. active/current known-good save
+2. previous known-good / milestone recovery
+3. user-authored or explicitly pinned content
+4. unpinned replay/highlight cache
+5. regenerable asset/cache data
+
+A replay cache or offline asset cache must not be allowed to consume the reserve needed for the next critical checkpoint.
+
+## 17. Reserve peak transactional footprint
+
+Steady-state save size is not enough. Migration or staged replacement can temporarily require old + candidate + metadata + validation working state.
+
+Maintain a critical reserve sized for the largest expected transaction, and prune disposable data before crossing it.
+
+## 18. Make quota failure recoverable
+
+On quota/storage failure:
+
+1. do not destroy known-good data
+2. classify the failure
+3. prune only disposable classes
+4. re-estimate if possible
+5. retry a bounded number of times
+6. expose recovery/export guidance if the save still cannot commit
+
+Never loop indefinitely or silently pretend the save succeeded.
+
+## 19. Detect origin-wide loss separately from corruption
+
+If all local stores disappear together, treat that differently from a malformed record. Browser eviction, explicit site-data deletion and private browsing lifecycle can remove the whole local origin state.
+
+Before silently creating a replacement campaign, check whether account/cloud/export evidence indicates recoverable prior progress.
+
+## 20. Test runtime contexts separately
+
+For browser games, test at least:
+- normal Safari/browser tab
+- Home Screen PWA where supported
+- private browsing where relevant
+- low-storage device condition
+- persistence granted / denied / unsupported
+
+The same URL does not imply the same durability policy in every runtime context.
+
+## 21. Keep storage telemetry structural
+
+Useful diagnostics:
+- estimated usage/quota ratio
+- persistence/durability tier
+- candidate save bytes
+- number and age of recovery generations
+- transaction outcome
+- quota/I/O failure class
+- cleanup class and bytes reclaimed
+
+Avoid uploading raw save payloads when these structural metrics are sufficient.
+
 ## Playtest / QA checklist
 
 - Can every shipped save fixture migrate to current?
@@ -152,3 +231,10 @@ The key metric is not “did load fail?” but “could this fault erase all rec
 - Can an old build damage a newer save?
 - Can import overwrite local progress before validation?
 - Is automatic recovery visible in diagnostic logs?
+- Does SAVE COMPLETE wait for transaction completion?
+- What happens when quota failure occurs before, during and after candidate staging?
+- Can replay/cache growth starve the next critical save?
+- Is enough reserve kept for migration's peak temporary footprint?
+- Can an origin-wide local-data loss be distinguished from save corruption?
+- Does persistence denial degrade safely?
+- Can the player recover after deliberate local website-data deletion using export/cloud where supported?
