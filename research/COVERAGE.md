@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-24 / Batch 31
+最終更新: 2026-09-24 / Batch 32
 
 ## Completed / substantially sampled
 
@@ -23,6 +23,7 @@
 - Batch 29 content-dependency cross-sample: Technopolis 1986/1987/1994 + complete-run history, Program Pochette 1984–1987 complete run, PC Engine Fan 1988–1997 complete-run/add-on context + Nov 1994/1995 appendix, Famimaga 64 1996–1998
 - Batch 30 divergent-save historical cross-sample: LOGiN 1983–1987, Program Pochette 1984–1987 preserved-program context, Family Computer Magazine 1985–1990, Play Meter 1978/1988/1990, Game Hihyō 1994–2006, Famimaga 64 1996–1998
 - Batch 31 host-migration historical cross-check: Play Meter 1990 Directory, Famimaga 64 1996–1998 holdings, broader Gaming Alexandria magazine index/network-multiplayer-era context
+- Batch 32 prediction/trust historical cross-sample: Play Meter 1988/1990, GamePro 1989, Technopolis 1987/1994, Famimaga 64 1996–1998, Gamejin 1998/1999, Monthly Coin Journal 1989/1998
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -53,6 +54,7 @@
 - Batch 29: Steamworks DLC + ISteamApps entitlement/presence APIs, Minecraft Forge MissingMappings registry policies, Unity Addressables content-state/catalog update workflow, Bethesda save recovery/support cases
 - Batch 30: PlayFab Game Saves conflict/atomic-unit model and player conflict UX; Unity Cloud Save write locks/API and custom conflict retry; semantic three-way merge / monotonic-vs-non-monotonic progression analysis
 - Batch 31: Unity Multiplayer Sessions host election/data migration; legacy UNet reconnect identity; Photon Fusion host-migration snapshots/reconnect; Photon PUN ownership/control; PlayFab Lobby owner migration/server recovery; DirectPlay 8 P2P host election/migration
+- Batch 32: Photon Fusion lag compensation/topology trust; Unity Cloud Code cheat prevention/server authority/game-state management; Gaffer client/server prediction and authority/ownership sequences; Nakama relayed/client-authoritative trust model
 
 ## Well-covered batches
 
@@ -82,6 +84,7 @@
 - 29: content-dependent save compatibility / DLC-mod removal / immutable IDs-remaps-tombstones / degraded read-only loading / opaque-state quarantine / dependency closure / remove-restore round-trip QA
 - 30: divergent save branches / common-ancestor semantic diff / per-domain merge algebra / unique-grant identity / economy provenance / tombstones / atomic-unit boundaries / write-lock vs resolution / post-merge validation
 - 31: host/authority migration / election-vs-state restoration / authority epochs / migration checkpoints / stable reconnect identity / orphan ownership policy / commit barriers / semantic resume validation / migration fault injection
+- 32: client prediction trust boundaries / intent-vs-result messages / temporal validation / bounded lag compensation / idempotent irreversible actions / ownership-vs-authority / topology provenance / hidden-information minimization / anti-cheat false-positive fault QA
 
 ## Dedicated guides
 
@@ -91,8 +94,9 @@ Core specialist set includes:
 - docs/touch-production-qa.md
 - docs/physical-arcade-interface-design.md
 - docs/input-calibration-and-diagnostics.md
-- docs/rollback-mobile-network-design.md — expanded Batch 31 with authority-migration boundary
+- docs/rollback-mobile-network-design.md — expanded through Batch 32 with authority migration and prediction trust boundaries
 - docs/host-authority-migration.md — Batch 31 production migration state machine and QA
+- docs/client-prediction-trust-boundaries.md — Batch 32 prediction/authority/security trust matrix and fault QA
 - docs/replay-spectator-telemetry.md
 - docs/replay-lifecycle-privacy.md
 - docs/automated-highlight-spectator-safety.md
@@ -138,7 +142,7 @@ See docs/ for remaining genre/system guides.
 - empirical rollback budget calibration across iPhone performance tiers
 - host migration follow-up: election scoring calibration, checkpoint cadence, split-brain/partition recovery, dedicated-server fallback
 - matchmaking network-quality thresholds
-- cheating/security boundaries for client prediction
+- prediction/security follow-up: per-genre trust matrices, rewind threshold calibration, enforcement escalation and privacy boundaries
 - protocol/version migration
 
 ## Next priorities — medium
