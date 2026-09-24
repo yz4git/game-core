@@ -147,3 +147,20 @@
 - route全体でglobal→district→floor→junction→destinationのcue handoff gapを測っているか
 - occlusion severityを時間だけでなくpredictability / agency / consequenceでも評価しているか
 - camera × portal × occupancy × lighting × deviceの全組合せを盲目的にrenderせず、cheap predicateでworst-Nを選んでいるか
+
+## Batch 38 — Schema evolution / mixed-version replay review
+
+- live join互換とreplay読込互換を同じbooleanで扱っていないか
+- replay envelopeにsource build / replay epoch / network version / ruleset / content / schema / simulation fingerprintがあるか
+- 削除したfield/RPC/component IDを別用途へ再利用していないか
+- additive fieldに安全なdefault semanticsが本当にあるか
+- custom serializerごとにformat versionと旧fixtureがあるか
+- parser成功後にstate-machine / entity reference / ownership / ruleset invariantを検証しているか
+- input-only replayでsimulation code / RNG / physics / data / asset driftをchecksumで検出できるか
+- replay catalog段階でplayable / migratable / archive-only / unsupportedを判別できるか
+- optional presentation dependency欠落をsimulation-critical dependency欠落と区別しているか
+- 長いevent/input historyをversioned snapshot checkpointで区切ってmigration chainを制限しているか
+- transcodeが元replayを上書きせずsource hash / converter version / target epochを残すか
+- oldest-supported replay fixtureを毎releaseで再生しているか
+- corrupt/truncated/unknown-field/changed-enum/content-driftをfailure fixtureに含めているか
+- compatibility readerのretirementを年齢だけで決めず、利用率・security risk・migration成功率で判断しているか
