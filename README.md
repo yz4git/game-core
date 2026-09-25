@@ -12,6 +12,18 @@
 - ジャンルが違っても再利用できるゲームデザイン知識を蓄積する
 - スマホ／Webゲームにも適用できる形にする
 
+## Find what you need
+
+知りたい情報から逆引きする場合は、まず以下を使います。
+
+- [Knowledge Index](docs/INDEX.md) — テーマから探す総合入口
+- [Problem Index](docs/PROBLEM-INDEX.md) — 「理不尽」「単調」「誤操作」など症状から逆引き
+- [Genre Index](docs/GENRE-INDEX.md) — Fighting / Shooter / Racing / RPG / Puzzle / Horror / Mobile等から探す
+- [Knowledge Map](docs/KNOWLEDGE-MAP.md) — Input → Feedback → Information → Decision → Challenge → Failure → Learning → Mastery の関係から診断
+- [Research Coverage](research/COVERAGE.md) — 調査済み・薄い領域・次の研究優先度
+
+通常の制作・レビューでは `Find what you need → 専門guide → checklist` の順で読み、調査根拠が必要な場合だけ `research/` へ降りることを推奨します。
+
 ## Index
 
 - [Core Principles](docs/core-principles.md) — ジャンル横断の設計原則
