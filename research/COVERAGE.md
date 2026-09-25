@@ -2,7 +2,7 @@
 
 自動・継続調査で同じ資料や同じ原則を繰り返さないための進捗表。
 
-最終更新: 2026-09-25 / Batch 42
+最終更新: 2026-09-25 / Batch 45
 
 ## Completed / substantially sampled
 
@@ -15,6 +15,7 @@
 - Batches 23–39: sports/off-ball AI, procedural readability and adversarial QA, replay/spectator, constrained hardware/networking, save/persistence/content dependencies/divergent branches, host migration, prediction/trust, matchmaking/QoS, protocol migration, 3D visibility/roads, cross-origin save, dynamic visibility/interiors, schema/replay longevity, and validity-preserving mutation; see the corresponding dated research notes for exact source sets.
 - Batch 40 genre-adversarial cross-sample: Program Pochette/Micom BASIC preserved action, shooter, racing and puzzle programs across 1983–1996, including compact examples of finite-shot, timer, acceleration, escalating-density, pursuit and time-trial pressure structures.
 - Batch 41 production-budget cross-sample: Micom BASIC 1983–1996 (`Xemious`, `Fuwarp Fuwarp`, `PYON PYON`, `Excite Race`, `Ball & Hole`, `Let Out`, `Metal Arms`, `BATTLE BALLER`) plus Program Pochette (`The 29`, `The UFO`, `Popping Crusher`, `Thief`, `Alien`) used as compact multi-genre evidence for different simulation/player-budget shapes.
+- Batches 42–45: empirical saturation calibration, human-confirmed search priors, boundary-pair/repair-distance QA, and metamorphic procedural QA. Batch 45 adds relation-based oracles for PRESERVE / MONOTONIC / BOUNDED / ROUND_TRIP / PERMUTATION / SYMMETRY / POLICY_ORDER testing.
 
 ### Related developer / technical / design material
 - Gamest / Computer Gaming World / Game Developer / GDC Vault
@@ -45,6 +46,10 @@
 - Batch 39: AIIDE simulation-based PCG testing; coverage-guided property testing; semantic mutation/shrinking
 - Batch 40: genre-specific adversarial objectives; Mario metric/user-study evidence, data-driven Sokoban difficulty, constrained/quality-diversity PCG and FPS topology/emergent-property contrast
 - Batch 41: cost-bounded procedural QA; simulation-based playability search-space restriction, human-calibrated cheap metrics, coverage-guided semantic generation, MAP-Elites temporal coverage, PCG Benchmark cross-problem evaluation, automated-game-testing runtime cost, runtime layered PCG validation
+- Batch 42: behavior-space saturation and counterfactual stopping-threshold calibration
+- Batch 43: human-confirmed failure feedback for contextual mutation/search priors
+- Batch 44: semantic boundary-pair coverage, matched pass/fail siblings, repair-distance calibration framework
+- Batch 45: metamorphic procedural QA; relation-based oracles and paired shrinking
 
 ## Well-covered batches
 
@@ -90,6 +95,9 @@ Core specialist set includes:
 - docs/procedural-pacing-readability-qa.md
 - docs/adversarial-procedural-qa.md — through Batch 40 genre-specific adversarial objectives
 - docs/procedural-qa-production-budgets.md — Batch 41 cost-bounded QA and CI sharding
+- docs/human-calibrated-procedural-search.md — Batch 43 contextual search priors
+- docs/procedural-boundary-interaction-qa.md — Batch 44 boundary-pair and repair-distance QA
+- docs/metamorphic-procedural-qa.md — Batch 45 relation-based procedural QA
 - docs/procedural-3d-visibility-road-qa.md — through Batch 37 dynamic/interior/lighting QA
 - docs/save-resilience-and-migration.md — through Batch 36 origin migration/portable-save guidance
 - docs/sports-game-abstraction.md
@@ -103,6 +111,7 @@ See docs/ for remaining genre/system guides.
 - empirical landmark/junction/cue-handoff thresholds from human play traces
 - validity-preserving mutation follow-up: learn operator priors from human-confirmed failures; boundary-pair coverage targets; repair-distance calibration
 - production-budget follow-up: calibrate evidence-per-compute thresholds on real CI history; cost-predictor accuracy; cache invalidation audit; shard-straggler telemetry
+- metamorphic follow-up: calibrate relation tolerances on real generator histories; relation-family yield by genre; paired-shrinker quality; policy-order thresholds from human play
 
 ### Replay / telemetry — follow-up
 - long-term replay archival corpus and converter validation at scale
